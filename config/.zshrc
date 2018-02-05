@@ -109,6 +109,7 @@ alias r="ranger"
 alias vimrc="vi ~/.vimrc"
 alias gpg="gpg2"
 alias view="xviewer"
+alias mocp="mocp -T nightshade"
 
 alias ll="ls -laho"
 
