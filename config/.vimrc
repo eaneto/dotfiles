@@ -4,11 +4,6 @@ execute pathogen#infect()
 
 set laststatus=2
 
-if !has('gui_running')
-    set t_Co=256
-    set background=dark
-endif
-
 set noshowmode
 
 let g:lightline = {
@@ -134,4 +129,8 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 
 " Sets the colorscheme to onedark
+set t_Co=256
+set background=dark
 colorscheme onedark
+highlight Normal ctermbg=NONE
+highlight nonText ctermbg=NONE
