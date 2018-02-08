@@ -3,10 +3,10 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-set $term gnome-terminal
+set $term urxvt
 set $browser firefox
+
 # Set color to be used in the bar
-# set $background "#000000"
 set $background "#30333A"
 set $complementary = "#3b3831"
 set $text_color "#f3f4f5"
@@ -19,63 +19,58 @@ font pango:Hack 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
-bindsym $mod+Return exec $term
-
 # Window borders
 new_window pixel 0
 
+#
+# Key bindings
+#
+
 # kill focused window
-bindsym $mod+Shift+q kill
-
+bindsym $mod+Shift+q		kill
+# start a terminal
+bindsym $mod+Return			exec $term
 # start rofi
-bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 50 -padding 50 -opacity "85" -bw 0 -bc "$background" -bg "$background" -fg "$text_color" -hlbg "$background" -hlfg "#aaa" - font "Hack 8"
-
+bindsym $mod+d				exec rofi -show run -lines 3 -eh 2 -width 20 -padding 50 -opacity "85" -bw 0 -bc $background -bg $background -fg $text_color -hlbg $background -hlfg "#aaa" - font "Hack 8"
 # start chrome
-bindsym $mod+g exec google-chrome 
-
+bindsym $mod+g				exec google-chrome 
 # start deluge
-bindsym $mod+o exec deluge
-
+bindsym $mod+o				exec deluge
 # start thunderbird
-bindsym $mod+Shift+a exec thunderbird
-
+bindsym $mod+Shift+a		exec thunderbird
 # start ranger
-bindsym $mod+q exec ranger
+bindsym $mod+q				exec $term -e ranger
 
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop 
+for_window [title="video0 - mpv"] floating enable
+
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+bindsym $mod+h				focus left
+bindsym $mod+j 				focus down
+bindsym $mod+k 				focus up
+bindsym $mod+l 				focus right
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym $mod+Left			focus left
+bindsym $mod+Down  			focus down
+bindsym $mod+Up    			focus up
+bindsym $mod+Right 			focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $mod+Shift+h		move left
+bindsym $mod+Shift+j 		move down
+bindsym $mod+Shift+k 		move up
+bindsym $mod+Shift+l 		move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+Left		move left
+bindsym $mod+Shift+Down  	move down
+bindsym $mod+Shift+Up    	move up
+bindsym $mod+Shift+Right 	move right
 
 # split in horizontal orientation
-bindsym $mod+ccedilla split h
+bindsym $mod+ccedilla		split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+v				split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -94,13 +89,11 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-# focus the child container
-#bindsym $mod+d focus child
-
 set $workspace1 "1 "
 set $workspace2 "2 "
 set $workspace3 "3 "
 set $workspace4 "4 "
+set $workspace5 "5 "
 set $workspace8 "8"
 set $workspace9 "9 "
 set $workspace10 "10 "
@@ -110,7 +103,7 @@ bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
 bindsym $mod+3 workspace $workspace3
 bindsym $mod+4 workspace $workspace4
-bindsym $mod+5 workspace 5
+bindsym $mod+5 workspace $workspace5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace $workspace8
@@ -122,7 +115,7 @@ bindsym $mod+Shift+1 move container to workspace $workspace1
 bindsym $mod+Shift+2 move container to workspace $workspace2
 bindsym $mod+Shift+3 move container to workspace $workspace3
 bindsym $mod+Shift+4 move container to workspace $workspace4
-bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+5 move container to workspace $workspace5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace $workspace8
@@ -130,8 +123,9 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # Loads deluge in workspace 10
-assign [class="Deluge"] $workspace10
-assign [class="Thunderbird"] $workspace9
+assign [class="Deluge"]			$workspace10
+assign [class="Thunderbird"]	$workspace9
+assign [class="Okular"]			$workspace5
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -148,20 +142,32 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym l resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
         bindsym j resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+        bindsym h resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Right resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
+}
+
+bindsym $mod+m mode move
+
+mode "move" {
+	bindsym h move left
+	bindsym j move down
+	bindsym k move up
+	bindsym l move right
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -187,9 +193,6 @@ bar {
 bindsym $mod+Shift+x exec i3lock --color "$background"
 
 # Set wallpaper
-#exec_always feh --bg-scale /home/eldron/Pictures/Wallpapers/eta_carinae-wallpaper-1600x900.jpg
-#exec_always feh --bg-scale /home/eldron/Pictures/Wallpapers/Eta-Carinae.jpg
-#exec_always feh --bg-scale /home/eldron/Pictures/Wallpapers/wallpapers/Cityscapes/1493045754250.jpg
 exec_always feh --bg-scale /home/eldron/Pictures/Wallpapers/wallpapers/Unsorted/serial_like.jpeg
 
 exec_always exec compton -f
