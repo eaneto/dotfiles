@@ -99,7 +99,7 @@ alias redis="~/Projects/redis-4.0.7/src/redis-server"
 alias postman="cd /home/eldron/Projects/Postman && ./Postman"
 
 alias cotacao="cd ~/Projects/cotacao/ && python3 core.py"
-alias myip="python3 /home/eldron/Projects/ip/ip.py"
+alias myip="python3 /home/eldron/Projects/scripts/ip/ip.py"
 alias multidoge="/usr/bin/java -jar /home/eldron/MultiDoge-0.1.7/multidoge-exe.jar"
 alias rest="cd /home/eldron/Courses/Programming/Python/Flask/Python\ Flask\ REST\ API"
 
@@ -114,7 +114,7 @@ alias mocp="mocp -T nightshade"
 alias ll="ls -laho"
 
 # Scripts
-alias brigthness="./Projects/scripts/brigthness.sh"
+alias brigthness="cd /home/eldron/Projects/scripts && ./brigthness.sh"
 alias update_python_packages="./Projects/scripts/update_python_packages.sh"
 
 # This export is used to work with vim lightline.
