@@ -2,15 +2,16 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod4
-set $term urxvt
-set $browser firefox
+set $mod		Mod4
+set $term		urxvt
+set $browser	firefox
 
 # Set color to be used in the bar
-set $background "#30333A"
-set $complementary = "#3b3831"
-set $text_color "#f3f4f5"
-set $inactive_text_color "#676e7d"
+#set $background				"#30333A"
+set $background				"#1d1f21"
+set $complementary =		"#3b3831"
+set $text_color				"#f3f4f5"
+set $inactive_text_color	"#676e7d"
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -27,110 +28,114 @@ new_window pixel 0
 #
 
 # kill focused window
-bindsym $mod+Shift+q		kill
+bindsym $mod+Shift+q							kill
 # start a terminal
-bindsym $mod+Return			exec $term
+bindsym $mod+Return								exec $term
 # start rofi
-bindsym $mod+d				exec rofi -show run -lines 3 -eh 2 -width 20 -padding 50 -opacity "85" -bw 0 -bc $background -bg $background -fg $text_color -hlbg $background -hlfg "#aaa" - font "Hack 8"
+bindsym $mod+d									exec rofi -show run -lines 3 -eh 2 -width 20 -padding 50 -opacity "85" -bw 0 -bc $background -bg $background -fg $text_color -hlbg $background -hlfg "#aaa" - font "Hack 8"
 # start chrome
-bindsym $mod+g				exec google-chrome 
+bindsym $mod+g									exec google-chrome 
 # start deluge
-bindsym $mod+o				exec deluge
+bindsym $mod+o									exec deluge
 # start thunderbird
-bindsym $mod+Shift+a		exec thunderbird
+bindsym $mod+Shift+a							exec thunderbird
 # start ranger
-bindsym $mod+q				exec $term -e ranger
+bindsym $mod+q									exec $term -e ranger
 
-for_window [title="video0 - mpv"] floating enable
+for_window [title="video0 - mpv"]				floating enable
 
 # change focus
-bindsym $mod+h				focus left
-bindsym $mod+j 				focus down
-bindsym $mod+k 				focus up
-bindsym $mod+l 				focus right
+bindsym $mod+h									focus left
+bindsym $mod+j 									focus down
+bindsym $mod+k 									focus up
+bindsym $mod+l 									focus right
 
-bindsym $mod+Left			focus left
-bindsym $mod+Down  			focus down
-bindsym $mod+Up    			focus up
-bindsym $mod+Right 			focus right
+bindsym $mod+Left								focus left
+bindsym $mod+Down  								focus down
+bindsym $mod+Up    								focus up
+bindsym $mod+Right 								focus right
 
 # move focused window
-bindsym $mod+Shift+h		move left
-bindsym $mod+Shift+j 		move down
-bindsym $mod+Shift+k 		move up
-bindsym $mod+Shift+l 		move right
+bindsym $mod+Shift+h							move left
+bindsym $mod+Shift+j 							move down
+bindsym $mod+Shift+k 							move up
+bindsym $mod+Shift+l 							move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left		move left
-bindsym $mod+Shift+Down  	move down
-bindsym $mod+Shift+Up    	move up
-bindsym $mod+Shift+Right 	move right
+bindsym $mod+Shift+Left							move left
+bindsym $mod+Shift+Down  						move down
+bindsym $mod+Shift+Up    						move up
+bindsym $mod+Shift+Right 						move right
 
 # split in horizontal orientation
-bindsym $mod+ccedilla		split h
-
+bindsym $mod+ccedilla							split h
 # split in vertical orientation
-bindsym $mod+v				split v
+bindsym $mod+v									split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+f									fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+s									layout stacking
+bindsym $mod+w 									layout tabbed
+bindsym $mod+e 									layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+space						floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+space								focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+bindsym $mod+a									focus parent
+
+bindsym $mod+m									mode move
+bindsym $mod+r									mode "resize"
 
 set $workspace1 "1 "
 set $workspace2 "2 "
 set $workspace3 "3 "
 set $workspace4 "4 "
 set $workspace5 "5 "
+set $workspace6 "6 "
+set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9 "
 set $workspace10 "10 "
 
 # switch to workspace
-bindsym $mod+1 workspace $workspace1
-bindsym $mod+2 workspace $workspace2
-bindsym $mod+3 workspace $workspace3
-bindsym $mod+4 workspace $workspace4
-bindsym $mod+5 workspace $workspace5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace $workspace8
-bindsym $mod+9 workspace $workspace9
-bindsym $mod+0 workspace $workspace10
+bindsym $mod+1									workspace $workspace1
+bindsym $mod+2 									workspace $workspace2
+bindsym $mod+3 									workspace $workspace3
+bindsym $mod+4 									workspace $workspace4
+bindsym $mod+5 									workspace $workspace5
+bindsym $mod+6 									workspace $workspace6
+bindsym $mod+7 									workspace $workspace7
+bindsym $mod+8 									workspace $workspace8
+bindsym $mod+9 									workspace $workspace9
+bindsym $mod+0 									workspace $workspace10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $workspace1
-bindsym $mod+Shift+2 move container to workspace $workspace2
-bindsym $mod+Shift+3 move container to workspace $workspace3
-bindsym $mod+Shift+4 move container to workspace $workspace4
-bindsym $mod+Shift+5 move container to workspace $workspace5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace $workspace8
-bindsym $mod+Shift+9 move container to workspace $workspace9
-bindsym $mod+Shift+0 move container to workspace $workspace10
+bindsym $mod+Shift+1                            move container to workspace $workspace1
+bindsym $mod+Shift+2                            move container to workspace $workspace2
+bindsym $mod+Shift+3                            move container to workspace $workspace3
+bindsym $mod+Shift+4                            move container to workspace $workspace4
+bindsym $mod+Shift+5                            move container to workspace $workspace5
+bindsym $mod+Shift+6                            move container to workspace $workspace6
+bindsym $mod+Shift+7                            move container to workspace $workspace7
+bindsym $mod+Shift+8                            move container to workspace $workspace8
+bindsym $mod+Shift+9                            move container to workspace $workspace9
+bindsym $mod+Shift+0                            move container to workspace $workspace10
 
 # Loads deluge in workspace 10
-assign [class="Deluge"]			$workspace10
-assign [class="Thunderbird"]	$workspace9
-assign [class="Okular"]			$workspace5
+assign [class="Deluge"]							 $workspace10
+assign [class="Thunderbird"]					 $workspace9
+assign [class="Okular"]							 $workspace5
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+c							 reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+r							 restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
@@ -158,8 +163,6 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+m mode move
-
 mode "move" {
 	bindsym h move left
 	bindsym j move down
@@ -170,29 +173,17 @@ mode "move" {
     bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
-
 hide_edge_borders both
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
-        tray_output primary
-		colors {
-			background $background 
-			separator #757575
-			#					border			background		text
-			focused_workspace	$background		$background		$text_color
-			inactive_workspace	$background		$background		$inactive_text_color
-		}
-		position bottom
-}
 
 # i3lock config
 bindsym $mod+Shift+x exec i3lock --color "$background"
 
 # Set wallpaper
-exec_always feh --bg-scale /home/eldron/Pictures/Wallpapers/wallpapers/Unsorted/serial_like.jpeg
+exec_always feh --bg-scale /home/eldron/Pictures/Wallpapers/wallpapers/Etc/QCyyG.jpg
 
 exec_always exec compton -f
+
+exec_always --no-startup-id /home/eldron/.config/polybar/launch.sh
+
+gaps inner 10
+gaps outer 10

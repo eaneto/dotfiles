@@ -36,10 +36,12 @@ let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php"
 " Set the files encoding to UTF_8
 set encoding=utf-8
 
+set expandtab
 set tabstop=4       " The width of a TAB is set to 4.
                     " Still it is a \t. It is just that
                     " Vim will interpret it to be having
                     " a width of 4.
+retab
 
 " Indents will have a width of 4
 set shiftwidth=4
@@ -76,7 +78,8 @@ set ruler
 
 set showcmd
 
-set splitbelow " set which area of the screen is gonna split
+" set which area of the screen is gonna split
+set splitbelow
 set splitright
 
 " Enable folding
@@ -97,12 +100,13 @@ let python_highlight_all = 1
 
 " Adds PEP8 proper identation.
 au BufNewFile,BufRead *.py:
-        \ set tabstop=4
         \ set shiftwidth=4
         \ set textwidth=79
-        \ set expandtab
         \ set autoindent
         \ set fileformat=unix
+        \ set tabstop=4
+        \ set expandtab
+		\ retab
 
 " Adds the correct identation to javascript, html and css files.
 au BufNewFile,BufRead *.html:
@@ -111,10 +115,11 @@ au BufNewFile,BufRead *.html:
         \ set shiftwidth=2
         \ set fileformat=unix
 
-au BufNewFile,BufRead *.js set tabstop=2
-au BufNewFile,BufRead *.js set softtabstop=2
-au BufNewFile,BufRead *.js set shiftwidth=2
-au BufNewFile,BufRead *.js set fileformat=unix
+au BufNewFile,BufRead *.js:
+        \ set tabstop=2
+        \ set softtabstop=2
+        \ set shiftwidth=2
+        \ set fileformat=unix
 
 au BufNewFile,BufRead *.css:
         \ set tabstop=2
@@ -131,6 +136,11 @@ noremap <Right> <NOP>
 " Sets the colorscheme to onedark
 set t_Co=256
 set background=dark
-colorscheme onedark
+" colorscheme onedark
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
+
+if filereadable(expand("~/.vimrc_background"))
+    let base16colorspace=256
+    source ~/.vimrc_background
+endif

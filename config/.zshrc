@@ -105,8 +105,8 @@ alias rest="cd /home/eldron/Courses/Programming/Python/Flask/Python\ Flask\ REST
 
 alias v="vim"
 alias vi="vim"
-alias r="ranger"
 alias vimrc="vi ~/.vimrc"
+alias r="ranger"
 alias gpg="gpg2"
 alias view="xviewer"
 alias mocp="mocp -T nightshade"
@@ -119,3 +119,6 @@ alias update_python_packages="./Projects/scripts/update_python_packages.sh"
 
 # This export is used to work with vim lightline.
 export TERM=xterm-256color
+
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1"  ] && [ -s $BASE16_SHELL/profile_helper.sh  ] && eval "$($BASE16_SHELL/profile_helper.sh)"
