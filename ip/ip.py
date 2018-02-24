@@ -8,7 +8,7 @@ def main():
     except:
         print("\nCan't connect to the server.\n")
         return False
-    
+
     ip = data['YourFuckingIPAddress']
     isp = data['YourFuckingISP']
     location = data['YourFuckingLocation']
