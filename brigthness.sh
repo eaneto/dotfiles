@@ -2,17 +2,6 @@
 
 # This script helps me change the brigthness of my computer screen.
 
-#echo "Select:"
-#echo "----------------------"
-#echo "|1| Night mode"
-#echo "|2| Not so bright mode"
-#echo "|3| Bright mode"
-#echo "|4| Too bright mode"
-#echo "|5| I can't see mode"
-#echo "----------------------"
-
-#read option
-
 if [ "$1" -eq 1 ]
 then
 	xbacklight -set 10
