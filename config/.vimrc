@@ -115,11 +115,7 @@ au BufNewFile,BufRead *.html:
         \ set shiftwidth=2
         \ set fileformat=unix
 
-au BufNewFile,BufRead *.js:
-        \ set tabstop=2
-        \ set softtabstop=2
-        \ set shiftwidth=2
-        \ set fileformat=unix
+autocmd Filetype javascript.jsx setlocal ts=2 sts=2 sw=2
 
 au BufNewFile,BufRead *.css:
         \ set tabstop=2
