@@ -30,7 +30,7 @@ alias minify="python3 /home/eldron/Projects/airvok/minifier/minify.py"
 alias redis="~/Projects/redis-4.0.7/src/redis-server"
 alias postman="cd /home/eldron/Projects/Postman && ./Postman"
 
-alias cotacao="cd ~/Projects/cotacao/ && python3 core.py"
+alias cotacao="python3 ~/Projects/cotacao/core.py"
 alias myip="python3 /home/eldron/Projects/scripts/ip/ip.py"
 alias multidoge="/usr/bin/java -jar /home/eldron/MultiDoge-0.1.7/multidoge-exe.jar"
 alias rest="cd /home/eldron/Courses/Programming/Python/Flask/Python\ Flask\ REST\ API"
