@@ -48,9 +48,8 @@ alias mocp="mocp -T nightshade"
 alias ll="ls -laho"
 
 # Scripts
-alias brigthness="cd /home/eldron/Projects/scripts && ./brigthness.sh"
-alias volume="cd ~/Projects/scripts && ./volume.sh"
-alias update_python_packages="./Projects/scripts/update_python_packages.sh"
+alias brigthness="python3 ~/Projects/scripts/brigthness.py"
+alias volume="python3 ~/Projects/scripts/volume.py"
 
 # This export is used to work with vim lightline.
 export TERM=xterm-256color
