@@ -132,7 +132,6 @@ noremap <Right> <NOP>
 " Sets the colorscheme to onedark
 set t_Co=256
 set background=dark
-" colorscheme onedark
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
 
