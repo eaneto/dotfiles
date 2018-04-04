@@ -1,0 +1,55 @@
+vim
+python3-dev
+python3-pip
+urxvt
+i3
+i3-gaps
+jdk
+okular
+atom
+gimp
+deluge
+thunderbird
+nmap
+libre office
+Mysql
+mysql workbench
+expo
+yarn
+npm
+nodejs
+mpv
+rhythmbox
+moc
+virtual box
+
+python packages:
+    - Flask
+    - Flask-RESTful
+    - PyMySQL
+    - requests
+    - beatifulsoup4
+    - celery
+    - Pygame
+    - virtualenv
+    - tornado
+    - numpy
+    - scipy
+    - astropy
+    - pandas
+    - matplotlib
+    - redis
+    - scikit-learn
+    - tensorflow
+    - sunpy
+    - astroml
+    - falcon
+    - bcrypt
+    - flask-bcrypt
+    - Flask-Mail
+    - Flask-JWT-Extended
+    - ipython
+    - jupyter
+    - marshmallow
+    - mglearn
+    - Pillow
