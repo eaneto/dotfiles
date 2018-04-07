@@ -32,7 +32,9 @@ bindsym $mod+Shift+q							kill
 # start a terminal
 bindsym $mod+Return								exec $term
 # start rofi
-bindsym $mod+d									exec rofi -show run -lines 3 -eh 2 -width 20 -padding 50 -opacity "85" -bw 0 -bc $background -bg $background -fg $text_color -hlbg $background -hlfg "#aaa" - font "Hack 8"
+#bindsym $mod+d									exec rofi -show run -lines 3 -eh 2 -width 20 -padding 50 -opacity "85" -bw 0 -bc $background -bg $background -fg $text_color -hlbg $background -hlfg "#aaa" - font "Hack 8"
+# start dmenu
+bindsym $mod+d                                  exed dmenu
 # start chrome
 bindsym $mod+g									exec google-chrome 
 # start deluge
@@ -130,7 +132,6 @@ bindsym $mod+Shift+0                            move container to workspace $wor
 # Loads deluge in workspace 10
 assign [class="Deluge"]							 $workspace10
 assign [class="Thunderbird"]					 $workspace9
-assign [class="Okular"]							 $workspace5
 
 # reload the configuration file
 bindsym $mod+Shift+c							 reload
@@ -183,7 +184,7 @@ exec_always feh --bg-scale /home/eldron/Pictures/Wallpapers/wallpapers/Etc/QCyyG
 
 exec_always exec compton -f
 
-exec_always --no-startup-id /home/eldron/.config/polybar/launch.sh
+#exec_always --no-startup-id /home/eldron/.config/polybar/launch.sh
 
 gaps inner 10
 gaps outer 10
