@@ -1,20 +1,31 @@
 execute pathogen#infect()
 
-" Enable the syntax syntax on filetype plugin indent on " This and the if statement must be set to lightline works
+let base16colorspace=256
+colorscheme base16-tomorrow-night
+
+let g:airline_theme='base16_tomorrow'
+
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
+nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+imap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+
+nmap <F5> <Plug>(JavaComplete-Imports-Add)
+imap <F5> <Plug>(JavaComplete-Imports-Add)
+
+nmap <F6> <Plug>(JavaComplete-Imports-AddMissing)
+imap <F6> <Plug>(JavaComplete-Imports-AddMissing)
+
+nmap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
+imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
+
+" Enable the syntax
+syntax on
+filetype plugin indent on
 
 set laststatus=2
 
 set noshowmode
-
-let g:lightline = {
-\   'active': {
-\       'left': [['mode', 'paste'],
-\                ['gitbranch', 'readonly', 'filename','modified']]
-\   },
-\   'component_function': {
-\       'gitbranch': 'fugitive#head'
-\   },
-\ }
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -134,8 +145,3 @@ set t_Co=256
 set background=dark
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
-
-if filereadable(expand("~/.vimrc_background"))
-    let base16colorspace=256
-    source ~/.vimrc_background
-endif

@@ -6,7 +6,6 @@ export ZSH=/home/eldron/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="lambda-mod"
 ZSH_THEME="lambda-mod"
 
 # Set vim mode
@@ -22,37 +21,34 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+SCRIPTS=$HOME/Projects/scripts-and-config/
+
 alias zshconfig="vi ~/.zshrc"
 
-alias airvok="cd ~/Projects/airvok/airvok && export FLASK_APP=airvok && flask run"
-alias airvokdev="cd ~/Projects/airvok/airvok/ && vi resources/"
-alias minify="python3 /home/eldron/Projects/airvok/minifier/minify.py"
-alias redis="~/Projects/redis-4.0.7/src/redis-server"
-alias postman="cd /home/eldron/Projects/Postman && ./Postman"
+alias airvok="cd $HOME/Projects/airvok/airvok && export FLASK_APP=airvok && flask run"
+alias airvokdev="cd $HOME/Projects/airvok/airvok/ && vi resources/"
+alias postman="cd $HOME/Projects/Postman && ./Postman"
 
-alias exchange="python3 ~/Projects/cryptocurrencies-exchange/core.py"
-alias myip="python3 /home/eldron/Projects/scripts/ip/ip.py"
-alias multidoge="/usr/bin/java -jar /home/eldron/MultiDoge-0.1.7/multidoge-exe.jar"
-alias rest="cd /home/eldron/Courses/Programming/Python/Flask/Python\ Flask\ REST\ API"
-
-alias visualg="cd /home/eldron/.wine/dosdevices/c:/Program\ Files\ \(x86\)/Apoio/Visualg\ Versão\ 2 && wine visualg.exe"
+alias exchange="python3 $HOME/Projects/cryptocurrencies-exchange/core.py"
+alias myip="python3 $SCRIPTS/ip/ip.py"
+alias download="cd $SCRIPTS && ./download.sh"
 
 alias v="vim"
 alias vi="vim"
 alias vimrc="vi ~/.vimrc"
 alias r="ranger"
 alias gpg="gpg2"
-alias view="xviewer"
-alias mocp="mocp -T nightshade"
 
 alias ll="ls -laho"
 
 # Scripts
-alias brigthness="python3 ~/Projects/scripts/brigthness.py"
-alias volume="python3 ~/Projects/scripts/volume.py"
+alias brigthness="python3 $SCRIPTS/brigthness.py"
+alias volume="python3 $SCRIPTS/volume.py"
 
 # This export is used to work with vim lightline.
 export TERM=xterm-256color
 
 BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1"  ] && [ -s $BASE16_SHELL/profile_helper.sh  ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
+$BASE16_SHELL/scripts/base16-tomorrow-night.sh
