@@ -4,7 +4,7 @@ import sys
 option = sys.argv[1]
 
 def change_brigtness(option):
-    subprocess.run(["xbacklight", "-set", option])
+    subprocess.run(["light", "-S", option])
     print("Brigthness set to {}".format(option))
     return True
 
