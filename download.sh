@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 current_directory=$(pwd)
 
