@@ -6,6 +6,6 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 # update all python3 packages.
-pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U
+python3 -m pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 python3 -m pip install -U
 
 echo "Everything updated"
