@@ -46,6 +46,15 @@
 
 (add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . rjsx-mode))
 
+(use-package php-mode
+  :ensure t)
+
+(use-package web-mode
+  :ensure t)
+
+(use-package markdown-mode
+  :ensure t)
+
 ;; Removes tool bar.
 (tool-bar-mode -1)
 
@@ -56,7 +65,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (rjsx-mode js2-mode evil py-autopep8 goto-chg undo-tree auto-complete elpy base16-theme which-key try use-package))))
+    (web-mode markdown-mode php-mode rjsx-mode js2-mode evil py-autopep8 goto-chg undo-tree auto-complete elpy base16-theme which-key try use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
