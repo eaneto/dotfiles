@@ -26,20 +26,30 @@ new_window pixel 0
 # Key bindings
 #
 
+# Screen brightness controls
+# increase screen brightness
+bindsym XF86MonBrightnessUp exec light -A 5
+ # decrease screen brightness
+bindsym XF86MonBrightnessDown exec light -U 5
+
+
 # kill focused window
 bindsym $mod+Shift+q							kill
 
 # start a terminal
 bindsym $mod+Return								exec $term
 
-# start rofi
-bindsym $mod+d									exec rofi -show run
+# start emacs
+bindsym $mod+e									exec emacs
+
+# start dmenu
+bindsym $mod+d									exec dmenu_run
 
 # start chrome
-bindsym $mod+g									exec google-chrome 
+bindsym $mod+g									exec $browser
 
-# start deluge
-bindsym $mod+o									exec deluge
+# start transmission
+bindsym $mod+o									exec transmission-gtk
 
 # start thunderbird
 bindsym $mod+Shift+a							exec thunderbird
@@ -83,7 +93,7 @@ bindsym $mod+f									fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s									layout stacking
 bindsym $mod+w 									layout tabbed
-bindsym $mod+e 									layout toggle split
+bindsym $mod+t 									layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space						floating toggle
@@ -133,8 +143,8 @@ bindsym $mod+Shift+8                            move container to workspace $wor
 bindsym $mod+Shift+9                            move container to workspace $workspace9
 bindsym $mod+Shift+0                            move container to workspace $workspace10
 
-# Loads deluge in workspace 10
-assign [class="Deluge"]							 $workspace10
+# Loads transmission in workspace 10
+assign [class="Transmission"]				 $workspace10
 assign [class="Thunderbird"]					 $workspace9
 
 # reload the configuration file
@@ -186,7 +196,7 @@ hide_edge_borders both
 bindsym $mod+Shift+x exec i3lock --color "$background"
 
 # Set wallpaper
-exec_always feh --bg-scale /home/eldron/Pictures/Wallpapers/wallpapers/Cityscapes/16[6].jpg
+exec_always feh --bg-scale /home/eldron/Pictures/Wallpapers/wallpapers/Tech/belenos.png
 
 exec_always exec compton -f
 
