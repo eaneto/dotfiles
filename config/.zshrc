@@ -25,6 +25,7 @@ source $ZSH/oh-my-zsh.sh
 SCRIPTS=$HOME/Projects/scripts-and-config/
 
 alias airvok="cd $HOME/Projects/airvok ; export FLASK_APP=airvok ; export FLASK_ENV=development ; flask run"
+alias redis="cd $HOME/Projects/airvok ; redis-server"
 alias postman="cd $HOME/Projects/Postman && ./Postman"
 
 alias exchange="python3 $HOME/Projects/cryptocurrencies-exchange/core.py"
@@ -33,7 +34,7 @@ alias download="cd $SCRIPTS && ./download.sh"
 
 alias v="vim"
 alias vi="vim"
-alias vimrc="vim ~/.vimrc"
+alias vimrc="vi ~/.vimrc"
 alias r="ranger"
 alias gpg="gpg2"
 alias mocp="mocp -T nightshade"
