@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (eclim function-args java-snippets react-snippets ## python-doctring web-mode markdown-mode php-mode rjsx-mode js2-mode evil py-autopep8 goto-chg undo-tree auto-complete elpy base16-theme which-key try use-package)))
+    (latex-preview-pane latex-math-preview eclim function-args java-snippets react-snippets ## python-doctring web-mode markdown-mode php-mode rjsx-mode js2-mode evil py-autopep8 goto-chg undo-tree auto-complete elpy base16-theme which-key try use-package)))
  '(standard-indent 4))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -81,6 +81,11 @@
   :ensure t)
 
 (fa-config-default)
+
+(use-package latex-math-preview
+  :ensure t)
+
+(latex-preview-pane-enable)
 
 ;; Uses eclim.
 (require 'eclim)
