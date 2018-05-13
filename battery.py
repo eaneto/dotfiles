@@ -3,5 +3,6 @@ def main():
         battery = f.readline()
         print("Battery: {}".format(battery))
 
+
 if __name__ == '__main__':
     main()
