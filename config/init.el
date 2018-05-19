@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (latex-preview-pane latex-math-preview eclim function-args java-snippets react-snippets ## python-doctring web-mode markdown-mode php-mode rjsx-mode js2-mode evil py-autopep8 goto-chg undo-tree auto-complete elpy base16-theme which-key try use-package)))
+    (flycheck jdee latex-preview-pane function-args java-snippets react-snippets ## python-doctring web-mode markdown-mode php-mode rjsx-mode js2-mode evil py-autopep8 goto-chg undo-tree auto-complete elpy base16-theme which-key try use-package)))
  '(standard-indent 4))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -19,7 +19,10 @@
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives
-	     '("melpa" . "https://melpa.org/packages/"))
+             '("melpa" . "https://melpa.org/packages/"))
+(when (< emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 
 (package-initialize)
 
@@ -82,23 +85,14 @@
 
 (fa-config-default)
 
-(use-package latex-math-preview
-  :ensure t)
-
 (latex-preview-pane-enable)
 
-;; Uses eclim.
-(require 'eclim)
-(setq eclimd-autostart t)
-
-(defun my-java-mode-hook ()
-    (eclim-mode t))
-
-(add-hook 'java-mode-hook 'my-java-mode-hook)
-
-;; regular auto-complete initialization
+;; Regular auto-complete initialization
 (require 'auto-complete-config)
 (ac-config-default)
+
+(custom-set-variables
+ '(jdee-server-dir "/home/eldron/jdee-server"))
 
 ;; Removes tool bar.
 (tool-bar-mode -1)
@@ -111,10 +105,12 @@
 
 ;; Sets tabs width to 4 spaces.
 (setq-default indent-tabs-mode nil)
+(setq js-indent-level 2)
+(setq c-basic-offset 4)
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
 
 (scroll-bar-mode 0)
 
 ;; Sets bash to be used as shell.
-(setq explicit-shell-file-name "/bin/bash")
+(setq explicit-shell-file-name "/bin/zsh")
