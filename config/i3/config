@@ -4,7 +4,7 @@
 
 set $mod		                                Mod4
 set $term		                                urxvt
-set $browser	                                firefox
+set $browser                          python3 -m qutebrowser
 
 # Set color to be used in the bar
 set $background				                    "#1d1f21"
@@ -33,22 +33,23 @@ bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
 
 
-# kill focused window
+# kill focused window.
 bindsym $mod+Shift+q							kill
 
-# start a terminal
+# start a terminal.
 bindsym $mod+Return								exec $term
 
-# start emacs
+# start emacs.
 bindsym $mod+e									exec emacs
 
-# start dmenu
+# start dmenu.
 bindsym $mod+d									exec dmenu_run
 
-# start chrome
+# start browser.
 bindsym $mod+g									exec $browser
+bindsym $mod+y                                  exec $browser
 
-# start transmission
+# start transmission,
 bindsym $mod+o									exec transmission-gtk
 
 # start thunderbird
@@ -203,4 +204,4 @@ exec_always exec compton -f
 exec_always --no-startup-id /home/eldron/.config/polybar/launch.sh
 
 gaps inner 10
-gaps outer 10
+gaps outer 9
