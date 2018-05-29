@@ -5,8 +5,8 @@
  ;; If there is more than one, they won't work right.
  '(jdee-server-dir "/home/eldron/jdee-server")
  '(package-selected-packages
-   (quote
-    (flycheck jdee latex-preview-pane function-args java-snippets react-snippets ## python-doctring web-mode markdown-mode php-mode rjsx-mode js2-mode evil py-autopep8 goto-chg undo-tree auto-complete elpy base16-theme which-key try use-package)))
+        (quote
+         (evil-magit async magit flycheck jdee latex-preview-pane function-args java-snippets react-snippets ## python-doctring web-mode markdown-mode php-mode rjsx-mode js2-mode evil py-autopep8 goto-chg undo-tree auto-complete elpy base16-theme which-key try use-package)))
  '(standard-indent 4))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -28,8 +28,10 @@
 (package-initialize)
 
 (unless (package-installed-p 'use-package)
-			     (package-refresh-contents)
-			     (package-install 'use-package))
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+;; Elpy configuration.
 (elpy-enable)
 (setq elpy-rpc-python-command "python3")
 (setq python-shell-interpreter "python3")
@@ -57,6 +59,7 @@
 (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
 (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
+;; Evil mode.
 (require 'evil)
 (evil-mode 1)
 
@@ -81,6 +84,12 @@
 (use-package yasnippet
   :ensure t)
 
+(use-package magit
+  :ensure t)
+
+(use-package evil-magit
+  :ensure t)
+
 (use-package function-args
   :ensure t)
 
@@ -91,8 +100,6 @@
 ;; Regular auto-complete initialization
 (require 'auto-complete-config)
 (ac-config-default)
-
-
 
 ;; Removes tool bar.
 (tool-bar-mode -1)
@@ -114,3 +121,10 @@
 
 ;; Sets bash to be used as shell.
 (setq explicit-shell-file-name "/bin/zsh")
+
+
+(setq ido-enable-flex-matching t)
+(setq ido-everyehere t)
+(ido-mode t)
+
+(defalias 'list-buffers 'ibuffer)
