@@ -5,8 +5,8 @@
  ;; If there is more than one, they won't work right.
  '(jdee-server-dir "/home/eldron/jdee-server")
  '(package-selected-packages
-        (quote
-         (evil-magit async magit flycheck jdee latex-preview-pane function-args java-snippets react-snippets ## python-doctring web-mode markdown-mode php-mode rjsx-mode js2-mode evil py-autopep8 goto-chg undo-tree auto-complete elpy base16-theme which-key try use-package)))
+   (quote
+    (arduino-mode evil-magit async magit flycheck jdee latex-preview-pane function-args java-snippets react-snippets ## python-doctring web-mode markdown-mode php-mode rjsx-mode js2-mode evil py-autopep8 goto-chg undo-tree auto-complete elpy base16-theme which-key try use-package)))
  '(standard-indent 4))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -90,10 +90,16 @@
 (use-package evil-magit
   :ensure t)
 
+(setq evil-magit-state 'motion)
+(require 'evil-magit)
+
 (use-package function-args
   :ensure t)
 
 (fa-config-default)
+
+(use-package arduino-mode
+  :ensure t)
 
 (latex-preview-pane-enable)
 
