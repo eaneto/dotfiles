@@ -21,7 +21,7 @@ col = #00f
 ;fg = #a8a19f
 ;bg = #5ab738
 
-[bar/example]
+[bar/main]
 monitor = eDP-1
 width = 100%
 height = 20
@@ -50,13 +50,23 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = Wuncon Siji:pixelsize=9;1
 
 modules-left = i3 mpd
-modules-right = filesystem volume xbacklight wlan battery memory temperature date
+modules-center = current-song
+modules-right = volume wlan battery memory temperature date
 
 tray-position = right
 tray-padding = 0
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
+
+;; Custom module to display the current song.
+[module/current-song]
+type = custom/script
+exec = /home/eldron/Projects/scripts-and-config/rhythmbox.sh
+label = %output%
+interval = 1
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #8abeb7
 
 [module/xwindow]
 type = internal/xwindow
@@ -95,6 +105,7 @@ mount-0 = /home
 label-mounted = %{F#0a81f5}~%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
+
 [module/bspwm]
 type = internal/bspwm
 
@@ -166,7 +177,7 @@ interface = wlp2s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #6666ea
+format-connected-underline = #b294bb
 label-connected = %essid%
 
 format-disconnected = <label-disconnected>
@@ -206,7 +217,7 @@ time = " at %I:%M%p"
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #407ee7
+format-underline = #81a2be
 
 label = %date% %time%
 
