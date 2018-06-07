@@ -14,8 +14,8 @@ def main():
     location = data['YourFuckingLocation']
 
     print("\nYour IP Adress is: {ip}".format(ip=ip))
-    print("\nYour ISP is: {isp}".format(isp=isp))
-    print("\nYour Location is: {location}".format(location=location))
+    print("Your ISP is: {isp}".format(isp=isp))
+    print("Your Location is: {location}".format(location=location))
 
 
 if __name__ == '__main__':
