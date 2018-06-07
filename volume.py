@@ -1,3 +1,5 @@
+#!/bin/python3
+
 # This script is used to increase/decrease the volume.
 
 import subprocess
