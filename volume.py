@@ -5,6 +5,6 @@
 import subprocess
 import sys
 
-volume = str(sys.argv[1]) + "%"
+volume = sys.argv[1] + "%"
 
 subprocess.run(["amixer", "sset", "Master", volume])
