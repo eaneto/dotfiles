@@ -2,8 +2,12 @@
 
 export PROJECTS_DIR=/home/eldron/Projects/*
 
-for entry in $PROJECTS_DIR
+for directory in $PROJECTS_DIR
 do
-    echo "$entry"
-    cd $entry && git status && git pull
+    cd $directory
+    is_repo=$(git status | grep -i "branch" | wc -l)
+    if [ $is_repo != 0 ];
+    then
+        git status && git pull
+    fi
 done
