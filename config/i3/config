@@ -58,6 +58,9 @@ bindsym $mod+Shift+a							exec thunderbird
 # start ranger
 bindsym $mod+q									exec $term -e ranger
 
+# start steam
+bindsym $mod+i                                  exec steam
+
 for_window [title="video0 - mpv"]				floating enable
 
 # change focus
@@ -203,5 +206,5 @@ exec_always exec compton -f
 
 exec_always --no-startup-id /home/eldron/.config/polybar/launch.sh
 
-gaps inner 10
-gaps outer 9
+# gaps inner 10
+# gaps outer 9
