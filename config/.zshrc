@@ -44,7 +44,7 @@ alias ls="ls -N --color"
 alias ll="ls -laho"
 
 # Scripts
-alias brigthness="python3 $SCRIPTS/brigthness.py"
+alias brigthness="sh $SCRIPTS/brigthness.sh"
 alias volume="python3 $SCRIPTS/volume.py"
 
 export PROJECTS=$HOME/Projects

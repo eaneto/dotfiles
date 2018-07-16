@@ -127,12 +127,12 @@
 (setq c-basic-offset 4)
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
+(global-set-key (kbd "RET") 'newline-and-indent)
 
 (scroll-bar-mode 0)
 
 ;; Sets bash to be used as shell.
 (setq explicit-shell-file-name "/bin/zsh")
-
 
 (setq ido-enable-flex-matching t)
 (setq ido-everyehere t)
