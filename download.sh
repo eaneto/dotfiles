@@ -2,11 +2,9 @@
 
 current_directory=$(pwd)
 
-read url
-
 if [ "$current_directory" = $HOME/Music ];
 then
-    youtube-dl "$url" -x --audio-format vorbis
+    youtube-dl "$1" -x --audio-format vorbis
 else
-    cd $HOME/Music && youtube-dl "$url" -x --audio-format vorbis
+    cd $HOME/Music && youtube-dl "$1" -x --audio-format vorbis
 fi
