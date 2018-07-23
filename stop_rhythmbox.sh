@@ -1,3 +1,3 @@
 #!/bin/bash
 
-rhymbox-client --pause
+rhythmbox-client --pause

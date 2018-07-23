@@ -1,3 +1,3 @@
 #!/bin/bash
 
-rhymbox-client --play
+rhythmbox-client --play
