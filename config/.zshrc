@@ -30,11 +30,11 @@ alias postman="cd $HOME/Projects/Postman && ./Postman"
 
 alias exchange="python3 $HOME/Projects/cryptocurrencies-exchange/core.py"
 alias myip="python3 $SCRIPTS/ip/ip.py"
-alias download="cd $SCRIPTS && ./download.sh"
+alias download="sh $SCRIPTS/download.sh"
 
 alias v="vim"
 alias vi="vim"
-alias vimrc="vi ~/.vimrc"
+alias vimrc="vi $HOME/.vimrc"
 alias r="ranger"
 alias gpg="gpg2"
 alias mocp="mocp -T nightshade"
