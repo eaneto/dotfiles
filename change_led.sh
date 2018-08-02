@@ -1,6 +1,12 @@
 #!/bin/bash
 
 # This file controls the keyboard led.
-# TODO make a script to turn it on/off.
 
-cat /sys/devices/platform/dell-laptop/leds/dell::kbd_backlight/brightness
+if [[ $EUID -ne 0 ]]; then
+	echo "This script must be run as root"
+	exit 1
+fi
+
+LED=/sys/devices/platform/dell-laptop/leds/dell::kbd_backlight/brightness
+
+sed 's/'"$1"'/'"$2"'/g' $LED > $LED
