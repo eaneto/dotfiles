@@ -37,7 +37,6 @@ alias pip3="/usr/local/bin/pip3"
 alias view="ristretto"
 
 alias airvok="cd $HOME/Projects/airvok ; export FLASK_APP=airvok ; export FLASK_ENV=development ; flask run"
-alias siano="cd $HOME/Projects/siano ; export FLASK_APP=siano ; export FLASK_ENV=development ; flask run"
 alias redis="cd $HOME/Projects/airvok ; redis-server"
 
 alias ls="ls -N --color"
@@ -51,6 +50,7 @@ alias exchange="python3 $HOME/Projects/cryptocurrencies-exchange/core.py"
 alias myip="python3 $SCRIPTS/ip/ip.py"
 alias download="sh $SCRIPTS/download.sh"
 alias kled="sh $SCRIPTS/change_led.sh"
+alias dolar="python3 $SCRIPTS/dolar.py"
 
 # ENV variables
 export PROJECTS=$HOME/Projects
