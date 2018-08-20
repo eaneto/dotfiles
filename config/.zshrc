@@ -57,6 +57,7 @@ export PROJECTS=$HOME/Projects
 export EDITOR=emacs
 export GIT_EDITOR=vim
 export TERM=rxvt-unicode-256color
+export PLAYING=1
 
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"

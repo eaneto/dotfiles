@@ -47,6 +47,7 @@ module-margin-right = 2
 font-0 = mono:pixelsize=9.5;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = Wuncon Siji:pixelsize=9;1
+font-3 = Awesome:size=9.5;1
 
 modules-left = i3 mpd
 modules-center = current-song
@@ -64,6 +65,11 @@ scroll-down = i3wm-wsprev
 [module/current-song]
 type = custom/script
 exec = ~/Projects/scripts-and-config/rhythmbox.sh
+
+click-left = ~/Projects/scripts-and-config/stop_rhythmbox.sh
+click-middle = ~/Projects/scripts-and-config/stop_rhythmbox.sh
+click-right = ~/Projects/scripts-and-config/stop_rhythmbox.sh
+
 label = %output%
 interval = 1
 format-prefix-foreground = ${colors.foreground-alt}
@@ -128,6 +134,7 @@ label-empty-padding = 2
 
 [module/i3]
 type = internal/i3
+
 format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
@@ -155,6 +162,7 @@ label-visible-padding = ${self.label-focused-padding}
 label-urgent = %index%
 label-urgent-background = ${module/bspwm.label-urgent-background}
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
+
 
 [module/cpu]
 type = internal/cpu
