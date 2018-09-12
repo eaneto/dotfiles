@@ -6,7 +6,7 @@
  '(jdee-server-dir "/home/eldron/jdee-server")
  '(package-selected-packages
    (quote
-    (sphinx-doc arduino-mode evil-magit async magit flycheck jdee latex-preview-pane function-args java-snippets react-snippets ## python-doctring web-mode markdown-mode php-mode rjsx-mode js2-mode evil py-autopep8 goto-chg undo-tree auto-complete elpy base16-theme which-key try use-package)))
+	(company-anaconda anaconda-mode pyenv-mode company-arduino all-the-icons neotree gh-md sphinx-doc arduino-mode evil-magit async magit flycheck jdee latex-preview-pane function-args java-snippets react-snippets ## python-doctring web-mode markdown-mode php-mode rjsx-mode js2-mode evil py-autopep8 goto-chg undo-tree auto-complete elpy base16-theme which-key try use-package)))
  '(standard-indent 4))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -16,6 +16,20 @@
  )
 
 (setq inhibit-startup-message t)
+
+(let ((filename "~/.emacs.d/scratchbuffermsg.txt"))
+  (when (and (file-exists-p filename)
+             (get-buffer "*scratch*"))
+    (with-current-buffer "*scratch*"
+      (erase-buffer)
+      (insert-file-contents filename))))
+;;(setq initial-scratch-message "\
+;; _____                          
+;;| ____|_ __ ___   __ _  ___ ___ 
+;;|  _| | '_ ` _ \ / _` |/ __/ __|
+;;| |___| | | | | | (_| | (__\__ \ \n
+;;|_____|_| |_| |_|\__,_|\___|___/
+;;")
 
 (require 'package)
 (setq package-enable-at-startup nil)
@@ -35,6 +49,10 @@
 (elpy-enable)
 (setq elpy-rpc-python-command "python3")
 (setq python-shell-interpreter "python3")
+
+(eval-after-load "company"
+ '(add-to-list 'company-backends 'company-anaconda))
+(add-hook 'python-mode-hook 'anaconda-mode)
 
 (use-package try
   :ensure t)
@@ -101,6 +119,15 @@
 (use-package arduino-mode
   :ensure t)
 
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+
+(require 'anaconda-mode)
+(require 'pyenv-mode)
+
+(require 'all-the-icons)
+
 (latex-preview-pane-enable)
 
 ;; Regular auto-complete initialization
@@ -124,7 +151,6 @@
 ;; Sets tabs width to 4 spaces.
 (setq-default indent-tabs-mode nil)
 (setq js-indent-level 2)
-(setq c-basic-offset 4)
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
 (global-set-key (kbd "RET") 'newline-and-indent)
@@ -139,3 +165,38 @@
 (ido-mode t)
 
 (defalias 'list-buffers 'ibuffer)
+
+(setq c-default-style "linux")
+(setq-default c-basic-offset 4
+              tab-width 4
+              indent-tabs-mode t)
+
+(defun c-lineup-arglist-tabs-only (ignored)
+  "Line up argument lists by tabs, not spaces"
+  (let* ((anchor (c-langelem-pos c-syntactic-element))
+         (column (c-langelem-2nd-pos c-syntactic-element))
+         (offset (- (1+ column) anchor))
+         (steps (floor offset c-basic-offset)))
+    (* (max steps 1)
+       c-basic-offset)))
+
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            ;; Add kernel style
+            (c-add-style
+             "linux-tabs-only"
+             '("linux" (c-offsets-alist
+                        (arglist-cont-nonempty
+                         c-lineup-gcc-asm-reg
+                         c-lineup-arglist-tabs-only))))))
+
+(add-hook 'c-mode-hook
+          (lambda ()
+            (let ((filename (buffer-file-name)))
+              ;; Enable kernel mode for the appropriate files
+              (when (and filename
+                         (string-match (expand-file-name "~/Projects/linux")
+                                       filename))
+                (setq indent-tabs-mode t)
+                (setq show-trailing-whitespace t)
+                (c-set-style "linux-tabs-only")))))
