@@ -6,7 +6,7 @@
  '(jdee-server-dir "/home/eldron/jdee-server")
  '(package-selected-packages
    (quote
-	(company-anaconda anaconda-mode pyenv-mode company-arduino all-the-icons neotree gh-md sphinx-doc arduino-mode evil-magit async magit flycheck jdee latex-preview-pane function-args java-snippets react-snippets ## python-doctring web-mode markdown-mode php-mode rjsx-mode js2-mode evil py-autopep8 goto-chg undo-tree auto-complete elpy base16-theme which-key try use-package)))
+	(yaml-mode dockerfile-mode company-anaconda anaconda-mode pyenv-mode company-arduino all-the-icons neotree gh-md sphinx-doc arduino-mode evil-magit async magit flycheck jdee latex-preview-pane function-args java-snippets react-snippets ## python-doctring web-mode markdown-mode php-mode rjsx-mode js2-mode evil py-autopep8 goto-chg undo-tree auto-complete elpy base16-theme which-key try use-package)))
  '(standard-indent 4))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -23,13 +23,6 @@
     (with-current-buffer "*scratch*"
       (erase-buffer)
       (insert-file-contents filename))))
-;;(setq initial-scratch-message "\
-;; _____                          
-;;| ____|_ __ ___   __ _  ___ ___ 
-;;|  _| | '_ ` _ \ / _` |/ __/ __|
-;;| |___| | | | | | (_| | (__\__ \ \n
-;;|_____|_| |_| |_|\__,_|\___|___/
-;;")
 
 (require 'package)
 (setq package-enable-at-startup nil)
@@ -127,6 +120,9 @@
 (require 'pyenv-mode)
 
 (require 'all-the-icons)
+
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
 (latex-preview-pane-enable)
 
