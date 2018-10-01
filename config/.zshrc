@@ -1,3 +1,9 @@
+#          _              
+#  _______| |__  _ __ ___ 
+# |_  / __| '_ \| '__/ __|
+#  / /\__ \ | | | | | (__ 
+# /___|___/_| |_|_|  \___|
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH 
 # Path to your oh-my-zsh installation.
@@ -21,6 +27,7 @@ zle -N something
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+
 
 SCRIPTS=$HOME/Projects/scripts-and-config/
 
@@ -51,13 +58,13 @@ alias myip="python3 $SCRIPTS/ip/ip.py"
 alias download="sh $SCRIPTS/download.sh"
 alias kled="sh $SCRIPTS/change_led.sh"
 alias dolar="python3 $SCRIPTS/dolar.py"
+alias "git add"="sh $SCRIPTS/git-add.sh"
 
 # ENV variables
 export PROJECTS=$HOME/Projects
 export EDITOR=emacs
 export GIT_EDITOR=vim
-export TERM=rxvt-unicode-256color
-export PLAYING=1
+export TERM=st
 
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
