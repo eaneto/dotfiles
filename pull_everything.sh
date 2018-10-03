@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PROJECTS_DIR=/home/eldron/Projects/*
+PROJECTS_DIR=/home/eldron/Projects/*
 
 for directory in $PROJECTS_DIR
 do
