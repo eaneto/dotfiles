@@ -6,7 +6,7 @@
  '(jdee-server-dir "/home/eldron/jdee-server")
  '(package-selected-packages
    (quote
-	(yaml-mode dockerfile-mode company-anaconda anaconda-mode pyenv-mode company-arduino all-the-icons neotree gh-md sphinx-doc arduino-mode evil-magit async magit flycheck jdee latex-preview-pane function-args java-snippets react-snippets ## python-doctring web-mode markdown-mode php-mode rjsx-mode js2-mode evil py-autopep8 goto-chg undo-tree auto-complete elpy base16-theme which-key try use-package)))
+	(telephone-line yaml-mode dockerfile-mode company-anaconda anaconda-mode pyenv-mode company-arduino all-the-icons neotree gh-md sphinx-doc arduino-mode evil-magit async magit flycheck jdee latex-preview-pane function-args java-snippets react-snippets ## python-doctring web-mode markdown-mode php-mode rjsx-mode js2-mode evil py-autopep8 goto-chg undo-tree auto-complete elpy base16-theme which-key try use-package)))
  '(standard-indent 4))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -134,6 +134,9 @@
 (add-hook 'python-mode-hook (lambda ()
                               (require 'sphinx-doc)
                               (sphinx-doc-mode t)))
+
+(require 'telephone-line)
+(telephone-line-mode 1)
 
 ;; Removes tool bar.
 (tool-bar-mode -1)

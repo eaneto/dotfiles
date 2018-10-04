@@ -23,11 +23,11 @@
 *color7: #a8a19f
 *color15: #f1efee
 
-URxvt.background:	#1d1f21
-URxvt.foreground:	#c5c8c6
+URxvt.background:	#000000
+URxvt.foreground:	#333333
 
 URxvt.depth:		32
-URxvt.font: 		xft:hack:size=11
+URxvt.font: 		xft:terminus:size=12
 URxvt.scrollBar:	false
 URxvt.cursorColor:	white
 
@@ -36,3 +36,5 @@ URxvt.resize-font.smaller:	C-Down
 URxvt.resize-font.bigger:	C-Up
 
 URxvt.colorUL:		#4682B4
+
+emacs.font: hack

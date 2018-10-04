@@ -4,19 +4,11 @@
 #  / /\__ \ | | | | | (__ 
 # /___|___/_| |_|_|  \___|
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH 
-# Path to your oh-my-zsh installation.
+
 export HOME=/home/eldron
 export ZSH=/home/eldron/.oh-my-zsh
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="lambda-mod"
-
-# Set vim mode
-bindkey -v
 
 something() {
 	    zle backward-word
@@ -28,9 +20,7 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-
-SCRIPTS=$HOME/Projects/scripts-and-config/
-
+export SCRIPTS=$HOME/Projects/scripts-and-config/
 
 # Shortcuts
 alias v="vim"
@@ -49,7 +39,6 @@ alias redis="cd $HOME/Projects/airvok ; redis-server"
 alias ls="ls -N --color"
 alias ll="ls -laho"
 
-
 # Scripts
 alias brigthness="sh $SCRIPTS/brigthness.sh"
 alias volume="python3 $SCRIPTS/volume.py"
@@ -58,6 +47,7 @@ alias myip="python3 $SCRIPTS/ip/ip.py"
 alias download="sh $SCRIPTS/download.sh"
 alias kled="sh $SCRIPTS/change_led.sh"
 alias dolar="python3 $SCRIPTS/dolar.py"
+alias yen="python3 $SCRIPTS/yen.py"
 alias "git add"="sh $SCRIPTS/git-add.sh"
 
 # ENV variables
