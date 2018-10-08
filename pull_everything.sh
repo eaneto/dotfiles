@@ -11,6 +11,7 @@ do
         is_repo=$(git status | grep -i "branch" | wc -l)
         if [ $is_repo != 0 ];
         then
+            echo "$directory"
             git status && git pull
         fi
     fi
