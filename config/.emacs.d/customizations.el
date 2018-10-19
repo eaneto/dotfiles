@@ -11,7 +11,6 @@
 
 ;; Sets tabs width to 4 spaces.
 (setq-default indent-tabs-mode nil)
-(setq js-indent-level 2)
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
 (global-set-key (kbd "RET") 'newline-and-indent)

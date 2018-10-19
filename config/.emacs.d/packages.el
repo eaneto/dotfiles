@@ -41,10 +41,6 @@
  '(add-to-list 'company-backends 'company-anaconda))
 (add-hook 'python-mode-hook 'anaconda-mode)
 
-(use-package try
-  :ensure t
-  :defer t)
-
 (use-package which-key
   :ensure t
   :config (which-key-mode))
@@ -86,9 +82,6 @@
 (use-package markdown-mode
   :ensure t)
 
-(use-package yasnippet
-  :ensure t)
-
 (use-package function-args
   :ensure t
   :init (fa-config-default))
@@ -126,3 +119,5 @@
 (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 (setq highlight-indent-guides-method 'character)
 (setq highlight-indent-guides-character ?\|)
+
+(add-hook 'after-init-hook #'global-flycheck-mode)
