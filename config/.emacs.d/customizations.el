@@ -1,3 +1,6 @@
+;;; customizations.el --- Configs and key maps for Emacs.
+;;; Commentary: Configure Emacs --- Configs and key maps for Emacs.
+
 (setq inhibit-startup-message t)
 
 ;; Removes tool bar.

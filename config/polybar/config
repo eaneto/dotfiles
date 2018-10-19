@@ -67,8 +67,9 @@ type = custom/script
 exec = ~/Projects/scripts-and-config/rhythmbox.sh
 
 click-left = ~/Projects/scripts-and-config/stop_rhythmbox.sh
-click-middle = ~/Projects/scripts-and-config/stop_rhythmbox.sh
-click-right = ~/Projects/scripts-and-config/stop_rhythmbox.sh
+click-left = rhythmbox-client --pause
+click-middle = rhythmbox-client --pause
+click-right = rhythmbox-client --pause
 
 label = %output%
 interval = 1

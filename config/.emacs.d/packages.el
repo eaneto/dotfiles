@@ -1,3 +1,6 @@
+;;; packages.el --- Package configuration file
+;;; Commentary: Emacs Packages configuration --- Package configuration for Emacs
+
 ;;                  _                         
 ;; _ __   __ _  ___| | ____ _  __ _  ___  ___ 
 ;;| '_ \ / _` |/ __| |/ / _` |/ _` |/ _ \/ __|
@@ -24,7 +27,8 @@
 ;; Elpy configuration.
 (elpy-enable)
 (setq elpy-rpc-python-command "python3")
-(setq python-shell-interpreter "python3")
+(setq python-shell-interpreter "python3"
+	  python-shell-interpreter-args "-i")
 
 (use-package py-autopep8
   :ensure t)
