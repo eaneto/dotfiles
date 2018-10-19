@@ -37,7 +37,6 @@ alias ls="ls -N --color"
 alias ll="ls -laho"
 
 # Scripts
-alias brigthness="sh $SCRIPTS/brigthness.sh"
 alias volume="sh $SCRIPTS/volume.sh"
 alias myip="python3 $SCRIPTS/ip/ip.py"
 alias download="sh $SCRIPTS/download.sh"
