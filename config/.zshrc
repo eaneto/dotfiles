@@ -33,16 +33,12 @@ alias mocp="mocp -T nightshade"
 alias pip3="/usr/local/bin/pip3"
 alias view="ristretto"
 
-alias airvok="cd $HOME/Projects/airvok ; export FLASK_APP=airvok ; export FLASK_ENV=development ; flask run"
-alias redis="cd $HOME/Projects/airvok ; redis-server"
-
 alias ls="ls -N --color"
 alias ll="ls -laho"
 
 # Scripts
 alias brigthness="sh $SCRIPTS/brigthness.sh"
-alias volume="python3 $SCRIPTS/volume.py"
-alias exchange="python3 $HOME/Projects/cryptocurrencies-exchange/core.py"
+alias volume="sh $SCRIPTS/volume.sh"
 alias myip="python3 $SCRIPTS/ip/ip.py"
 alias download="sh $SCRIPTS/download.sh"
 alias kled="sh $SCRIPTS/change_led.sh"
