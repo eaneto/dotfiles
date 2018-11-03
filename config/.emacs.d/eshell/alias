@@ -1,0 +1,8 @@
+alias ls ls -N --color $*
+alias l ls -l
+alias ll ls -laho $*
+alias volume sh $SCRIPTS/volume.sh $*
+alias myip python3 $SCRIPTS/ip/ip.py $*
+alias download sh $SCRIPTS/download.sh $*
+alias dolar python3 $SCRIPTS/dolar.py $*
+alias yen python3 $SCRIPTS/yen.py $*
