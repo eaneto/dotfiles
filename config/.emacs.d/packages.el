@@ -1,6 +1,6 @@
-;;; packages.el --- Package configuration file
-;;; Commentary: Emacs Packages configuration --- Package configuration for Emacs
-
+;; packages.el --- Package configuration file
+;; Commentary: Emacs Packages configuration --- Package configuration for Emacs
+;;
 ;;                  _                         
 ;; _ __   __ _  ___| | ____ _  __ _  ___  ___ 
 ;;| '_ \ / _` |/ __| |/ / _` |/ _` |/ _ \/ __|
@@ -77,7 +77,6 @@
   (add-to-list 'auto-mode-alist
 	     '("components\\/.*\\.js\\'" . rjsx-mode)))
 
-
 (require 'php-mode)
 
 (use-package web-mode
@@ -103,6 +102,11 @@
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
 (latex-preview-pane-enable)
+
+(with-eval-after-load "esh-opt"
+  (autoload 'epe-theme-lambda "eshell-prompt-extras")
+  (setq eshell-highlight-prompt nil
+        eshell-prompt-function 'epe-theme-lambda))
 
 ;; Regular auto-complete initialization
 (use-package auto-complete

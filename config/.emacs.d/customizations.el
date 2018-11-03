@@ -18,18 +18,28 @@
 (setq indent-line-function 'insert-tab)
 (global-set-key (kbd "RET") 'newline-and-indent)
 
+;; Removes scroll bar.
 (scroll-bar-mode 0)
 
 ;; Sets bash to be used as shell.
-(setq explicit-shell-file-name "/bin/zsh")
+(setq explicit-shell-file-name "/bin/bash")
 
+;; Enables ido-mode
 (setq ido-enable-flex-matching t)
 (setq ido-everyehere t)
-(ido-mode t)
+(ido-mode 1)
 
+;; Sets ibuffer as default.
 (defalias 'list-buffers 'ibuffer)
 
 (setq c-default-style "linux")
 (setq-default c-basic-offset 4
               tab-width 4
               indent-tabs-mode t)
+
+(defun beginning-of-line++ ()
+  (interactive)
+  (if (bolp)
+	  (back-to-indentation)
+	(beginning-of-line)))
+(global-set-key (kbd "C-a") 'beginning-of-line++)
