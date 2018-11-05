@@ -1,5 +1,8 @@
 ;;; linux-style.el --- Linux coding style for Emacs.
-;;; Commentary: Emacs config for linux code style --- Linux coding style for Emacs.
+;;; Commentary:
+;;; Emacs config for linux code style --- Linux coding style for Emacs.
+;;;
+;;; Code:
 
 (defun c-lineup-arglist-tabs-only (ignored)
   "Line up argument lists by tabs, not spaces"

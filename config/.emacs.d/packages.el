@@ -1,13 +1,15 @@
-;; packages.el --- Package configuration file
-;; Commentary: Emacs Packages configuration --- Package configuration for Emacs
-;;
-;;                  _                         
-;; _ __   __ _  ___| | ____ _  __ _  ___  ___ 
-;;| '_ \ / _` |/ __| |/ / _` |/ _` |/ _ \/ __|
-;;| |_) | (_| | (__|   < (_| | (_| |  __/\__ \
-;;| .__/ \__,_|\___|_|\_\__,_|\__, |\___||___/
-;;|_|                         |___/
-;;
+;;; packages.el --- Package configuration file
+;;; Commentary:
+;;; Emacs Packages configuration --- Package configuration for Emacs
+;;;
+;;;                  _
+;;; _ __   __ _  ___| | ____ _  __ _  ___  ___
+;;;| '_ \ / _` |/ __| |/ / _` |/ _` |/ _ \/ __|
+;;;| |_) | (_| | (__|   < (_| | (_| |  __/\__ \
+;;;| .__/ \__,_|\___|_|\_\__,_|\__, |\___||___/
+;;;|_|                         |___/
+;;;
+;;; Code:
 
 (require 'package)
 (setq package-enable-at-startup nil)

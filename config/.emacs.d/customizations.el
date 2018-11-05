@@ -1,5 +1,8 @@
 ;;; customizations.el --- Configs and key maps for Emacs.
-;;; Commentary: Configure Emacs --- Configs and key maps for Emacs.
+;;; Commentary:
+;;; Configure Emacs --- Configs and key maps for Emacs.
+;;;
+;;; Code:
 
 (setq inhibit-startup-message t)
 
@@ -25,14 +28,14 @@
 (setq explicit-shell-file-name "/bin/bash")
 
 ;; Enables ido-mode
-(setq ido-enable-flex-matching t)
-(setq ido-everyehere t)
+(setq-default ido-enable-flex-matching t)
+(setq-default ido-everyehere t)
 (ido-mode 1)
 
 ;; Sets ibuffer as default.
 (defalias 'list-buffers 'ibuffer)
 
-(setq c-default-style "linux")
+(setq-default c-default-style "linux")
 (setq-default c-basic-offset 4
               tab-width 4
               indent-tabs-mode t)
@@ -43,3 +46,6 @@
 	  (back-to-indentation)
 	(beginning-of-line)))
 (global-set-key (kbd "C-a") 'beginning-of-line++)
+
+;; Env variables
+(setenv "SCRIPTS" "/home/eldron/Projects/scripts-and-config")
