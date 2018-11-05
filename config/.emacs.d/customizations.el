@@ -41,6 +41,7 @@
               indent-tabs-mode t)
 
 (defun beginning-of-line++ ()
+  "Go to first character on a line."
   (interactive)
   (if (bolp)
 	  (back-to-indentation)
@@ -49,3 +50,5 @@
 
 ;; Env variables
 (setenv "SCRIPTS" "/home/eldron/Projects/scripts-and-config")
+
+;;; customizations.el ends here

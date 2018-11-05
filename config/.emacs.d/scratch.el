@@ -10,3 +10,5 @@
     (with-current-buffer "*scratch*"
       (erase-buffer)
       (insert-file-contents filename))))
+
+;;; scratch.el ends here

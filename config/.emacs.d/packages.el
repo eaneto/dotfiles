@@ -131,3 +131,5 @@
 (setq highlight-indent-guides-character ?\|)
 
 (add-hook 'after-init-hook #'global-flycheck-mode)
+
+;;; packages.el ends here
