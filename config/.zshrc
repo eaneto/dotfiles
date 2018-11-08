@@ -31,7 +31,6 @@ alias r="ranger"
 alias gpg="gpg2"
 alias mocp="mocp -T nightshade"
 alias pip3="/usr/local/bin/pip3"
-alias view="ristretto"
 
 alias ls="ls -N --color"
 alias ll="ls -laho"
@@ -43,7 +42,6 @@ alias download="sh $SCRIPTS/download.sh"
 alias kled="sh $SCRIPTS/change_led.sh"
 alias dolar="python3 $SCRIPTS/dolar.py"
 alias yen="python3 $SCRIPTS/yen.py"
-alias "git add"="sh $SCRIPTS/git-add.sh"
 
 # ENV variables
 export PROJECTS=$HOME/Projects
