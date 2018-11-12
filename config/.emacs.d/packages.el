@@ -77,7 +77,10 @@
   :ensure t
   :config
   (add-to-list 'auto-mode-alist
-	     '("components\\/.*\\.js\\'" . rjsx-mode)))
+			   '("components\\/.*\\.js\\'" . rjsx-mode)))
+
+(use-package vue-mode
+  :ensure t)
 
 (require 'php-mode)
 
@@ -120,6 +123,12 @@
 (add-hook 'python-mode-hook (lambda ()
                               (require 'sphinx-doc)
                               (sphinx-doc-mode t)))
+
+(use-package python-docstring
+  :ensure t)
+
+(use-package elixir-mode
+  :ensure t)
 
 (require 'telephone-line)
 (telephone-line-mode 1)
