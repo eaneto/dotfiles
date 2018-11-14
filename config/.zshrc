@@ -37,7 +37,7 @@ alias ll="ls -laho"
 
 # Scripts
 alias volume="sh $SCRIPTS/volume.sh"
-alias myip="python3 $SCRIPTS/ip/ip.py"
+alias myip="python3 $SCRIPTS/ip.py"
 alias download="sh $SCRIPTS/download.sh"
 alias kled="sh $SCRIPTS/change_led.sh"
 alias dolar="python3 $SCRIPTS/dolar.py"
