@@ -1,7 +1,9 @@
+#!/usr/bin/env python3
+
 import requests
 
 
-def main():
+if __name__ == '__main__':
     try:
         r = requests.get('https://wtfismyip.com/json')
         data = r.json()
@@ -16,7 +18,3 @@ def main():
     print("\nYour IP Adress is: {ip}".format(ip=ip))
     print("Your ISP is: {isp}".format(isp=isp))
     print("Your Location is: {location}".format(location=location))
-
-
-if __name__ == '__main__':
-    main()
