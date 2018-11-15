@@ -51,7 +51,7 @@ font-3 = Awesome:size=9.5;1
 
 modules-left = i3 mpd
 modules-center = current-song
-modules-right = volume wlan battery memory temperature date
+modules-right = crypto volume wlan battery memory temperature date
 
 wm-name = i3
 
@@ -75,23 +75,19 @@ interval = 1
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #8abeb7
 
+[module/crypto]
+type = custom/script
+exec = ~/Projects/scripts-and-config/crypto.py
+
+label = %output%
+interval = 60
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #f22c40
+
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
 
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
-
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
-
-label-layout = %layout%
-label-layout-underline = ${colors.secondary} label-indicator-padding = 2
-label-indicator-margin = 1
-label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
 
 [module/filesystem]
 type = internal/fs
