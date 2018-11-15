@@ -14,7 +14,9 @@ if __name__ == '__main__':
     ip = data['YourFuckingIPAddress']
     isp = data['YourFuckingISP']
     location = data['YourFuckingLocation']
+    hostname = data["YourFuckingHostname"]
 
     print("\nYour IP Adress is: {ip}".format(ip=ip))
     print("Your ISP is: {isp}".format(isp=isp))
+    print("Your host name is: {host}".format(host=hostname))
     print("Your Location is: {location}".format(location=location))
