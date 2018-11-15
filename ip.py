@@ -9,7 +9,7 @@ if __name__ == '__main__':
         data = r.json()
     except Exception as exp:
         print("\nCan't connect to the server.\n")
-        return False
+        exit()
 
     ip = data['YourFuckingIPAddress']
     isp = data['YourFuckingISP']
