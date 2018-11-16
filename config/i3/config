@@ -4,7 +4,7 @@
 
 set $mod		                                Mod4
 set $term		                                st
-set $browser                          python3 -m qutebrowser
+set $browser                                    python3 -m qutebrowser
 
 # Set color to be used in the bar
 set $background				                    "#1d1f21"
@@ -46,7 +46,6 @@ bindsym $mod+e									exec emacs
 bindsym $mod+d									exec dmenu_run
 
 # start browser.
-bindsym $mod+g									exec $browser
 bindsym $mod+y                                  exec $browser
 
 # start transmission,
@@ -57,6 +56,9 @@ bindsym $mod+Shift+a							exec thunderbird
 
 # start ranger
 bindsym $mod+q									exec $term -e ranger
+
+# Start postman
+bindsym $mod+p									exec postman	
 
 # start steam
 bindsym $mod+i                                  exec steam
@@ -114,10 +116,10 @@ bindsym $mod+r									mode "resize"
 
 set $workspace1 "1 "
 set $workspace2 "2 "
-set $workspace3 "3 "
+set $workspace3 "3 "
 set $workspace4 "4 "
 set $workspace5 "5 "
-set $workspace6 "6 "
+set $workspace6 "6 "
 set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9 "
@@ -148,8 +150,8 @@ bindsym $mod+Shift+9                            move container to workspace $wor
 bindsym $mod+Shift+0                            move container to workspace $workspace10
 
 # Loads transmission in workspace 10
-assign [class="Transmission"]				 $workspace10
-assign [class="Thunderbird"]					 $workspace9
+assign [class="Transmission"]				    $workspace10
+assign [class="Thunderbird"]					$workspace9
 
 # reload the configuration file
 bindsym $mod+Shift+c							 reload
@@ -199,12 +201,9 @@ hide_edge_borders both
 # i3lock config
 bindsym $mod+Shift+x exec i3lock --color "$background"
 
-# Set wallpaper
-exec_always feh --bg-scale /home/eldron/Pictures/Wallpapers/wallpapers/Cityscapes/1433294607975-4.jpg
-
 exec_always exec compton -f
 
 exec_always --no-startup-id /home/eldron/.config/polybar/launch.sh
 
-# gaps inner 10
-# gaps outer 9
+# Set wallpaper
+exec --no-startup-id feh --bg-scale /home/eldron/Pictures/Wallpapers/wallpapers/Cityscapes/street_kyoto.jpg 
