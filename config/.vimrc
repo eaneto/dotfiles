@@ -13,18 +13,9 @@ set laststatus=2
 
 set noshowmode
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
 let g:jsx_ext_required = 0
 
-" Activates sumplylFold
+" Activates simplylFold
 let g:SimpylFold_docstring_preview=1
 
 " set autoclosing tags in filenames like *.html, *.xhtml
@@ -112,7 +103,7 @@ au BufNewFile,BufRead *.html:
         \ set shiftwidth=2
         \ set fileformat=unix
 
-autocmd Filetype javascript.jsx setlocal ts=2 sts=2 sw=2
+autocmd Filetype javascript.jsx setlocal ts=4 sts=4 sw=4
 
 au BufNewFile,BufRead *.css:
         \ set tabstop=2
