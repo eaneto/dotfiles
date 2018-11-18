@@ -66,9 +66,9 @@ scroll-down = i3wm-wsprev
 type = custom/script
 exec = ~/Projects/scripts-and-config/rhythmbox.sh
 
-click-left = rhythmbox-client --pause
-click-middle = rhythmbox-client --pause
-click-right = rhythmbox-client --pause
+click-left = rhythmbox-client --play-pause
+click-middle = rhythmbox-client --play-pause
+click-right = rhythmbox-client --play-pause
 
 label = %output%
 interval = 1
