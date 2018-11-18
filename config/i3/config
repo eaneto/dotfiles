@@ -54,6 +54,9 @@ bindsym $mod+o									exec transmission-gtk
 # start thunderbird
 bindsym $mod+Shift+a							exec thunderbird
 
+# pause rhythmbox
+bindsym $mod+Shift+p							exec rhythmbox-client --play-pause
+
 # start ranger
 bindsym $mod+q									exec $term -e ranger
 
