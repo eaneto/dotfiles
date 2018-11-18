@@ -84,6 +84,9 @@
 
 (require 'php-mode)
 
+(use-package apache-mode
+  :ensure t)
+
 (use-package web-mode
   :ensure t)
 

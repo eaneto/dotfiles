@@ -11,7 +11,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-	(elixir-mode vue-mode mmm-mode python-docstring popwin eshell-prompt-extras color-identifiers-mode highlight-indent-guides telephone-line yaml-mode dockerfile-mode company-anaconda anaconda-mode pyenv-mode all-the-icons neotree gh-md sphinx-doc arduino-mode evil-magit async magit flycheck latex-preview-pane function-args ## python-doctring web-mode markdown-mode php-mode rjsx-mode js2-mode evil py-autopep8 goto-chg undo-tree auto-complete elpy base16-theme which-key use-package)))
+	(apache-mode elixir-mode vue-mode mmm-mode python-docstring popwin eshell-prompt-extras color-identifiers-mode highlight-indent-guides telephone-line yaml-mode dockerfile-mode company-anaconda anaconda-mode pyenv-mode all-the-icons neotree gh-md sphinx-doc arduino-mode evil-magit async magit flycheck latex-preview-pane function-args ## python-doctring web-mode markdown-mode php-mode rjsx-mode js2-mode evil py-autopep8 goto-chg undo-tree auto-complete elpy base16-theme which-key use-package)))
  '(send-mail-function (quote mailclient-send-it))
  '(standard-indent 4))
 
