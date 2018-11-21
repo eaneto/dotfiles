@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 current_directory=$(pwd)
 

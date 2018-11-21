@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 PROJECTS_DIR=/home/eldron/Projects/*
 

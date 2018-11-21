@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 # This file controls the keyboard led.
 

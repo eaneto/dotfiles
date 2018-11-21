@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 if pgrep -x "rhythmbox" > /dev/null
 then
