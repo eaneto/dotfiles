@@ -1,0 +1,35 @@
+#!/usr/bin/bash
+
+opt=$1
+HOME=/home/eldron
+
+if [ "$opt" = "--install-packages" ];
+then
+	if [[ $EUID -ne 0 ]]; then
+		echo "This script must be run as root"
+		exit 1
+	fi
+
+	dnf copr enable tomwishaupt/polybar
+	dnf install emacs i3 polybar rxvt-unicode-256color zsh dmenu i3lock light youtube-dl moc
+
+	# Python packages
+	python3 -m pip install requests BeautifulSoup
+fi
+
+echo "Copying text editor config... "
+cp -R config/.emacs.d/ $HOME/
+cp -R config/.moc/ $HOME/
+cp config/.vimrc $HOME/.vimrc
+cp config/.vimrc_background $HOME/.vimrc_background
+
+# The sleeps are useful to know what's actually going on
+sleep 1
+
+echo "Preparing i3wm and polybar config... "
+cp -R config/polybar/ $HOME/.config/
+cp config/i3/config $HOME/.config/i3/
+cp config/.zshrc $HOME/.zshrc
+cp config/.Xresources $HOME/.Xresources
+
+sleep 1
