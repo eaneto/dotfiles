@@ -33,3 +33,5 @@ cp config/.zshrc $HOME/.zshrc
 cp config/.Xresources $HOME/.Xresources
 
 sleep 1
+
+echo "All done."
