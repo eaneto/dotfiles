@@ -20,7 +20,7 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-export SCRIPTS=$HOME/Projects/scripts-and-config/
+export SCRIPTS=$HOME/Projects/scripts-and-config/scripts/
 
 # Shortcuts
 alias v="vim"

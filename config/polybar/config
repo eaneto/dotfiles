@@ -49,7 +49,7 @@ scroll-down = i3wm-wsprev
 ;; Custom module to display the current song.
 [module/current-song]
 type = custom/script
-exec = ~/Projects/scripts-and-config/rhythmbox.sh
+exec = ~/Projects/scripts-and-config/scripts/rhythmbox.sh
 
 click-left = rhythmbox-client --play-pause
 click-middle = rhythmbox-client --play-pause
@@ -63,7 +63,7 @@ format-underline = #8abeb7
 ;; Custom module to display bitcoin and ethereum price.
 [module/crypto]
 type = custom/script
-exec = ~/Projects/scripts-and-config/crypto.py
+exec = ~/Projects/scripts-and-config/scripts/crypto.py
 
 label = %output%
 interval = 60
