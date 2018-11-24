@@ -70,6 +70,9 @@
 
 (require 'evil-magit)
 
+(use-package ag
+  :ensure t)
+
 (use-package js2-mode
   :ensure t)
 

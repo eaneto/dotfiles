@@ -6,9 +6,11 @@
 
 (setq inhibit-startup-message t)
 
-;; Removes tool bar.
+;; Removes tool and menu bar.
 (tool-bar-mode -1)
 (menu-bar-mode -1)
+;; Removes scroll bar.
+(scroll-bar-mode -1)
 
 ;; Display line numbers
 (global-linum-mode t)
@@ -22,8 +24,6 @@
 (setq indent-line-function 'insert-tab)
 (global-set-key (kbd "RET") 'newline-and-indent)
 
-;; Removes scroll bar.
-(scroll-bar-mode 0)
 
 ;; Sets bash to be used as shell.
 (setq explicit-shell-file-name "/bin/bash")
