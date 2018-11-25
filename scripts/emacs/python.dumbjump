@@ -1,0 +1,10 @@
+-.venv
+-.env
+-venv
+-env
+-docs
+-doc
+-Documentation
+-.git
+-tests
+-__pycache__

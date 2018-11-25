@@ -1,0 +1,7 @@
+-.git
+-.settings
+-target
+-src/tests
+-docs
+-doc
+-Documentation

@@ -1,0 +1,8 @@
+-node_modules
+-tests
+-build
+-images
+-.git
+-docs
+-doc
+-Documentation

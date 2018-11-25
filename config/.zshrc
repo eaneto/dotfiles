@@ -42,6 +42,7 @@ alias download="sh $SCRIPTS/download.sh"
 alias kled="sh $SCRIPTS/change_led.sh"
 alias dolar="python3 $SCRIPTS/dolar.py"
 alias yen="python3 $SCRIPTS/yen.py"
+alias init-project="sh $SCRIPTS/init-project.sh"
 
 # ENV variables
 export PROJECTS=$HOME/Projects
