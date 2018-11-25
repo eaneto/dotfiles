@@ -1,7 +1,6 @@
 import requests
-from bs4 import BeautifulSoup
 
-r = requests.get("https://www.dolarhoje.com/iene/")
-data = BeautifulSoup(r.text, 'html.parser')
-
-print("R$ {}".format(data.find(id="estrangeiro")["value"]))
+r = requests.get(
+    "http://free.currencyconverterapi.com/api/v5/convert?q=JPY_BRL&compact=y")
+data = r.json()
+print("JPY: R$", data["JPY_BRL"]["val"])

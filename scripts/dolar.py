@@ -1,7 +1,6 @@
 import requests
-from bs4 import BeautifulSoup
 
-r = requests.get("https://www.dolarhoje.net.br")
-data = BeautifulSoup(r.text, 'html.parser')
-
-print("R$ {}".format(data.find(id="moeda")["value"]))
+r = requests.get(
+    "http://free.currencyconverterapi.com/api/v5/convert?q=USD_BRL&compact=y")
+data = r.json()
+print("USD: R$", data["USD_BRL"]["val"])

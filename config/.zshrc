@@ -20,7 +20,7 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-export SCRIPTS=$HOME/Projects/scripts-and-config/scripts/
+export SCRIPTS=$HOME/Projects/scripts-and-config/scripts
 
 # Shortcuts
 alias v="vim"
@@ -42,6 +42,9 @@ alias download="sh $SCRIPTS/download.sh"
 alias kled="sh $SCRIPTS/change_led.sh"
 alias dolar="python3 $SCRIPTS/dolar.py"
 alias yen="python3 $SCRIPTS/yen.py"
+alias hkd="python3 $SCRIPTS/hkd.py"
+alias cny="python3 $SCRIPTS/cny.py"
+alias currencies="dolar && yen && hkd && cny"
 alias init-project="sh $SCRIPTS/init-project.sh"
 
 # ENV variables
