@@ -27,7 +27,7 @@ URxvt.background:	#000000
 URxvt.foreground:	#333333
 
 URxvt.depth:		32
-URxvt.font: 		xft:terminus:size=12
+URxvt.font: 		xft:hack:size=11
 URxvt.scrollBar:	false
 URxvt.cursorColor:	white
 
