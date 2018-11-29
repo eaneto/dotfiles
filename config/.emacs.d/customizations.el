@@ -50,6 +50,6 @@
 (global-set-key (kbd "C-a") 'beginning-of-line++)
 
 ;; Env variables
-(setenv "SCRIPTS" "/home/eldron/Projects/scripts-and-config")
+(setenv "SCRIPTS" "/home/eldron/Projects/scripts-and-config/scripts/")
 
 ;;; customizations.el ends here
