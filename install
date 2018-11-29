@@ -1,7 +1,6 @@
 #!/usr/bin/bash
 
 opt=$1
-HOME=/home/eldron
 
 if [ "$opt" = "--install-packages" ];
 then
