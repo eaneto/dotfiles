@@ -42,9 +42,11 @@
 (require 'pyenv-mode)
 
 (use-package company
-  :ensure t)
-(eval-after-load "company"
- '(add-to-list 'company-backends 'company-anaconda))
+  :ensure t
+  :config
+  (eval-after-load "company"
+	'(add-to-list 'company-backends 'company-anaconda)))
+
 (add-hook 'python-mode-hook 'anaconda-mode)
 
 (use-package which-key
@@ -81,7 +83,8 @@
 		 ("M-g x" . dumb-jump-go-prefer-external)
 		 ("M-g z" . dumb-jump-go-prefer-external-other-window))
   :init (dumb-jump-mode)
-  :config (setq dumb-jump-force-searcher 'ag)
+  :config
+  (setq dumb-jump-force-searcher 'ag)
   (setq dumb-jump-prefer-searcher 'ag)
   :ensure t)
 
@@ -117,12 +120,15 @@
 
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
-(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+(setq neo-theme
+	  (if (display-graphic-p) 'icons 'arrow))
 
 (require 'all-the-icons)
 
-(require 'yaml-mode)
-(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+(use-package yaml-mode
+  :config
+  (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+  :ensure t)
 
 (latex-preview-pane-enable)
 
@@ -134,13 +140,14 @@
 ;; Regular auto-complete initialization
 (use-package auto-complete
   :ensure t)
+
 (require 'auto-complete-config)
 (ac-config-default)
 
 ;; Sphinx-doc config.
 (add-hook 'python-mode-hook (lambda ()
-                              (require 'sphinx-doc)
-                              (sphinx-doc-mode t)))
+                     (require 'sphinx-doc)
+                     (sphinx-doc-mode t)))
 
 (use-package python-docstring
   :ensure t)
