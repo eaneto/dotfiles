@@ -1,6 +1,8 @@
 #!/usr/bin/bash
 
 PROJECTS_DIR=/home/eldron/Projects/*
+RED='\033[0;31m'
+ERASE='\033[0m'
 
 for directory in $PROJECTS_DIR
 do
@@ -11,7 +13,7 @@ do
         is_repo=$(git status | grep -i "branch" | wc -l)
         if [ $is_repo != 0 ];
         then
-            echo "$directory"
+            echo -e "\n$RED $directory $ERASE\n"
             git status && git pull
         fi
     fi
