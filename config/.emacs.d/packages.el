@@ -53,6 +53,9 @@
   :ensure t
   :config (which-key-mode))
 
+(use-package gitignore-mode
+  :ensure t)
+
 (use-package base16-theme
   :ensure t
   :config
