@@ -3,6 +3,12 @@
 project_lang=$1
 project_name=$2
 
+if [ $# != 2 ];
+then
+    echo "Not enough arguments"
+    exit 1
+fi
+
 echo -e "Creating project $project_name... \n"
 sleep .5
 
