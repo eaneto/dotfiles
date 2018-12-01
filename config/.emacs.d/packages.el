@@ -27,34 +27,35 @@
   (package-install 'use-package))
 
 ;; Elpy configuration.
-(elpy-enable)
-(setq elpy-rpc-python-command "python3")
-(setq python-shell-interpreter "python3"
-	  python-shell-interpreter-args "-i")
+(use-package elpy
+  :init (elpy-enable)
+  (setq elpy-rpc-python-command "python3")
+  (setq python-shell-interpreter "python3"
+		python-shell-interpreter-args "-i"))
 
 (use-package py-autopep8
-  :ensure t)
-
-(add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
-(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
-
-(require 'anaconda-mode)
-(require 'pyenv-mode)
-
-(use-package company
   :ensure t
   :config
-  (eval-after-load "company"
-	'(add-to-list 'company-backends 'company-anaconda)))
+  (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
+  (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save))
 
-(add-hook 'python-mode-hook 'anaconda-mode)
+(use-package pyenv-mode
+  :ensure t)
+
+(use-package dockerfile-mode
+  :ensure t
+  :defer t)
+
+(use-package company
+  :ensure t)
 
 (use-package which-key
   :ensure t
   :config (which-key-mode))
 
 (use-package gitignore-mode
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (use-package base16-theme
   :ensure t
@@ -66,14 +67,13 @@
   :defer t)
 
 ;; Evil mode.
-(require 'evil)
-(evil-mode 1)
+(use-package evil
+  :ensure t
+  :init (evil-mode 1))
 
 (use-package evil-magit
   :ensure t
   :config (setq evil-magit-state 'motion))
-
-(require 'evil-magit)
 
 (use-package ag
   :ensure t)
@@ -103,9 +103,10 @@
 (use-package vue-mode
   :ensure t)
 
-(require 'php-mode)
-
 (use-package apache-mode
+  :ensure t)
+
+(use-package php-mode
   :ensure t)
 
 (use-package web-mode
@@ -119,38 +120,32 @@
   :init (fa-config-default))
 
 (use-package arduino-mode
-  :ensure t)
+  :ensure t
+  :defer t)
 
-(require 'neotree)
-(global-set-key [f8] 'neotree-toggle)
-(setq neo-theme
-	  (if (display-graphic-p) 'icons 'arrow))
+(use-package neotree
+  :ensure t
+  :config (global-set-key [f8] 'neotree-toggle)
+  (setq neo-theme
+	  (if (display-graphic-p) 'icons 'arrow)))
 
-(require 'all-the-icons)
+(use-package all-the-icons
+  :ensure t
+  :defer t)
 
 (use-package yaml-mode
   :config
   (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
   :ensure t)
 
-(latex-preview-pane-enable)
-
-(with-eval-after-load "esh-opt"
-  (autoload 'epe-theme-lambda "eshell-prompt-extras")
-  (setq eshell-highlight-prompt nil
-        eshell-prompt-function 'epe-theme-lambda))
+(use-package latex-preview-pane
+  :ensure t
+  :init (latex-preview-pane-enable))
 
 ;; Regular auto-complete initialization
 (use-package auto-complete
-  :ensure t)
-
-(require 'auto-complete-config)
-(ac-config-default)
-
-;; Sphinx-doc config.
-(add-hook 'python-mode-hook (lambda ()
-                     (require 'sphinx-doc)
-                     (sphinx-doc-mode t)))
+  :ensure t
+  :config (ac-config-default))
 
 (use-package python-docstring
   :ensure t)
@@ -158,15 +153,23 @@
 (use-package elixir-mode
   :ensure t)
 
-(require 'telephone-line)
-(telephone-line-mode 1)
+(use-package telephone-line
+  :ensure t
+  :init (telephone-line-mode 1))
 
 (require 'iso-transl)
 
-(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
-(setq highlight-indent-guides-method 'character)
-(setq highlight-indent-guides-character ?\|)
+(use-package highlight-indent-guides
+  :ensure t
+  :defer t
+  :init
+  (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+  (setq highlight-indent-guides-method 'column)
+  (setq highlight-indent-guides-character ?\|))
 
-(add-hook 'after-init-hook #'global-flycheck-mode)
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode)
+  (add-hook 'after-init-hook #'global-flycheck-mode))
 
 ;;; packages.el ends here
