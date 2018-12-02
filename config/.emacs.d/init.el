@@ -16,7 +16,7 @@
  '(custom-enabled-themes (quote (base16-tomorrow-night)))
  '(package-selected-packages
    (quote
-	(gitignore-mode dumb-jump ag apache-mode elixir-mode vue-mode mmm-mode popwin color-identifiers-mode highlight-indent-guides telephone-line yaml-mode dockerfile-mode pyenv-mode all-the-icons neotree gh-md arduino-mode evil-magit async magit flycheck latex-preview-pane function-args ## python-doctring web-mode markdown-mode php-mode rjsx-mode js2-mode evil py-autopep8 goto-chg undo-tree auto-complete elpy base16-theme which-key use-package)))
+	(flycheck-irony company-irony python-docstring irony gitignore-mode dumb-jump ag apache-mode elixir-mode vue-mode mmm-mode popwin color-identifiers-mode highlight-indent-guides telephone-line yaml-mode dockerfile-mode pyenv-mode all-the-icons neotree gh-md arduino-mode evil-magit async magit flycheck latex-preview-pane function-args ## python-doctring web-mode markdown-mode php-mode rjsx-mode js2-mode evil py-autopep8 goto-chg undo-tree elpy base16-theme which-key use-package)))
  '(send-mail-function (quote mailclient-send-it))
  '(standard-indent 4))
 

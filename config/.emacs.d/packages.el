@@ -26,6 +26,11 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode)
+  (add-hook 'after-init-hook #'global-flycheck-mode))
+
 ;; Elpy configuration.
 (use-package elpy
   :init (elpy-enable)
@@ -46,8 +51,30 @@
   :ensure t
   :defer t)
 
+(use-package irony
+  :ensure t
+  :init
+  (add-hook 'c++-mode-hook 'irony-mode)
+  (add-hook 'c-mode-hook 'irony-mode)
+  (add-hook 'objc-mode-hook 'irony-mode)
+  (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options))
+
 (use-package company
-  :ensure t)
+  :ensure t
+  :init
+  (add-hook 'after-init-hook 'global-company-mode))
+
+(use-package company-irony
+  :ensure t
+  :config
+  (eval-after-load 'company
+	'(add-to-list 'company-backends 'company-irony)))
+
+(use-package flycheck-irony
+  :ensure t
+  :config
+  (eval-after-load 'flycheck
+  '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup)))
 
 (use-package which-key
   :ensure t
@@ -142,14 +169,6 @@
   :ensure t
   :init (latex-preview-pane-enable))
 
-;; Regular auto-complete initialization
-(use-package auto-complete
-  :ensure t
-  :config (ac-config-default))
-
-(use-package python-docstring
-  :ensure t)
-
 (use-package elixir-mode
   :ensure t)
 
@@ -166,10 +185,5 @@
   (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
   (setq highlight-indent-guides-method 'column)
   (setq highlight-indent-guides-character ?\|))
-
-(use-package flycheck
-  :ensure t
-  :init (global-flycheck-mode)
-  (add-hook 'after-init-hook #'global-flycheck-mode))
 
 ;;; packages.el ends here
