@@ -13,7 +13,7 @@ do
         is_repo=$(git status | grep -i "branch" | wc -l)
         if [ $is_repo != 0 ];
         then
-            echo -e "\n$RED $directory $ERASE\n"
+            echo -e "\n$RED ${PWD##*/} $ERASE\n"
             git status && git pull
         fi
     fi
