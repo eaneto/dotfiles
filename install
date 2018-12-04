@@ -18,7 +18,6 @@ fi
 
 echo "Copying text editor config... "
 cp -R config/.emacs.d/ $HOME/
-cp -R config/.moc/ $HOME/
 cp config/.vimrc $HOME/.vimrc
 cp config/.vimrc_background $HOME/.vimrc_background
 
@@ -30,6 +29,7 @@ cp -R config/polybar/ $HOME/.config/
 cp config/i3/config $HOME/.config/i3/
 cp config/.zshrc $HOME/.zshrc
 cp config/.Xresources $HOME/.Xresources
+cp -R config/.gitignore_global $HOME/
 
 sleep 1
 
