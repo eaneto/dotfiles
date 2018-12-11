@@ -100,7 +100,9 @@
 
 (use-package evil-magit
   :ensure t
-  :config (setq evil-magit-state 'motion))
+  :config
+  (setq evil-magit-state 'normal)
+  (setq evil-magit-use-y-for-yank nil))
 
 (use-package ag
   :ensure t)
