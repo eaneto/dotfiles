@@ -31,10 +31,10 @@ then
 	npm init
 elif [ "$project_lang" = "java" ];
 then
-	mvn archetype:generate -DgroupId=com."$project_name".app \
+	mvn -B archetype:generate \
+		-DgroupId=org."$project_name" \
 		-DartifactId="$project_name" \
-		-DarchetypeArtifactId=maven-archetype-quickstart \
-		-DinteractiveMode=false
+		-DarchetypeArtifactId=maven-archetype-quickstart
 	cd "$project_name"
 fi
 
