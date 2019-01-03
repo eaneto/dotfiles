@@ -202,11 +202,11 @@ mode "move" {
 hide_edge_borders both
 
 # i3lock config
-bindsym $mod+Shift+x exec i3lock --color "$background"
+bindsym $mod+Shift+x exec i3lock --color="$background"
 
 exec_always exec compton -f
 
 exec_always --no-startup-id /home/eldron/.config/polybar/launch.sh
 
 # Set wallpaper
-exec --no-startup-id feh --bg-scale /home/eldron/Pictures/Wallpapers/wallpapers/Cityscapes/street_kyoto.jpg 
+exec --no-startup-id /usr/bin/feh --bg-scale /home/eldron/.config/wallpaper.jpg
