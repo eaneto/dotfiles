@@ -13,8 +13,10 @@ def get_coins(currency):
             .format(currency))
         coin_data = req.json()
         coin_data = coin_data[0]
+    except requests.exceptions.ConnectionError:
+        return 0
     except HTTPError:
-        return False
+        return 0
 
     return int(float(coin_data["price_usd"]))
 
