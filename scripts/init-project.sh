@@ -3,9 +3,15 @@
 project_lang=$1
 project_name=$2
 
+help_message() {
+    echo -e "Create sample project script.\n"
+    echo -e "Usage: init-project [PROJECT_LANG] [PROJECT_NAME]\n"
+    echo -e "Written by Edison Neto"
+}
+
 if [ $# != 2 ];
 then
-    echo "Not enough arguments"
+    help_message;
     exit 1
 fi
 
