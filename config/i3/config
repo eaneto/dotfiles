@@ -4,7 +4,8 @@
 
 set $mod		                                Mod4
 set $term		                                st
-set $browser                                    python3 -m qutebrowser
+set $sec_term                                   urxvt256c
+set $browser 									python3 -m qutebrowser
 
 # Set color to be used in the bar
 set $background				                    "#1d1f21"
@@ -38,6 +39,7 @@ bindsym $mod+Shift+q							kill
 
 # start a terminal.
 bindsym $mod+Return								exec $term
+bindsym $mod+g                                  exec $sec_term
 
 # start emacs.
 bindsym $mod+e									exec emacs

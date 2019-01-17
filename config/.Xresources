@@ -11,7 +11,7 @@
 *color3: #d5911a
 *color11: #d5911a
 !! blue
-*color4: #407ee7
+*color4: #0d98ba
 *color12: #407ee7
 !! magenta
 *color5: #6666ea
@@ -36,5 +36,7 @@ URxvt.resize-font.smaller:	C-Down
 URxvt.resize-font.bigger:	C-Up
 
 URxvt.colorUL:		#4682B4
+
+st.alpha: 250
 
 emacs.font: hack
