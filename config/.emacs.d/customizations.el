@@ -24,9 +24,14 @@
 (setq indent-line-function 'insert-tab)
 (global-set-key (kbd "RET") 'newline-and-indent)
 
+;; Java indentation.
+(add-hook 'java-mode-hook (lambda ()
+							(setq-default c-basic-offset 4
+										  tab-width 4
+										  indent-tabs-mode nil)))
 
 ;; Sets bash to be used as shell.
-(setq explicit-shell-file-name "/bin/bash")
+(setq explicit-shell-file-name "/bin/fish")
 
 ;; Enables ido-mode
 (setq-default ido-enable-flex-matching t)

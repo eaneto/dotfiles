@@ -1,9 +1,6 @@
 execute pathogen#infect()
 
 let base16colorspace=256
-colorscheme base16-tomorrow-night
-
-let g:airline_theme='base16_tomorrow'
 
 " Enable the syntax
 syntax on
@@ -25,23 +22,17 @@ let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php"
 set encoding=utf-8
 
 set expandtab
-set tabstop=4       " The width of a TAB is set to 4.
-                    " Still it is a \t. It is just that
-                    " Vim will interpret it to be having
-                    " a width of 4.
-retab
-
+set tabstop=4
 " Indents will have a width of 4
 set shiftwidth=4
-
 " Sets the number of columns for a TAB
 set softtabstop=4
-
 " Sets the auto indent to true
 set autoindent
-
 " Smart indent
 set si
+
+retab
 
 " Enables visual wrapping
 set wrap
@@ -77,16 +68,10 @@ set foldlevel=99
 " Enable folding with the spacebar
 nnoremap <space> za
 
-" Remap the keys to move around panes
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
 " Specific config for python files
 let python_highlight_all = 1
 
-" Adds PEP8 proper identation.
+" Adds PEP8 proper indentation.
 au BufNewFile,BufRead *.py:
         \ set shiftwidth=4
         \ set textwidth=79
@@ -96,11 +81,11 @@ au BufNewFile,BufRead *.py:
         \ set expandtab
 		\ retab
 
-" Adds the correct identation to javascript, html and css files.
+" Adds the correct indentation to javascript, html and css files.
 au BufNewFile,BufRead *.html:
-        \ set tabstop=2
-        \ set softtabstop=2
-        \ set shiftwidth=2
+        \ set tabstop=4
+        \ set softtabstop=4
+        \ set shiftwidth=4
         \ set fileformat=unix
 
 autocmd Filetype javascript.jsx setlocal ts=4 sts=4 sw=4

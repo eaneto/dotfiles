@@ -1,5 +1,5 @@
 !! black
-*color0: #1b1918
+*color0: #232323
 *color8: #766e6b
 !! red
 *color1: #f22c40
@@ -17,8 +17,8 @@
 *color5: #6666ea
 *color13: #6666ea
 !! cyan
-*color6: #00ad9c
-*color14: #00ad9c
+*color6: #8abeb7
+*color14: #8abeb7
 !! white
 *color7: #a8a19f
 *color15: #f1efee

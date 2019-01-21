@@ -201,6 +201,11 @@ mode "move" {
     bindsym Escape mode "default"
 }
 
+#bar {
+#    status_command i3blocks
+#    position top
+#}
+
 hide_edge_borders both
 
 # i3lock config
