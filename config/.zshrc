@@ -29,7 +29,6 @@ alias vimrc="vi $HOME/.vimrc"
 alias zshrc="vi $HOME/.zshrc"
 alias r="ranger"
 alias gpg="gpg2"
-alias mocp="mocp -T nightshade"
 alias pip3="/usr/local/bin/pip3"
 
 alias ls="ls -N --color"

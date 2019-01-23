@@ -8,14 +8,11 @@ alias vi="vim"
 alias vimrc="vi $HOME/.vimrc"
 alias r="ranger"
 alias gpg="gpg2"
-alias mocp="mocp -T nightshade"
 alias pip3="/usr/local/bin/pip3"
-alias sudo="sudo "
-alias su="echo kkk eae man"
 
 alias ls="ls -N --color"
-alias ll="ls -laho"
-alias l="ls -l"
+abbr ll "ls -laho"
+abbr l "ls -l"
 
 # Scripts
 alias init-project="sh $SCRIPTS/init-project.sh"
