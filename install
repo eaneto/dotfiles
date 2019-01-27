@@ -27,9 +27,14 @@ sleep 1
 echo "Preparing i3wm and polybar config... "
 cp -R config/polybar/ $HOME/.config/
 cp config/i3/config $HOME/.config/i3/
+
+sleep 1
+
+echo "Terminal configs"
+cp config/config.fish $HOME/.config/fish/
 cp config/.zshrc $HOME/.zshrc
 cp config/.Xresources $HOME/.Xresources
-cp -R config/.gitignore_global $HOME/
+cp config/.gitignore_global $HOME/
 
 sleep 1
 
