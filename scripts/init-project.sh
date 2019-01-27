@@ -38,7 +38,7 @@ then
 elif [ "$project_lang" = "java" ];
 then
 	mvn -B archetype:generate \
-		-DgroupId=org."$project_name" \
+		-DgroupId="$project_name" \
 		-DartifactId="$project_name" \
 		-DarchetypeArtifactId=maven-archetype-quickstart
 	cd "$project_name"
