@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-PROJECTS_DIR=/home/eldron/Projects/*
+PROJECTS_DIR=~/Projects/*
 RED='\033[0;31m'
 ERASE='\033[0m'
 
