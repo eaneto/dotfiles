@@ -9,4 +9,3 @@ alias yen python3 $SCRIPTS/yen.py $*
 alias hkd python3 $SCRIPTS/hkd.py $*
 alias cny python3 $SCRIPTS/cny.py $*
 alias currencies dolar && yen && hkd && cny $*
-alias lpython ./.venv/bin/python $*
