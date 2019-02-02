@@ -9,6 +9,29 @@ help_message() {
     echo -e "Written by Edison Neto"
 }
 
+create_java_project() {
+    mkdir -p "$project_name"/src/main/java/"$project_name"
+	cd "$project_name"
+    cp $SCRIPTS/java/base-pom.xml pom.xml
+}
+
+create_javascript_project() {
+	mkdir "$project_name"
+    cd "$project_name"
+	npm init
+}
+
+create_python_project() {
+	mkdir "$project_name"
+    cd "$project_name"
+	virtualenv .venv
+}
+
+create_c_project() {
+    mkdir "$project_name"
+    cd "$project_name"
+}
+
 if [ $# != 2 ];
 then
     help_message;
@@ -26,22 +49,16 @@ fi
 
 if [ "$project_lang" = "python" ];
 then
-	mkdir "$project_name" && cd "$project_name"
-	virtualenv .venv
-elif [ "$project_lang" = "c" ];
+	create_python_project;
+elif [ "$project_lang" = "c" ] || [ "$project_lang" = "c++" ];
 then
-	mkdir "$project_name" && cd "$project_name"
+	create_c_project
 elif [ "$project_lang" = "javascript" ];
 then
-	mkdir "$project_name" && cd "$project_name"
-	npm init
+    create_javascript_project;
 elif [ "$project_lang" = "java" ];
 then
-	mvn -B archetype:generate \
-		-DgroupId="$project_name" \
-		-DartifactId="$project_name" \
-		-DarchetypeArtifactId=maven-archetype-quickstart
-	cd "$project_name"
+    create_java_project;
 fi
 
 git init
