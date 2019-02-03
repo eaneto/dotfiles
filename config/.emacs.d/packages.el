@@ -74,7 +74,7 @@
   :ensure t
   :config
   (eval-after-load 'flycheck
-  '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup)))
+	'(add-hook 'flycheck-mode-hook #'flycheck-irony-setup)))
 
 (use-package which-key
   :ensure t

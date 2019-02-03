@@ -31,7 +31,7 @@
 										  indent-tabs-mode nil)))
 
 ;; Sets bash to be used as shell.
-(setq explicit-shell-file-name "/bin/fish")
+(setq explicit-shell-file-name "/bin/bash")
 
 ;; Enables ido-mode
 (setq-default ido-enable-flex-matching t)
@@ -45,6 +45,11 @@
 (setq-default c-basic-offset 4
               tab-width 4
               indent-tabs-mode t)
+
+(add-hook 'xml-mode-hook (lambda ()
+							(setq-default c-basic-offset 4
+										  tab-width 4
+										  indent-tabs-mode nil)))
 
 (defun beginning-of-line++ ()
   "Go to first character on a line."
