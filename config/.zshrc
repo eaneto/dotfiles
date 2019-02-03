@@ -5,7 +5,6 @@
 # /___|___/_| |_|_|  \___|
 
 
-export HOME=/home/eldron
 export ZSH=/home/eldron/.oh-my-zsh
 
 ZSH_THEME="lambda-mod"

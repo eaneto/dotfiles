@@ -13,6 +13,7 @@ alias pip3="/usr/local/bin/pip3"
 alias ls="ls -N --color"
 abbr ll "ls -laho"
 abbr l "ls -l"
+abbr sudo "sudo"
 
 # Scripts
 alias init-project="sh $SCRIPTS/init-project.sh"
@@ -25,6 +26,7 @@ alias yen="python3 $SCRIPTS/yen.py"
 alias hkd="python3 $SCRIPTS/hkd.py"
 alias cny="python3 $SCRIPTS/cny.py"
 alias currencies="dolar ;and yen ;and hkd ;and cny"
+alias pall="sh $SCRIPTS/pull_everything.sh"
 
 # ENV variables
 export PROJECTS=$HOME/Projects
@@ -47,6 +49,5 @@ function fish_prompt
 end
 
 set BASE16_SHELL $HOME/.config/base16-shell/
-[ -n "$PS1" ] ;and [ -s $BASE16_SHELL/profile_helper.sh ] ;and eval "($BASE16_SHELL/profile_helper.sh)"
 
 bash $BASE16_SHELL/scripts/base16-tomorrow-night.sh
