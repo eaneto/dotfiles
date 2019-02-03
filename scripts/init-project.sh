@@ -6,7 +6,7 @@ project_name=$2
 help_message() {
     echo -e "Create sample project script.\n"
     echo -e "Usage: init-project [PROJECT_LANG] [PROJECT_NAME]\n"
-    echo -e "Written by Edison Neto"
+    echo -e "Written by Edison Neto (2019)"
 }
 
 create_java_project() {
@@ -32,6 +32,14 @@ create_c_project() {
     cd "$project_name"
 }
 
+directory_exists() {
+    if [ -d "$project_name" ];
+    then
+    	echo "Directory '$project_name' already exists."
+    	exit 1
+    fi
+}
+
 if [ $# != 2 ];
 then
     help_message;
@@ -41,11 +49,7 @@ fi
 echo -e "Creating project $project_name... \n"
 sleep .5
 
-if [ -d "$project_name" ];
-then
-	echo "Directory '$project_name' already exists."
-	exit 1
-fi
+directory_exists;
 
 if [ "$project_lang" = "python" ];
 then
