@@ -11,20 +11,20 @@ help_message() {
 
 create_java_project() {
     mkdir -p "$project_name"/src/main/java/"$project_name"
-	cd "$project_name"
+    cd "$project_name"
     cp $SCRIPTS/java/base-pom.xml pom.xml
 }
 
 create_javascript_project() {
-	mkdir "$project_name"
+    mkdir "$project_name"
     cd "$project_name"
-	npm init
+    npm init
 }
 
 create_python_project() {
-	mkdir "$project_name"
+    mkdir "$project_name"
     cd "$project_name"
-	virtualenv .venv
+    virtualenv .venv
 }
 
 create_c_project() {
@@ -35,8 +35,8 @@ create_c_project() {
 directory_exists() {
     if [ -d "$project_name" ];
     then
-    	echo "Directory '$project_name' already exists."
-    	exit 1
+        echo "Directory '$project_name' already exists."
+        exit 1
     fi
 }
 
@@ -53,10 +53,10 @@ directory_exists;
 
 if [ "$project_lang" = "python" ];
 then
-	create_python_project;
+    create_python_project;
 elif [ "$project_lang" = "c" ] || [ "$project_lang" = "c++" ];
 then
-	create_c_project
+    create_c_project
 elif [ "$project_lang" = "javascript" ];
 then
     create_javascript_project;
@@ -72,9 +72,9 @@ read -e -p "Is there a github repo? [y/n]" github
 
 if [ "$github" = "y" ];
 then
-	git remote add origin https://github.com/3ldr0n/"$project_name".git
-	git remote -v
-	git pull origin master
+    git remote add origin https://github.com/3ldr0n/"$project_name".git
+    git remote -v
+    git pull origin master
 fi
 
 
