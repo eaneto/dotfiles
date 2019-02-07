@@ -46,20 +46,6 @@ tray-padding = 0
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
-;; Custom module to display the current song.
-[module/current-song]
-type = custom/script
-exec = ~/Projects/scripts-and-config/scripts/rhythmbox.sh
-
-click-left = rhythmbox-client --play-pause
-click-middle = rhythmbox-client --play-pause
-click-right = rhythmbox-client --play-pause
-
-label = %output%
-interval = 1
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #8abeb7
-
 ;; Custom module to display bitcoin and ethereum price.
 [module/crypto]
 type = custom/script
