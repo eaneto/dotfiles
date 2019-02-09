@@ -1,7 +1,18 @@
 # Emacs/vim files
 \#*#
+.#*
 *#
 *~
 *.swp
-.venv
 .dumbjump
+
+# Python environment
+.venv
+
+# Java
+target/
+.idea/
+*.iml
+
+# C / C++
+*.o
