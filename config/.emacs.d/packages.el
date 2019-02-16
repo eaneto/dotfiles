@@ -123,15 +123,6 @@
 (use-package js2-mode
   :ensure t)
 
-(use-package rjsx-mode
-  :ensure t
-  :config
-  (add-to-list 'auto-mode-alist
-			   '("components\\/.*\\.js\\'" . rjsx-mode)))
-
-(use-package vue-mode
-  :ensure t)
-
 (use-package apache-mode
   :ensure t)
 

@@ -24,14 +24,8 @@
 (setq indent-line-function 'insert-tab)
 (global-set-key (kbd "RET") 'newline-and-indent)
 
-;; Java indentation.
-(add-hook 'java-mode-hook (lambda ()
-							(setq-default c-basic-offset 4
-										  tab-width 4
-										  indent-tabs-mode nil)))
-
 ;; Sets bash to be used as shell.
-(setq explicit-shell-file-name "/bin/bash")
+(defvar explicit-shell-file-name "/bin/bash")
 
 ;; Enables ido-mode
 (setq-default ido-enable-flex-matching t)
@@ -41,15 +35,23 @@
 ;; Sets ibuffer as default.
 (defalias 'list-buffers 'ibuffer)
 
+;; C indentation and code style
 (setq-default c-default-style "linux")
 (setq-default c-basic-offset 4
               tab-width 4
               indent-tabs-mode t)
 
+;; XML identation
 (add-hook 'xml-mode-hook (lambda ()
 							(setq-default c-basic-offset 4
 										  tab-width 4
 										  indent-tabs-mode nil)))
+;; Java indentation.
+(add-hook 'java-mode-hook (lambda ()
+							(setq-default c-basic-offset 4
+										  tab-width 4
+										  indent-tabs-mode nil)))
+
 
 (defun beginning-of-line++ ()
   "Go to first character on a line."
