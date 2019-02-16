@@ -1,5 +1,3 @@
-execute pathogen#infect()
-
 let base16colorspace=256
 
 " Enable the syntax

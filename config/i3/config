@@ -4,7 +4,6 @@
 
 set $mod		                                Mod4
 set $term		                                st
-set $sec_term                                   urxvt256c
 set $browser 									python3 -m qutebrowser
 
 # Set color to be used in the bar
@@ -15,7 +14,7 @@ set $inactive_text_color	                    "#676e7d"
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Hack 8
+font pango:mono 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier                               $mod
@@ -39,7 +38,6 @@ bindsym $mod+Shift+q							kill
 
 # start a terminal.
 bindsym $mod+Return								exec $term
-bindsym $mod+g                                  exec $sec_term
 
 # start emacs.
 bindsym $mod+e									exec emacs
@@ -53,20 +51,11 @@ bindsym $mod+y                                  exec $browser
 # start transmission,
 bindsym $mod+o									exec transmission-gtk
 
-# start thunderbird
-bindsym $mod+Shift+a							exec thunderbird
-
-# pause rhythmbox
-bindsym $mod+Shift+p							exec rhythmbox-client --play-pause
-
 # start ranger
 bindsym $mod+q									exec $term -e ranger
 
 # Start postman
 bindsym $mod+p									exec postman	
-
-# start steam
-bindsym $mod+i                                  exec steam
 
 for_window [title="video0 - mpv"]				floating enable
 
@@ -156,7 +145,6 @@ bindsym $mod+Shift+0                            move container to workspace $wor
 
 # Loads transmission in workspace 10
 assign [class="Transmission"]				    $workspace10
-assign [class="Thunderbird"]					$workspace9
 
 # reload the configuration file
 bindsym $mod+Shift+c							 reload
@@ -191,21 +179,6 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-mode "move" {
-	bindsym h move left
-	bindsym j move down
-	bindsym k move up
-	bindsym l move right
-
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-
-#bar {
-#    status_command i3blocks
-#    position top
-#}
-
 hide_edge_borders both
 
 # i3lock config
@@ -216,4 +189,4 @@ exec_always exec compton -f
 exec_always --no-startup-id /home/eldron/.config/polybar/launch.sh
 
 # Set wallpaper
-exec --no-startup-id /usr/bin/feh --bg-scale /home/eldron/.config/wallpaper.jpg
+exec --no-startup-id feh --bg-scale /home/eldron/.config/wallpaper.jpg

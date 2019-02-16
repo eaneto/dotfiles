@@ -39,4 +39,4 @@ URxvt.colorUL:		#4682B4
 
 st.alpha: 250
 
-emacs.font: hack
+emacs.font: mono

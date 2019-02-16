@@ -47,7 +47,3 @@ function fish_prompt
     set_color cyan
     echo -n " → "
 end
-
-set BASE16_SHELL $HOME/.config/base16-shell/
-
-bash $BASE16_SHELL/scripts/base16-tomorrow-night.sh
