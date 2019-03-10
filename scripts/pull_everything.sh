@@ -1,6 +1,6 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
-PROJECTS_DIR=~/Projects/*
+PROJECTS_DIR=~/projects/*
 RED='\033[0;31m'
 ERASE='\033[0m'
 
