@@ -39,7 +39,7 @@
 (setq-default c-default-style "linux")
 (setq-default c-basic-offset 4
               tab-width 4
-              indent-tabs-mode t)
+              indent-tabs-mode nil)
 
 ;; XML identation
 (add-hook 'xml-mode-hook (lambda ()
