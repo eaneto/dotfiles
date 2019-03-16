@@ -7,7 +7,10 @@
 .dumbjump
 
 # Python environment
-.venv
+.venv/
+.env/
+env/
+venv/
 
 # Java
 target/
