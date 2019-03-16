@@ -9,7 +9,7 @@ then
 		exit 1
 	fi
 
-	dnf install emacs i3 rxvt-unicode-256color zsh dmenu i3lock light youtube-dl moc
+	dnf install emacs i3 rxvt-unicode-256color zsh dmenu i3lock light youtube-dl
 
 	# Python packages
 	python3 -m pip install requests BeautifulSoup
