@@ -80,6 +80,11 @@
   :ensure t
   :config (which-key-mode))
 
+(use-package smex
+  :ensure t
+  :config
+  (global-set-key (kbd "M-x") 'smex))
+
 (use-package gitignore-mode
   :ensure t
   :defer t)
