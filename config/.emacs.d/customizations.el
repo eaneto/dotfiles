@@ -6,52 +6,46 @@
 
 (setq inhibit-startup-message t)
 
-;; Removes tool and menu bar.
-(tool-bar-mode -1)
-(menu-bar-mode -1)
-;; Removes scroll bar.
-(scroll-bar-mode -1)
+(defun visual-config-modes()
+  "Visual modes. Removes tool and menu bar, removes scroll bar and display line numbers."
+  (tool-bar-mode -1)
+  (menu-bar-mode -1)
+  (scroll-bar-mode -1)
+  (global-linum-mode t))
 
-;; Display line numbers
-(global-linum-mode t)
+(defun set-default-indentation()
+  "Configures the default indentation (4 spaces)."
+  (setq-default indent-tabs-mode nil)
+  (setq-default tab-width 4)
+  (setq indent-line-function 'insert-tab)
+  (global-set-key (kbd "RET") 'newline-and-indent))
 
-;; Autoclose brackets, quotes.
-(electric-pair-mode 1)
+(defun enable-ido-mode()
+  "Enables ido-mode."
+  (setq-default ido-enable-flex-matching t)
+  (setq-default ido-everyehere t)
+  (ido-mode 1))
 
-;; Sets tabs width to 4 spaces.
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 4)
-(setq indent-line-function 'insert-tab)
-(global-set-key (kbd "RET") 'newline-and-indent)
+(defun set-c-code-style()
+  "C indentation and code style."
+  (setq-default c-default-style "linux")
+  (setq-default c-basic-offset 4
+                tab-width 4
+                indent-tabs-mode nil))
 
-;; Sets bash to be used as shell.
-(defvar explicit-shell-file-name "/bin/bash")
+(defun set-xml-code-style()
+  "XML indentation."
+  (add-hook 'xml-mode-hook (lambda ()
+                             (setq-default c-basic-offset 4
+                                           tab-width 4
+                                           indent-tabs-mode nil))))
 
-;; Enables ido-mode
-(setq-default ido-enable-flex-matching t)
-(setq-default ido-everyehere t)
-(ido-mode 1)
-
-;; Sets ibuffer as default.
-(defalias 'list-buffers 'ibuffer)
-
-;; C indentation and code style
-(setq-default c-default-style "linux")
-(setq-default c-basic-offset 4
-              tab-width 4
-              indent-tabs-mode nil)
-
-;; XML identation
-(add-hook 'xml-mode-hook (lambda ()
-							(setq-default c-basic-offset 4
-										  tab-width 4
-										  indent-tabs-mode nil)))
-;; Java indentation.
-(add-hook 'java-mode-hook (lambda ()
-							(setq-default c-basic-offset 4
-										  tab-width 4
-										  indent-tabs-mode nil)))
-
+(defun set-java-code-style()
+  "Java indentation and code style."
+  (add-hook 'java-mode-hook (lambda ()
+                              (setq-default c-basic-offset 4
+                                            tab-width 4
+                                            indent-tabs-mode nil))))
 
 (defun beginning-of-line++ ()
   "Go to first character on a line."
@@ -59,6 +53,23 @@
   (if (bolp)
 	  (back-to-indentation)
 	(beginning-of-line)))
+
+;; Autoclose brackets, quotes.
+(electric-pair-mode 1)
+
+(visual-config-modes)
+(set-default-indentation)
+(enable-ido-mode)
+(set-c-code-style)
+(set-xml-code-style)
+(set-java-code-style)
+
+;; Sets bash to be used as shell.
+(defvar explicit-shell-file-name "/bin/bash")
+
+;; Sets ibuffer as default.
+(defalias 'list-buffers 'ibuffer)
+
 (global-set-key (kbd "C-a") 'beginning-of-line++)
 
 ;; Env variables
