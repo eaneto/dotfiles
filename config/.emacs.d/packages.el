@@ -26,6 +26,10 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
+(use-package yasnippet
+  :ensure t
+  :config (yas-global-mode 1))
+
 (use-package flycheck
   :ensure t
   :init (global-flycheck-mode)
