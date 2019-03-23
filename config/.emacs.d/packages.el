@@ -31,7 +31,6 @@
   :init (global-flycheck-mode)
   (add-hook 'after-init-hook #'global-flycheck-mode))
 
-;; Elpy configuration.
 (use-package elpy
   :init (elpy-enable)
   (setq elpy-rpc-python-command "python3")
@@ -98,7 +97,6 @@
   :ensure t
   :defer t)
 
-;; Evil mode.
 (use-package evil
   :ensure t
   :init (evil-mode 1))
