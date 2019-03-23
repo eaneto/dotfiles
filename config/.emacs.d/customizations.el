@@ -26,27 +26,6 @@
   (setq-default ido-everyehere t)
   (ido-mode 1))
 
-(defun set-c-code-style()
-  "C indentation and code style."
-  (setq-default c-default-style "linux")
-  (setq-default c-basic-offset 4
-                tab-width 4
-                indent-tabs-mode nil))
-
-(defun set-xml-code-style()
-  "XML indentation."
-  (add-hook 'xml-mode-hook (lambda ()
-                             (setq-default c-basic-offset 4
-                                           tab-width 4
-                                           indent-tabs-mode nil))))
-
-(defun set-java-code-style()
-  "Java indentation and code style."
-  (add-hook 'java-mode-hook (lambda ()
-                              (setq-default c-basic-offset 4
-                                            tab-width 4
-                                            indent-tabs-mode nil))))
-
 (defun beginning-of-line++ ()
   "Go to first character on a line."
   (interactive)
@@ -54,15 +33,12 @@
 	  (back-to-indentation)
 	(beginning-of-line)))
 
-;; Autoclose brackets, quotes.
-(electric-pair-mode 1)
-
 (visual-config-modes)
 (set-default-indentation)
 (enable-ido-mode)
-(set-c-code-style)
-(set-xml-code-style)
-(set-java-code-style)
+
+;; Autoclose brackets, quotes.
+(electric-pair-mode 1)
 
 ;; Sets bash to be used as shell.
 (defvar explicit-shell-file-name "/bin/bash")
