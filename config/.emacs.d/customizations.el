@@ -33,9 +33,21 @@
 	  (back-to-indentation)
 	(beginning-of-line)))
 
+(defun read-path-variable-from-zshrc()
+(let ((path (shell-command-to-string ". ~/.zshrc; echo -n $PATH")))
+  (setenv "PATH" path)
+  (setq exec-path
+        (append
+         (split-string-and-unquote path ":")
+         exec-path))))
+
+(setq user-full-name "Edison Aguiar de S. Neto"
+      user-mail-address "ednetoali@gmail.com")
+
 (visual-config-modes)
 (set-default-indentation)
 (enable-ido-mode)
+(read-path-variable-from-zshrc)
 
 ;; Autoclose brackets, quotes.
 (electric-pair-mode 1)
