@@ -24,10 +24,10 @@
 *color15: #f1efee
 
 URxvt.background:	#000000
-URxvt.foreground:	#333333
+URxvt.foreground:	#dddddd
 
 URxvt.depth:		32
-URxvt.font: 		xft:hack:size=11
+URxvt.font: 		xft:source code variable:size=11
 URxvt.scrollBar:	false
 URxvt.cursorColor:	white
 
@@ -38,5 +38,3 @@ URxvt.resize-font.bigger:	C-Up
 URxvt.colorUL:		#4682B4
 
 st.alpha: 250
-
-emacs.font: mono

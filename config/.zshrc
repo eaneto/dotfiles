@@ -45,3 +45,5 @@ case "$EMACS" in
     PROMPT_COMMAND=
     PS1="[\u@\h:\w]$ "
 esac
+
+export PATH=/home/eldron/.local/bin:$PATH
