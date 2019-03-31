@@ -11,7 +11,8 @@
   (tool-bar-mode -1)
   (menu-bar-mode -1)
   (scroll-bar-mode -1)
-  (global-linum-mode t))
+  (global-linum-mode t)
+  (show-paren-mode 1))
 
 (defun set-default-indentation()
   "Configures the default indentation (4 spaces)."
