@@ -4,6 +4,7 @@
 # contributor: Chen Bin <chenbin.sh AT gmail>
 # --
 if (${1:true}) {
-  $0
+    $0
 } else {
+    $1
 }
