@@ -53,8 +53,8 @@
 ;; Autoclose brackets, quotes.
 (electric-pair-mode 1)
 
-;; Sets bash to be used as shell.
-(defvar explicit-shell-file-name "/bin/bash")
+;; Sets zsh to be used as shell.
+(defvar explicit-shell-file-name "/bin/zsh")
 
 ;; Sets ibuffer as default.
 (defalias 'list-buffers 'ibuffer)
@@ -62,6 +62,6 @@
 (global-set-key (kbd "C-a") 'beginning-of-line++)
 
 ;; Env variables
-(setenv "SCRIPTS" "/home/eldron/Projects/scripts-and-config/scripts/")
+(setenv "SCRIPTS" "/home/eldron/projects/scripts-and-config/scripts/")
 
 ;;; customizations.el ends here

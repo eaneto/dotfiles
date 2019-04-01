@@ -104,11 +104,6 @@
   :ensure t
   :defer t)
 
-(use-package persp-mode
-  :ensure t
-  :config
-  (persp-mode))
-
 (defun setup-evil-packages()
   (use-package evil
     :ensure t
@@ -215,11 +210,16 @@
   (setq highlight-indent-guides-method 'column)
   (setq highlight-indent-guides-character ?\|))
 
-(use-package helm
+(use-package smex
   :ensure t
   :config
-  (helm-mode 1)
-  (global-set-key (kbd "M-x") 'helm-M-x))
+  (global-set-key (kbd "M-x") 'smex))
+
+(use-package org-bullets
+  :ensure t
+  :config
+  (add-hook 'org-mode-hook
+            (lambda () (org-bullets-mode 1))))
 
 (setup-evil-packages)
 (setup-python-packages)
