@@ -4,5 +4,7 @@
 # --
 class ${1:string} {
 public:
+    $2
 private:
+    $0
 };
