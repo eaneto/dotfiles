@@ -4,10 +4,10 @@
 ;;;
 ;;; Code:
 
-(setq inhibit-startup-message t)
 
 (defun visual-config-modes()
   "Visual modes. Removes tool and menu bar, removes scroll bar and display line numbers."
+  (setq inhibit-startup-message t)
   (tool-bar-mode -1)
   (menu-bar-mode -1)
   (scroll-bar-mode -1)
@@ -35,12 +35,12 @@
 	(beginning-of-line)))
 
 (defun read-path-variable-from-zshrc()
-(let ((path (shell-command-to-string ". ~/.zshrc; echo -n $PATH")))
-  (setenv "PATH" path)
-  (setq exec-path
-        (append
-         (split-string-and-unquote path ":")
-         exec-path))))
+  (let ((path (shell-command-to-string ". ~/.zshrc; echo -n $PATH")))
+    (setenv "PATH" path)
+    (setq exec-path
+          (append
+           (split-string-and-unquote path ":")
+           exec-path))))
 
 (setq user-full-name "Edison Aguiar de S. Neto"
       user-mail-address "ednetoali@gmail.com")
