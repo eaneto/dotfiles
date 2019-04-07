@@ -34,5 +34,7 @@ target/
 *.ipr
 /out/
 
-# C / C++
-*.o
+# Tags
+GTAGS
+GRTAGS
+GPATH
