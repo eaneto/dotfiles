@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 opt=$1
 
@@ -12,7 +12,7 @@ then
 	dnf install emacs i3 rxvt-unicode-256color zsh dmenu i3lock light youtube-dl
 
 	# Python packages
-	python3 -m pip install requests BeautifulSoup
+	python3 -m pip install --user requests BeautifulSoup
 fi
 
 echo "Copying text editor config... "

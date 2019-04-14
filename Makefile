@@ -19,5 +19,5 @@ config:
 
 main:
 	dnf install emacs i3 rxvt-unicode-256color zsh dmenu i3lock light youtube-dl
-	$(PYTHON) -m pip install requests bs4
+	$(PYTHON) -m pip install --user requests bs4
 	config
