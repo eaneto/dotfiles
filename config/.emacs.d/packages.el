@@ -112,6 +112,21 @@
     :config
     (global-evil-matchit-mode 1)))
 
+(defun setup-elixir-packages()
+  (use-package elixir-mode
+    :ensure t
+    :defer t
+    :config
+    (add-hook 'elixir-mode-hook
+          (lambda ()
+            (add-hook 'before-save-hook 'elixir-format nil t))))
+
+  (use-package alchemist
+    :ensure t
+    :defer t
+    :config
+    (setq alchemist-key-command-prefix (kbd "C-c /"))))
+
 (defun setup-custom-modes-packages()
   (use-package dockerfile-mode
     :ensure t
@@ -158,10 +173,6 @@
   (use-package yaml-mode
     :config
     (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
-    :ensure t
-    :defer t)
-  
-  (use-package elixir-mode
     :ensure t
     :defer t)
   
@@ -252,6 +263,14 @@
   :config
   (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
 
+(use-package elfeed
+  :ensure t
+  :defer t
+  :config
+  (global-set-key (kbd "C-x w") 'elfeed)
+  (elfeed-feeds
+      '("https://undeadly.org/cgi?action=rss")))
+
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 
 (defun configure-awesome-tab()
@@ -265,6 +284,7 @@
 (setup-evil-packages)
 (setup-python-packages)
 (setup-irony-packages)
+(setup-elixir-packages)
 (configure-awesome-tab)
 (configure-company-english-helper)
 
