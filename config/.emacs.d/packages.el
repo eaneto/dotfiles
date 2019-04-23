@@ -269,7 +269,13 @@
   :config
   (global-set-key (kbd "C-x w") 'elfeed)
   (elfeed-feeds
-      '("https://undeadly.org/cgi?action=rss")))
+   '("https://undeadly.org/cgi?action=rss")))
+
+(use-package git-gutter
+  :ensure t
+  :config
+  (global-git-gutter-mode t)
+  (git-gutter:linum-setup))
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 
