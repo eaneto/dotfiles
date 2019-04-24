@@ -277,6 +277,11 @@
   (global-git-gutter-mode t)
   (git-gutter:linum-setup))
 
+(use-package dashboard
+  :ensure t
+  :config
+  (dashboard-setup-startup-hook))
+
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 
 (defun configure-awesome-tab()
