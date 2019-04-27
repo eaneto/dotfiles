@@ -35,10 +35,19 @@
   :init (global-flycheck-mode)
   (add-hook 'after-init-hook #'global-flycheck-mode))
 
+(use-package rainbow-mode
+  :ensure t
+  :config
+  (add-hook 'prog-mode-hook 'rainbow-mode))
+
 (use-package company
   :ensure t
   :init
-  (add-hook 'after-init-hook 'global-company-mode))
+  (add-hook 'after-init-hook 'global-company-mode)
+  :config
+  (setq company-idle-delay 0)
+  (define-key company-active-map (kbd "M-j") 'company-select-next-or-abort)
+  (define-key company-active-map (kbd "M-k") 'company-select-previous-or-abort))
 
 (defun setup-python-packages()
   (use-package elpy
@@ -182,7 +191,13 @@
 
   (use-package kotlin-mode
     :ensure t
-    :defer t))
+    :defer t)
+
+  (use-package clojure-mode
+    :ensure t)
+
+  (use-package cider
+    :ensure t))
 
 (use-package ag
   :ensure t)
