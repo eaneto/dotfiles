@@ -215,10 +215,6 @@
   (setq projectile-project-search-path '("~/projects/"))
   (projectile-mode +1))
 
-(use-package function-args
-  :ensure t
-  :init (fa-config-default))
-
 (use-package neotree
   :ensure t
   :config (global-set-key [f8] 'neotree-toggle)
@@ -280,7 +276,12 @@
 (use-package dashboard
   :ensure t
   :config
-  (dashboard-setup-startup-hook))
+  (dashboard-setup-startup-hook)
+  (setq dashboard-items '((recents  . 5)
+                        (bookmarks . 5)
+                        (projects . 5)
+                        (agenda . 5)
+                        (registers . 5))))
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 
@@ -296,7 +297,5 @@
 (setup-python-packages)
 (setup-irony-packages)
 (setup-elixir-packages)
-(configure-awesome-tab)
-(configure-company-english-helper)
 
 ;;; packages.el ends here
