@@ -28,11 +28,13 @@
 
 (use-package yasnippet
   :ensure t
-  :config (yas-global-mode 1))
+  :config
+  (yas-global-mode 1))
 
 (use-package flycheck
   :ensure t
-  :init (global-flycheck-mode)
+  :init
+  (global-flycheck-mode)
   (add-hook 'after-init-hook #'global-flycheck-mode))
 
 (use-package rainbow-mode
@@ -52,7 +54,8 @@
 (defun setup-python-packages()
   (use-package elpy
     :ensure t
-    :init (elpy-enable)
+    :init
+    (elpy-enable)
     (setq elpy-rpc-python-command "python3")
     (setq python-shell-interpreter "python3"
           python-shell-interpreter-args "-i"))
@@ -89,7 +92,8 @@
 
 (use-package which-key
   :ensure t
-  :config (which-key-mode))
+  :config
+  (which-key-mode))
 
 (use-package fancy-battery
   :ensure t
@@ -108,7 +112,8 @@
 (defun setup-evil-packages()
   (use-package evil
     :ensure t
-    :init (evil-mode 1))
+    :init
+    (evil-mode 1))
 
   (use-package evil-magit
     :ensure t
@@ -180,10 +185,10 @@
     :defer t)
   
   (use-package yaml-mode
-    :config
-    (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
     :ensure t
-    :defer t)
+    :defer t
+    :config
+    (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode)))
   
   (use-package groovy-mode
     :ensure t
@@ -232,7 +237,8 @@
 
 (use-package neotree
   :ensure t
-  :config (global-set-key [f8] 'neotree-toggle)
+  :config
+  (global-set-key [f8] 'neotree-toggle)
   (setq neo-theme
 	  (if (display-graphic-p) 'icons 'arrow)))
 
@@ -242,11 +248,13 @@
 
 (use-package latex-preview-pane
   :ensure t
-  :init (latex-preview-pane-enable))
+  :init
+  (latex-preview-pane-enable))
 
 (use-package telephone-line
   :ensure t
-  :init (telephone-line-mode 1))
+  :init
+  (telephone-line-mode 1))
 
 (require 'iso-transl)
 

@@ -6,7 +6,8 @@
 
 
 (defun visual-config-modes()
-  "Visual modes. Removes tool and menu bar, removes scroll bar and display line numbers."
+  "Visual modes. Removes tool and menu bar,
+removes scroll bar and display line numbers."
   (setq inhibit-startup-message t)
   (tool-bar-mode -1)
   (menu-bar-mode -1)
@@ -27,7 +28,7 @@
   (setq-default ido-everyehere t)
   (ido-mode 1))
 
-(defun beginning-of-line++ ()
+(defun beginning-of-line++()
   "Go to first character on a line."
   (interactive)
   (if (bolp)
