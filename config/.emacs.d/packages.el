@@ -37,11 +37,6 @@
   (global-flycheck-mode)
   (add-hook 'after-init-hook #'global-flycheck-mode))
 
-(use-package rainbow-mode
-  :ensure t
-  :config
-  (add-hook 'prog-mode-hook 'rainbow-mode))
-
 (use-package company
   :ensure t
   :init
