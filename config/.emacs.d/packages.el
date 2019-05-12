@@ -37,6 +37,9 @@
   (global-flycheck-mode)
   (add-hook 'after-init-hook #'global-flycheck-mode))
 
+(use-package flycheck-mypy
+  :ensure t)
+
 (use-package company
   :ensure t
   :init
@@ -108,7 +111,10 @@
   (use-package evil
     :ensure t
     :init
-    (evil-mode 1))
+    (evil-mode 1)
+    :config
+    (with-eval-after-load 'evil
+      (define-key evil-normal-state-map (kbd "M-.") nil)))
 
   (use-package evil-magit
     :ensure t
