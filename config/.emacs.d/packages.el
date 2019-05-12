@@ -307,6 +307,9 @@
                         (agenda . 5)
                         (registers . 5))))
 
+(use-package sly
+  :ensure t)
+
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 
 (defun configure-awesome-tab()
