@@ -308,7 +308,9 @@
                         (registers . 5))))
 
 (use-package sly
-  :ensure t)
+  :ensure t
+  :config
+  (setq inferior-lisp-program "/usr/bin/sbcl"))
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 
