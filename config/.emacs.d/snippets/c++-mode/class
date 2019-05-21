@@ -3,8 +3,8 @@
 # key: class
 # --
 class ${1:string} {
-public:
-    $2
 private:
+    $2
+public:
     $0
 };
