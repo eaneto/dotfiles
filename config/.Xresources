@@ -23,11 +23,11 @@
 *color7: #a8a19f
 *color15: #f1efee
 
-URxvt.background:	#000000
+URxvt.background:	#111111
 URxvt.foreground:	#dddddd
 
 URxvt.depth:		32
-URxvt.font: 		xft:source code variable:size=11
+URxvt.font: 		xft:source code variable:size=12
 URxvt.scrollBar:	false
 URxvt.cursorColor:	white
 
