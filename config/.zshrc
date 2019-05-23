@@ -30,14 +30,7 @@ alias ll="ls -laho"
 
 # Scripts
 alias volume="sh $SCRIPTS/volume.sh"
-alias myip="python3 $SCRIPTS/ip.py"
 alias download="sh $SCRIPTS/download.sh"
-alias dolar="python3 $SCRIPTS/dolar.py"
-alias yen="python3 $SCRIPTS/yen.py"
-alias hkd="python3 $SCRIPTS/hkd.py"
-alias cny="python3 $SCRIPTS/cny.py"
-alias currencies="dolar && yen && hkd && cny"
-alias init-project="sh $SCRIPTS/init-project.sh"
 alias pall="sh $SCRIPTS/pull_everything.sh"
 
 case "$EMACS" in
