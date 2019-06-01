@@ -49,45 +49,6 @@
   (define-key company-active-map (kbd "M-j") 'company-select-next-or-abort)
   (define-key company-active-map (kbd "M-k") 'company-select-previous-or-abort))
 
-(defun setup-python-packages()
-  (use-package elpy
-    :ensure t
-    :init
-    (elpy-enable)
-    (setq elpy-rpc-python-command "python3")
-    (setq python-shell-interpreter "python3"
-          python-shell-interpreter-args "-i"))
-
-  (use-package py-autopep8
-    :ensure t
-    :config
-    (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
-    (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save))
-  
-  (use-package pyenv-mode
-    :ensure t))
-
-(defun setup-irony-packages()
-  (use-package irony
-    :ensure t
-    :init
-    (add-hook 'c++-mode-hook 'irony-mode)
-    (add-hook 'c-mode-hook 'irony-mode)
-    (add-hook 'objc-mode-hook 'irony-mode)
-    (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options))
-  
-  (use-package company-irony
-    :ensure t
-    :config
-    (eval-after-load 'company
-      '(add-to-list 'company-backends 'company-irony)))
-  
-  (use-package flycheck-irony
-    :ensure t
-    :config
-    (eval-after-load 'flycheck
-      '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))))
-
 (use-package which-key
   :ensure t
   :config
@@ -102,150 +63,6 @@
   :ensure t
   :config
   (load-theme 'base16-tomorrow-night t))
-
-(use-package magit
-  :ensure t
-  :defer t)
-
-(defun setup-evil-packages()
-  (use-package evil
-    :ensure t
-    :init
-    (evil-mode 1)
-    :config
-    (with-eval-after-load 'evil
-      (define-key evil-normal-state-map (kbd "M-.") nil)))
-
-  (use-package evil-magit
-    :ensure t
-    :config
-    (setq evil-magit-state 'normal)
-    (setq evil-magit-use-y-for-yank nil))
-
-  (use-package evil-matchit
-    :ensure t
-    :config
-    (global-evil-matchit-mode 1)))
-
-(defun setup-elixir-packages()
-  (use-package elixir-mode
-    :ensure t
-    :defer t
-    :config
-    (add-hook 'elixir-mode-hook
-          (lambda ()
-            (add-hook 'before-save-hook 'elixir-format nil t))))
-
-  (use-package alchemist
-    :ensure t
-    :defer t
-    :config
-    (setq alchemist-key-command-prefix (kbd "C-c /"))))
-
-(defun setup-custom-modes-packages()
-  (use-package dockerfile-mode
-    :ensure t
-    :defer t)
-  
-  (use-package gitignore-mode
-    :ensure t
-    :defer t)
-  
-  (use-package js2-mode
-    :ensure t
-    :defer t)
-  
-  (use-package apache-mode
-    :ensure t
-    :defer t)
-  
-  (use-package php-mode
-    :ensure t
-    :defer t
-    :config
-    (add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode)))
-  
-  (use-package web-mode
-    :ensure t
-    :defer t
-    :config
-    (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
-    (add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
-    (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
-    (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-    (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
-    (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
-    (setq web-mode-css-indent-offset 4))
-  
-  (use-package markdown-mode
-    :ensure t
-    :defer t)
-  
-  (use-package arduino-mode
-    :ensure t
-    :defer t)
-  
-  (use-package yaml-mode
-    :ensure t
-    :defer t
-    :config
-    (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode)))
-  
-  (use-package groovy-mode
-    :ensure t
-    :defer t)
-
-  (use-package kotlin-mode
-    :ensure t
-    :defer t)
-
-  (use-package clojure-mode
-    :ensure t)
-
-  (use-package cider
-    :ensure t))
-
-(use-package ag
-  :ensure t)
-
-(use-package dumb-jump
-  :bind (("M-g o" . dumb-jump-go-other-window)
-         ("M-g p" . dumb-jump-back)
-         ("M-g j" . dumb-jump-go)
-         ("M-g i" . dumb-jump-go-prompt)
-         ("M-g x" . dumb-jump-go-prefer-external)
-         ("M-g z" . dumb-jump-go-prefer-external-other-window))
-  :init (dumb-jump-mode)
-  :config
-  (setq dumb-jump-force-searcher 'ag)
-  (setq dumb-jump-prefer-searcher 'ag)
-  :ensure t)
-
-(use-package ggtags
-  :config
-  (add-hook 'c-mode-common-hook
-          (lambda ()
-            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
-              (ggtags-mode 1))))
-  :ensure t)
-
-(use-package projectile
-  :ensure t
-  :config
-  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-  (setq projectile-project-search-path '("~/projects/"))
-  (projectile-mode +1))
-
-(use-package neotree
-  :ensure t
-  :config
-  (global-set-key [f8] 'neotree-toggle)
-  (setq neo-theme
-	  (if (display-graphic-p) 'icons 'arrow)))
-
-(use-package all-the-icons
-  :ensure t
-  :defer t)
 
 (use-package latex-preview-pane
   :ensure t
@@ -291,12 +108,6 @@
   (elfeed-feeds
    '("https://undeadly.org/cgi?action=rss")))
 
-(use-package git-gutter
-  :ensure t
-  :config
-  (global-git-gutter-mode t)
-  (git-gutter:linum-setup))
-
 (use-package dashboard
   :ensure t
   :config
@@ -314,17 +125,20 @@
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 
-(defun configure-awesome-tab()
-  (require 'awesome-tab)
-  (awesome-tab-mode 1))
-
-(defun configure-company-english-helper()
-  (require 'company-english-helper))
+(load "~/.emacs.d/lisp/python-config.el")
+(load "~/.emacs.d/lisp/evil-config.el")
+(load "~/.emacs.d/lisp/irony-config.el")
+(load "~/.emacs.d/lisp/custom-modes-config.el")
+(load "~/.emacs.d/lisp/git-config.el")
+(load "~/.emacs.d/lisp/elixir-config.el")
+(load "~/.emacs.d/lisp/project-config.el")
 
 (setup-custom-modes-packages)
 (setup-evil-packages)
 (setup-python-packages)
 (setup-irony-packages)
 (setup-elixir-packages)
+(setup-git-packages)
+(setup-project-packages)
 
 ;;; packages.el ends here
