@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 PROJECTS_DIR=~/projects/*
 RED='\033[0;31m'

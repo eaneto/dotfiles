@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 monitor=$(xrandr | grep -w "connected" | wc -l)
 
