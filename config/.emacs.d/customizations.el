@@ -9,6 +9,7 @@
   "Visual modes. Removes tool and menu bar,
 removes scroll bar and display line numbers."
   (setq inhibit-startup-message t)
+  (setq-default show-trailing-whitespace t)
   (tool-bar-mode -1)
   (menu-bar-mode -1)
   (scroll-bar-mode -1)
