@@ -1,7 +1,7 @@
-PYTHON=python3
+emacs:
+	cp -R config/.emacs.d/ $HOME/
 
 config:
-	cp -R config/.emacs.d/ $HOME/
 	cp config/.vimrc $HOME/.vimrc
 	cp config/.vimrc_background $HOME/.vimrc_background
 	@echo "Emacs and vim config done."
@@ -17,7 +17,7 @@ config:
 	@xrdb -merge ~/.Xresources
 	@echo "Configs done."
 
-main:
+install:
 	dnf install emacs i3 rxvt-unicode-256color zsh dmenu i3lock light youtube-dl
-	$(PYTHON) -m pip install --user requests bs4
+	emacs
 	config
