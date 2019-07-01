@@ -1,14 +1,15 @@
-#          _              
-#  _______| |__  _ __ ___ 
+#          _
+#  _______| |__  _ __ ___
 # |_  / __| '_ \| '__/ __|
-#  / /\__ \ | | | | | (__ 
+#  / /\__ \ | | | | | (__
 # /___|___/_| |_|_|  \___|
 
 export ZSH="/home/eldron/.oh-my-zsh"
 
 ZSH_THEME="lambda-mod"
+ZSH_TMUX_AUTOSTART=true
 
-plugins=(git)
+plugins=(git git-prompt docker docker-compose virtualenv gradle)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -24,6 +25,7 @@ alias vi="vim"
 alias vimrc="vi $HOME/.vimrc"
 alias zshrc="vi $HOME/.zshrc"
 alias r="ranger"
+alias gw="./gradlew"
 
 alias ls="ls -N --color"
 alias ll="ls -laho"
@@ -44,3 +46,5 @@ export PATH=/home/eldron/.local/bin:$PATH
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/eldron/.sdkman"
 [[ -s "/home/eldron/.sdkman/bin/sdkman-init.sh" ]] && source "/home/eldron/.sdkman/bin/sdkman-init.sh"
+
+. ~/.profile
