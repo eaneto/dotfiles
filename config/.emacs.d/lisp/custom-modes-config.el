@@ -7,25 +7,25 @@
   (use-package dockerfile-mode
     :ensure t
     :defer t)
-  
+
   (use-package gitignore-mode
     :ensure t
     :defer t)
-  
+
   (use-package js2-mode
     :ensure t
     :defer t)
-  
+
   (use-package apache-mode
     :ensure t
     :defer t)
-  
+
   (use-package php-mode
     :ensure t
     :defer t
     :config
     (add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode)))
-  
+
   (use-package web-mode
     :ensure t
     :defer t
@@ -37,21 +37,21 @@
     (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
     (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
     (setq web-mode-css-indent-offset 4))
-  
+
   (use-package markdown-mode
     :ensure t
     :defer t)
-  
+
   (use-package arduino-mode
     :ensure t
     :defer t)
-  
+
   (use-package yaml-mode
     :ensure t
     :defer t
     :config
     (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode)))
-  
+
   (use-package groovy-mode
     :ensure t
     :defer t)
@@ -64,6 +64,9 @@
     :ensure t)
 
   (use-package cider
+    :ensure t)
+
+  (use-package feature-mode
     :ensure t))
 
 
