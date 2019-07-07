@@ -125,19 +125,21 @@
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 
-(load "~/.emacs.d/lisp/python-config.el")
-(load "~/.emacs.d/lisp/evil-config.el")
-(load "~/.emacs.d/lisp/irony-config.el")
 (load "~/.emacs.d/lisp/custom-modes-config.el")
-(load "~/.emacs.d/lisp/git-config.el")
+(load "~/.emacs.d/lisp/clojure-config.el")
 (load "~/.emacs.d/lisp/elixir-config.el")
+(load "~/.emacs.d/lisp/evil-config.el")
+(load "~/.emacs.d/lisp/python-config.el")
+(load "~/.emacs.d/lisp/irony-config.el")
+(load "~/.emacs.d/lisp/git-config.el")
 (load "~/.emacs.d/lisp/project-config.el")
 
 (setup-custom-modes-packages)
+(setup-clojure-packages)
+(setup-elixir-packages)
 (setup-evil-packages)
 (setup-python-packages)
 (setup-irony-packages)
-(setup-elixir-packages)
 (setup-git-packages)
 (setup-project-packages)
 
