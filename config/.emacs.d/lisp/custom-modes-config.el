@@ -67,6 +67,9 @@
     :ensure t)
 
   (use-package feature-mode
+    :ensure t)
+
+  (use-package terraform-mode
     :ensure t))
 
 
