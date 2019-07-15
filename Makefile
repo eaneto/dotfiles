@@ -1,19 +1,20 @@
 emacs:
-	cp -R config/.emacs.d/ $HOME/
+	cp config/.emacs.d/*.el ~/.emacs,d/
+	cp config/.emacs.d/lisp/*.el ~/.emacs,d/lisp/
 
 config:
-	cp config/.vimrc $HOME/.vimrc
-	cp config/.vimrc_background $HOME/.vimrc_background
+	cp config/.vimrc ~/.vimrc
+	cp config/.vimrc_background ~/.vimrc_background
 	@echo "Emacs and vim config done."
 
-	cp -R config/polybar/ $HOME/.config/
-	cp config/i3/config $HOME/.config/i3/
+	cp -R config/polybar/ ~/.config/
+	cp config/i3/config ~/.config/i3/
 	@echo "i3wm and polybar config done."
 
-	cp config/config.fish $HOME/.config/fish/
-	cp config/.zshrc $HOME/.zshrc
-	cp config/.Xresources $HOME/.Xresources
-	cp config/.gitignore_global $HOME/
+	cp config/config.fish ~/.config/fish/
+	cp config/.zshrc ~/.zshrc
+	cp config/.Xresources ~/.Xresources
+	cp config/.gitignore_global ~/
 	@xrdb -merge ~/.Xresources
 	@echo "Configs done."
 
