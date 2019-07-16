@@ -11,7 +11,10 @@
     :ensure t)
 
   (use-package clj-refactor
-    :ensure t))
+    :ensure t
+    :config
+    (clj-refactor-mode 1)
+    (cljr-add-keybindings-with-prefix "C-c C-m")))
 
 (provide 'clojure-config)
 
