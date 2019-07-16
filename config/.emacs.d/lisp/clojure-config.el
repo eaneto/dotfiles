@@ -8,6 +8,9 @@
     :ensure t)
 
   (use-package cider
+    :ensure t)
+
+  (use-package clj-refactor
     :ensure t))
 
 (provide 'clojure-config)
