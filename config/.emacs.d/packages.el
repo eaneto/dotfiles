@@ -120,6 +120,11 @@
   :config
   (setq inferior-lisp-program "/usr/bin/sbcl"))
 
+(use-package ranger
+  :ensure t
+  :config
+  (ranger-override-dired-mode t))
+
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 
 (load "~/.emacs.d/lisp/custom-modes-config.el")
