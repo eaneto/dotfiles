@@ -37,9 +37,6 @@
   (global-flycheck-mode)
   (add-hook 'after-init-hook #'global-flycheck-mode))
 
-(use-package flycheck-mypy
-  :ensure t)
-
 (use-package company
   :ensure t
   :init

@@ -19,6 +19,9 @@
     (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save))
 
   (use-package pyenv-mode
+    :ensure t)
+
+  (use-package flycheck-mypy
     :ensure t))
 
 (provide 'python-config)
