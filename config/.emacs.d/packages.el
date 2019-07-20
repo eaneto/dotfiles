@@ -73,13 +73,18 @@
 
 (require 'iso-transl)
 
-(use-package highlight-indent-guides
+;;(use-package highlight-indent-guides
+;;  :ensure t
+;;  :defer t
+;;  :init
+;;  (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+;;  (setq highlight-indent-guides-method 'column)
+;;  (setq highlight-indent-guides-character ?\|))
+
+(use-package indent-guide
   :ensure t
-  :defer t
-  :init
-  (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
-  (setq highlight-indent-guides-method 'column)
-  (setq highlight-indent-guides-character ?\|))
+  :config
+  (indent-guide-global-mode))
 
 (use-package smex
   :ensure t
@@ -124,6 +129,10 @@
   :ensure t
   :config
   (ranger-override-dired-mode t))
+
+(use-package docker
+  :ensure t
+  :bind ("C-c d" . docker))
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 

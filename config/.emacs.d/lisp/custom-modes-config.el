@@ -70,8 +70,11 @@
     :ensure t)
 
   (use-package terraform-mode
-    :ensure t))
+    :ensure t)
 
+  (use-package alda-mode
+    :ensure t
+    :config))
 
 (provide 'custom-modes-config)
 
