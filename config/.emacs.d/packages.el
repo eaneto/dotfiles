@@ -134,7 +134,17 @@
   :ensure t
   :bind ("C-c d" . docker))
 
+(use-package pdf-tools
+  :ensure t
+  :defer t
+  :init
+  (pdf-tools-install))
+
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
+
+(defun setup-awesome-tab()
+  (require 'awesome-tab)
+  (awesome-tab-mode))
 
 (load "~/.emacs.d/lisp/custom-modes-config.el")
 (load "~/.emacs.d/lisp/clojure-config.el")
@@ -145,13 +155,14 @@
 (load "~/.emacs.d/lisp/git-config.el")
 (load "~/.emacs.d/lisp/project-config.el")
 
+(setup-evil-packages)
 (setup-custom-modes-packages)
 (setup-clojure-packages)
 (setup-elixir-packages)
-(setup-evil-packages)
 (setup-python-packages)
 (setup-irony-packages)
 (setup-git-packages)
 (setup-project-packages)
+(setup-awesome-tab)
 
 ;;; packages.el ends here
