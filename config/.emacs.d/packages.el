@@ -141,6 +141,7 @@
   (pdf-tools-install))
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/awesome-tab"))
 
 (defun setup-awesome-tab()
   (require 'awesome-tab)
