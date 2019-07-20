@@ -73,14 +73,6 @@
 
 (require 'iso-transl)
 
-;;(use-package highlight-indent-guides
-;;  :ensure t
-;;  :defer t
-;;  :init
-;;  (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
-;;  (setq highlight-indent-guides-method 'column)
-;;  (setq highlight-indent-guides-character ?\|))
-
 (use-package indent-guide
   :ensure t
   :config
@@ -145,7 +137,7 @@
 
 (defun setup-awesome-tab()
   (require 'awesome-tab)
-  (awesome-tab-mode))
+  (awesome-tab-mode t))
 
 (load "~/.emacs.d/lisp/custom-modes-config.el")
 (load "~/.emacs.d/lisp/clojure-config.el")
