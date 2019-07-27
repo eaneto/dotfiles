@@ -137,6 +137,11 @@
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/awesome-tab"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/cql-mode"))
+
+(defun setup-cql-mode()
+  (require 'cql-mode)
+  (add-to-list 'auto-mode-alist '("\\.cql\\'" . cql-mode)))
 
 (defun setup-awesome-tab()
   (require 'awesome-tab)
@@ -161,5 +166,6 @@
 (setup-git-packages)
 (setup-project-packages)
 (setup-awesome-tab)
+(setup-cql-mode)
 
 ;;; packages.el ends here

@@ -73,10 +73,10 @@
     :ensure t)
 
   (use-package alda-mode
-    :ensure t)
-
-  (use-package cql-mode
     :ensure t))
+
+  ;;(use-package cql-mode
+  ;;  :ensure t))
 
 (provide 'custom-modes-config)
 
