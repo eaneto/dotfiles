@@ -26,6 +26,9 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
+(use-package all-the-icons
+  :ensure t)
+
 (use-package yasnippet
   :ensure t
   :config
@@ -137,6 +140,7 @@
 
 (defun setup-awesome-tab()
   (require 'awesome-tab)
+  (setq awesome-tab-display-icon t)
   (awesome-tab-mode t))
 
 (load "~/.emacs.d/lisp/custom-modes-config.el")

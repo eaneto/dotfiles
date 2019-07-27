@@ -110,12 +110,7 @@
 
   (use-package treemacs-magit
     :after treemacs magit
-    :ensure t)
-
-  (use-package all-the-icons
-    :ensure t
-    :defer t))
-
+    :ensure t))
 
 (provide 'project-config)
 
