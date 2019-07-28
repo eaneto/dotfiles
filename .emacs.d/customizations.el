@@ -54,7 +54,6 @@ removes scroll bar and display line numbers."
 (add-hook 'term-mode-hook (lambda ()
                             (setq show-trailing-whitespace nil)))
 
-
 ;; Autoclose brackets, quotes.
 (electric-pair-mode 1)
 

@@ -9,8 +9,10 @@
     :init
     (evil-mode 1)
     :config
+    (evil-set-initial-state 'term-mode 'emacs)
     (with-eval-after-load 'evil
-      (define-key evil-normal-state-map (kbd "M-.") nil)))
+      (define-key evil-normal-state-map (kbd "M-.") nil)
+      (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)))
 
   (use-package evil-magit
     :ensure t
