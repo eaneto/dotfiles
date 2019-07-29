@@ -1,3 +1,6 @@
 [submodule ".emacs.d/lisp/awesome-tab"]
 	path = .emacs.d/lisp/awesome-tab
 	url = https://github.com/manateelazycat/awesome-tab.git
+[submodule ".emacs.d/lisp/cql-mode"]
+	path = .emacs.d/lisp/cql-mode
+	url = https://github.com/3ldr0n/cql-mode.git
