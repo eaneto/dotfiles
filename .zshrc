@@ -17,7 +17,7 @@ source $ZSH/oh-my-zsh.sh
 export PROJECTS=$HOME/projects
 export EDITOR=emacs
 export GIT_EDITOR=vim
-export SCRIPTS=$PROJECTS/scripts-and-config/scripts
+export SCRIPTS=$PROJECTS/snippets/shell
 
 # Shortcuts
 alias v="vim"
