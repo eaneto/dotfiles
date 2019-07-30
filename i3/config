@@ -3,8 +3,8 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod		                                Mod4
-set $term		                                st
-set $browser 									qutebrowser
+set $term		                                st -e tmux
+set $browser 									firefox
 
 # Set color to be used in the bar
 set $background				                    "#1d1f21"
@@ -184,9 +184,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bar {
-    status_command i3status
-}
+exec_always --no-startup-id polybar main
 
 hide_edge_borders both
 
