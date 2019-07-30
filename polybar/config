@@ -35,8 +35,7 @@ font-2 = Wuncon Siji:pixelsize=9;1
 font-3 = Awesome:size=9.5;1
 
 modules-left = i3
-modules-center = current-song
-modules-right = crypto volume wlan battery date
+modules-right = alsa wlan battery date
 
 wm-name = i3
 
@@ -45,16 +44,6 @@ tray-padding = 0
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
-
-;; Custom module to display bitcoin and ethereum price.
-[module/crypto]
-type = custom/script
-exec = ~/Projects/scripts-and-config/scripts/crypto.py
-
-label = %output%
-interval = 60
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f22c40
 
 [module/xwindow]
 type = internal/xwindow
@@ -134,7 +123,7 @@ format-underline = #81a2be
 
 label = %date% %time%
 
-[module/volume]
+[module/alsa]
 type = internal/volume
 
 format-volume = <label-volume> <bar-volume>
