@@ -3,6 +3,6 @@ Urxvt.font: xft:Monsapce:size=13
 st.font: Monospace-13
 
 !! Set the background, foreground and cursor colors as below:
-*.background: #111111
-*.foreground: #DDDDDD
-*.cursorColor: #CCCCCC
+st.background: #111111
+st.foreground: #DDDDDD
+st.cursorColor: #CCCCCC
