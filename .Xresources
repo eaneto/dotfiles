@@ -1,8 +1,15 @@
 !! Set a default font and font size as below:
-Urxvt.font: xft:Monsapce:size=13
-st.font: Monospace-13
-
 !! Set the background, foreground and cursor colors as below:
+st.font: Monospace-13
 st.background: #111111
 st.foreground: #DDDDDD
 st.cursorColor: #CCCCCC
+
+URxvt.font: xft:monospace:size=13
+URxvt.background: #111111
+URxvt.foreground: #DDDDDD
+URxvt.cursorColor: #CCCCCC
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
