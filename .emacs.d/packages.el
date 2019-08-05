@@ -59,11 +59,6 @@
   :config
   (fancy-battery-mode))
 
-(use-package base16-theme
-  :ensure t
-  :config
-  (load-theme 'base16-tomorrow-night t))
-
 (use-package latex-preview-pane
   :ensure t
   :init
@@ -96,14 +91,6 @@
   :ensure t
   :config
   (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
-
-(use-package elfeed
-  :ensure t
-  :defer t
-  :config
-  (global-set-key (kbd "C-x w") 'elfeed)
-  (elfeed-feeds
-   '("https://undeadly.org/cgi?action=rss")))
 
 (use-package dashboard
   :ensure t

@@ -10,5 +10,6 @@
 (load "~/.emacs.d/linux-style.el")
 (load "~/.emacs.d/customizations.el")
 (load "~/.emacs.d/code-style.el")
+(load "~/.emacs.d/theme.el")
 
 ;;; main.el ends here
