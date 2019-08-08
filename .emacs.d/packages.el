@@ -145,13 +145,13 @@
 (load "~/.emacs.d/lisp/project-config.el")
 
 (setup-evil-packages)
+(setup-project-packages)
 (setup-custom-modes-packages)
 (setup-clojure-packages)
 (setup-elixir-packages)
 (setup-python-packages)
 (setup-irony-packages)
 (setup-git-packages)
-(setup-project-packages)
 (setup-awesome-tab)
 (setup-cql-mode)
 
