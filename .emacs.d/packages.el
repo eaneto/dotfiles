@@ -71,10 +71,12 @@
 
 (require 'iso-transl)
 
-(use-package indent-guide
+(use-package highlight-indent-guides
   :ensure t
   :config
-  (indent-guide-global-mode))
+  (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+  (setq highlight-indent-guides-method 'character)
+  (setq highlight-indent-guides-responsive 'top))
 
 (use-package smex
   :ensure t

@@ -12,8 +12,10 @@
 (package-initialize)
 
 (custom-set-variables
- ;'(ansi-color-faces-vector
- ;  [default default default italic underline success warning error])
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector
    ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
  '(custom-safe-themes
@@ -24,11 +26,15 @@
  '(line-spacing 0.2)
  '(package-selected-packages
    (quote
-    (monokai racket-mode evil-surround pdf-tools alda-mode indent-guide docker treemacs-icons-dired treemacs-magit treemacs-evil treemacs-projectile treemacs ranger hydra clj-refactor terraform-mode feature-mode poet poet-theme sly darkroom origami tldr moe-theme flycheck-mypy green-is-the-newblack-theme green-is-the-new-black-theme dracula-theme multi-term writeroom-mode rainbow-mode cider clojure-mode dashboard git-gutter alchemist nov counsel kotlin-mode groovy-mode org-bullets smex fancy-battery evil-matchit symon projectile ggtags fireplace flycheck-irony company-irony python-docstring irony gitignore-mode dumb-jump ag apache-mode elixir-mode mmm-mode popwin color-identifiers-mode highlight-indent-guides telephone-line yaml-mode dockerfile-mode pyenv-mode all-the-icons neotree gh-md arduino-mode evil-magit async magit flycheck latex-preview-pane ## python-doctring web-mode markdown-mode php-mode js2-mode evil py-autopep8 goto-chg undo-tree elpy which-key use-package)))
+    (monokai racket-mode evil-surround pdf-tools alda-mode docker treemacs-icons-dired treemacs-magit treemacs-evil treemacs-projectile treemacs ranger hydra clj-refactor terraform-mode feature-mode poet poet-theme sly darkroom origami tldr flycheck-mypy green-is-the-newblack-theme green-is-the-new-black-theme multi-term writeroom-mode rainbow-mode cider clojure-mode dashboard git-gutter alchemist nov counsel kotlin-mode groovy-mode org-bullets smex fancy-battery evil-matchit symon projectile ggtags fireplace flycheck-irony company-irony python-docstring irony gitignore-mode dumb-jump ag apache-mode elixir-mode mmm-mode popwin color-identifiers-mode highlight-indent-guides telephone-line yaml-mode dockerfile-mode pyenv-mode all-the-icons neotree gh-md arduino-mode evil-magit async magit flycheck latex-preview-pane ## python-doctring web-mode markdown-mode php-mode js2-mode evil py-autopep8 goto-chg undo-tree elpy which-key use-package)))
  '(send-mail-function (quote mailclient-send-it))
  '(standard-indent 4))
 
 (custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "#1d1f21" :foreground "#c5c8c6" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 134 :width normal :foundry "ADBO" :family "Source Code Variable")))))
 
 (load "~/.emacs.d/main.el")
