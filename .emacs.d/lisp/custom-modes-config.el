@@ -73,7 +73,12 @@
     :ensure t)
 
   (use-package alda-mode
-    :ensure t))
+    :ensure t)
+
+  (use-package ess
+    :ensure t
+    :config
+    (add-to-list 'auto-mode-alist '("\\.r\\'" . R-mode))))
 
   ;;(use-package cql-mode
   ;;  :ensure t))
