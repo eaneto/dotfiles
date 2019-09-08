@@ -78,7 +78,13 @@
   (use-package ess
     :ensure t
     :config
-    (add-to-list 'auto-mode-alist '("\\.r\\'" . R-mode))))
+    (add-to-list 'auto-mode-alist '("\\.r\\'" . R-mode)))
+
+  (use-package go-mode
+    :ensure t
+    :config
+    (autoload 'go-mode "go-mode" nil t)
+    (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))))
 
   ;;(use-package cql-mode
   ;;  :ensure t))
