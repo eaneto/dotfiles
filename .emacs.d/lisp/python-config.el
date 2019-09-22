@@ -8,8 +8,8 @@
     :ensure t
     :init
     (elpy-enable)
-    (setq elpy-rpc-python-command "python3")
-    (setq python-shell-interpreter "python3"
+    (setq elpy-rpc-python-command "python3.7")
+    (setq python-shell-interpreter "python3.7"
           python-shell-interpreter-args "-i"))
 
   (use-package py-autopep8
@@ -22,7 +22,20 @@
     :ensure t)
 
   (use-package flycheck-mypy
-    :ensure t))
+    :ensure t)
+
+  (flycheck-define-checker
+    python-mypy ""
+    :command ("mypy"
+              "--ignore-missing-imports" "--fast-parser"
+              "--python-version" "3.7"
+              source-original)
+    :error-patterns
+    ((error line-start (file-name) ":" line ": error:" (message) line-end))
+    :modes python-mode)
+
+  (add-to-list 'flycheck-checkers 'python-mypy t)
+  (flycheck-add-next-checker 'python-pylint 'python-mypy t))
 
 (provide 'python-config)
 

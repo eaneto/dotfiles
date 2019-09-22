@@ -38,7 +38,12 @@
   :ensure t
   :init
   (global-flycheck-mode)
-  (add-hook 'after-init-hook #'global-flycheck-mode))
+  (add-hook 'after-init-hook #'global-flycheck-mode)
+  :config
+  (custom-set-variables
+   '(flycheck-python-flake8-executable "python3.7")
+   '(flycheck-python-pycompile-executable "python3.7")
+   '(flycheck-python-pylint-executable "python3.7")))
 
 (use-package company
   :ensure t
