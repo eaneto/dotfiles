@@ -57,7 +57,7 @@ bindsym $mod+shift+a							exec thunderbird
 bindsym $mod+q									exec $term -e ranger
 
 # Start postman
-bindsym $mod+p									exec postman	
+bindsym $mod+p									exec /opt/PostmanCanary/app/PostmanCanary
 
 # change focus
 bindsym $mod+h									focus left

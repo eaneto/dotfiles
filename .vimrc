@@ -1,5 +1,6 @@
 let base16colorspace=256
 
+execute pathogen#infect()
 " Enable the syntax
 syntax on
 filetype plugin indent on
@@ -105,3 +106,8 @@ set t_Co=256
 set background=dark
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
+
+" fzf config
+set rtp+=~/.fzf
+
+let g:fzf =  '<c-p>'

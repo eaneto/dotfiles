@@ -41,12 +41,9 @@ case "$EMACS" in
     PS1="[\u@\h:\w]$ "
 esac
 
-export PATH=/home/eldron/.local/bin:$PATH
-
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/eldron/.sdkman"
 [[ -s "/home/eldron/.sdkman/bin/sdkman-init.sh" ]] && source "/home/eldron/.sdkman/bin/sdkman-init.sh"
 
 . ~/.profile
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(jenv init -)"
