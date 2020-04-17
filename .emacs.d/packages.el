@@ -34,7 +34,8 @@
 (use-package yasnippet
   :ensure t
   :config
-  (yas-global-mode 1))
+  (yas-global-mode 1)
+  :hook (go-mode . yas-minor-mode))
 
 (use-package flycheck
   :ensure t
@@ -47,14 +48,33 @@
    '(flycheck-python-pycompile-executable "python3.7")
    '(flycheck-python-pylint-executable "python3.7")))
 
+(use-package lsp-mode
+  :ensure t
+  :commands (lsp lsp-deferred)
+  :hook (go-mode . lsp-deferred))
+
+(defun lsp-go-install-save-hooks ()
+  (add-hook 'before-save-hook #'lsp-format-buffer t t)
+  (add-hook 'before-save-hook #'lsp-organize-imports t t))
+(add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
+
+(use-package lsp-ui
+  :ensure t
+  :commands lsp-ui-mode)
+
 (use-package company
   :ensure t
   :init
   (add-hook 'after-init-hook 'global-company-mode)
   :config
   (setq company-idle-delay 0)
+  (setq company-minimum-prefix-length 1)
   (define-key company-active-map (kbd "M-j") 'company-select-next-or-abort)
   (define-key company-active-map (kbd "M-k") 'company-select-previous-or-abort))
+
+(use-package company-lsp
+  :ensure t
+  :commands company-lsp)
 
 (use-package which-key
   :ensure t
@@ -100,16 +120,6 @@
   :ensure t
   :config
   (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
-
-(use-package dashboard
-  :ensure t
-  :config
-  (dashboard-setup-startup-hook)
-  (setq dashboard-center-content t)
-  (setq dashboard-items '((recents . 5)
-                          (bookmarks . 5)
-                          (projects . 15)
-                          (agenda . 5))))
 
 (use-package sly
   :ensure t

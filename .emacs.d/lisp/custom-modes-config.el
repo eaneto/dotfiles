@@ -80,11 +80,8 @@
     :config
     (add-to-list 'auto-mode-alist '("\\.r\\'" . R-mode)))
 
-  (use-package go-mode
-    :ensure t
-    :config
-    (autoload 'go-mode "go-mode" nil t)
-    (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))))
+  (use-package rust-mode
+    :ensure t))
 
   ;;(use-package cql-mode
   ;;  :ensure t))
