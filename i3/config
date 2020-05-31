@@ -4,7 +4,7 @@
 
 set $mod		                                Mod4
 set $term		                                st -e tmux
-set $browser 									firefox
+set $browser 									brave-browser
 
 # Set color to be used in the bar
 set $background				                    "#1d1f21"
@@ -51,13 +51,8 @@ bindsym $mod+y                                  exec $browser
 # start transmission,
 bindsym $mod+o									exec transmission-gtk
 
-bindsym $mod+shift+a							exec thunderbird
-
 # start ranger
 bindsym $mod+q									exec $term -e ranger
-
-# Start postman
-bindsym $mod+p									exec /opt/PostmanCanary/app/PostmanCanary
 
 # change focus
 bindsym $mod+h									focus left
@@ -145,7 +140,6 @@ bindsym $mod+Shift+0                            move container to workspace $wor
 
 # Loads transmission in workspace 10
 assign [class="Transmission"]				    $workspace10
-assign [class="Thunderbird"]				    $workspace9
 
 for_window [class="^jetbrains-.+"][window_type=dialog]  focus
 for_window [instance="sun-awt-X11-XWindowPeer"]         border pixel 0
@@ -187,6 +181,11 @@ mode "resize" {
 }
 
 exec_always --no-startup-id polybar main
+
+bar {
+        status_command i3status
+        position top
+}
 
 hide_edge_borders both
 
