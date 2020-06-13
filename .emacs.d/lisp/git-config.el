@@ -6,15 +6,15 @@
 (defun setup-git-packages()
   (use-package magit
     :ensure t
-    :defer t)
+    :defer t))
 
-  (use-package git-gutter
-    :ensure t
-    :config
-    (global-git-gutter-mode t)
-    (git-gutter:linum-setup)
-    (custom-set-variables
-     '(git-gutter:update-interval 1))))
+  ;;(use-package git-gutter-fringe
+  ;;  :ensure t
+  ;;  :config
+  ;;  (global-git-gutter-mode t)
+  ;;  (git-gutter:linum-setup)
+  ;;  (custom-set-variables
+  ;;   '(git-gutter:update-interval 1))))
 
 (provide 'git-config)
 

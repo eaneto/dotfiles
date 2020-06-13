@@ -44,9 +44,9 @@
   (add-hook 'after-init-hook #'global-flycheck-mode)
   :config
   (custom-set-variables
-   '(flycheck-python-flake8-executable "python3.7")
-   '(flycheck-python-pycompile-executable "python3.7")
-   '(flycheck-python-pylint-executable "python3.7")))
+   '(flycheck-python-flake8-executable "python3.8")
+   '(flycheck-python-pycompile-executable "python3.8")
+   '(flycheck-python-pylint-executable "python3.8")))
 
 (use-package lsp-mode
   :ensure t
@@ -146,10 +146,12 @@
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/cql-mode"))
 
 (defun setup-cql-mode()
+  "Setup for cql mode."
   (require 'cql-mode)
   (add-to-list 'auto-mode-alist '("\\.cql\\'" . cql-mode)))
 
 (defun setup-awesome-tab()
+  "Setup for awesome tab."
   (require 'awesome-tab)
   (setq awesome-tab-display-icon t)
   (awesome-tab-mode t))
@@ -159,7 +161,7 @@
 (load "~/.emacs.d/lisp/elixir-config.el")
 (load "~/.emacs.d/lisp/evil-config.el")
 (load "~/.emacs.d/lisp/python-config.el")
-(load "~/.emacs.d/lisp/irony-config.el")
+(load "~/.emacs.d/lisp/lsp-mode-c.el")
 (load "~/.emacs.d/lisp/git-config.el")
 (load "~/.emacs.d/lisp/project-config.el")
 
@@ -169,7 +171,7 @@
 (setup-clojure-packages)
 (setup-elixir-packages)
 (setup-python-packages)
-(setup-irony-packages)
+(setup-lsp-mode-c)
 (setup-git-packages)
 (setup-awesome-tab)
 (setup-cql-mode)
