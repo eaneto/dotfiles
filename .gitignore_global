@@ -85,3 +85,5 @@ flycheck_*.el
 /network-security.data
 
 .scannerwork/*
+
+*/.ccls-cache*
