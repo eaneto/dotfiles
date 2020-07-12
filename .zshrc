@@ -4,12 +4,19 @@
 #  / /\__ \ | | | | | (__
 # /___|___/_| |_|_|  \___|
 
-export ZSH="/home/eldron/.oh-my-zsh"
+export ZSH="/home/edison/.oh-my-zsh"
 
 ZSH_THEME="lambda-mod"
 ZSH_TMUX_AUTOSTART=true
 
-plugins=(git git-prompt docker docker-compose virtualenv gradle)
+plugins=(
+    git
+    git-prompt
+    docker
+    docker-compose
+    virtualenv
+    catimg
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -40,10 +47,6 @@ case "$EMACS" in
     PROMPT_COMMAND=
     PS1="[\u@\h:\w]$ "
 esac
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/eldron/.sdkman"
-[[ -s "/home/eldron/.sdkman/bin/sdkman-init.sh" ]] && source "/home/eldron/.sdkman/bin/sdkman-init.sh"
 
 . ~/.profile
 eval "$(jenv init -)"
