@@ -8,14 +8,6 @@
     :ensure t
     :defer t))
 
-  ;;(use-package git-gutter-fringe
-  ;;  :ensure t
-  ;;  :config
-  ;;  (global-git-gutter-mode t)
-  ;;  (git-gutter:linum-setup)
-  ;;  (custom-set-variables
-  ;;   '(git-gutter:update-interval 1))))
-
 (provide 'git-config)
 
 ;;; git-config.el ends here

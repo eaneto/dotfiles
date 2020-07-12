@@ -48,10 +48,23 @@
    '(flycheck-python-pycompile-executable "python3.8")
    '(flycheck-python-pylint-executable "python3.8")))
 
+;(use-package go-mode
+;  :ensure t)
+
 (use-package lsp-mode
   :ensure t
   :commands (lsp lsp-deferred)
-  :hook (go-mode . lsp-deferred))
+  :hook
+  (go-mode . lsp-deferred)
+  :config
+  (add-to-list 'lsp-language-id-configuration '(terraform-mode . "terraform"))
+
+  (lsp-register-client
+   (make-lsp-client :new-connection (lsp-stdio-connection '("~/.local/bin/terraform-lsp" "-enable-log-file"))
+                    :major-modes '(terraform-mode)
+                    :server-id 'terraform-ls))
+
+  (add-hook 'terraform-mode-hook #'lsp))
 
 (defun lsp-go-install-save-hooks ()
   (add-hook 'before-save-hook #'lsp-format-buffer t t)

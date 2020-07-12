@@ -8,8 +8,8 @@
     :ensure t
     :init
     (elpy-enable)
-    (setq elpy-rpc-python-command "python3.7")
-    (setq python-shell-interpreter "python3.7"
+    (setq elpy-rpc-python-command "python3.8")
+    (setq python-shell-interpreter "python3.8"
           python-shell-interpreter-args "-i"))
 
   (use-package py-autopep8
