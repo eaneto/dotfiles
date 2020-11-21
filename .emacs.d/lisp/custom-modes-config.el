@@ -80,14 +80,8 @@
     :config
     (add-to-list 'auto-mode-alist '("\\.r\\'" . R-mode)))
 
-  (use-package rust-mode
-    :ensure t)
-
   (use-package haskell-mode
     :ensure t))
-
-  ;;(use-package cql-mode
-  ;;  :ensure t))
 
 (provide 'custom-modes-config)
 
