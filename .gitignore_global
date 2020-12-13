@@ -87,3 +87,4 @@ flycheck_*.el
 .scannerwork/*
 
 */.ccls-cache*
+*.java-version
