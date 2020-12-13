@@ -20,7 +20,9 @@ git:
 	cp config/.gitignore_global ~/
 
 install:
-	dnf install emacs i3 rxvt-unicode-256color zsh dmenu i3lock light
+	dnf install git emacs i3 rxvt-unicode-256color zsh dmenu i3lock light \
+		htop libx11-devel freetype-devel fontconfig-devel libXft-devel \
+		mpv sxiv polybar ranger
 	git
 	emacs
 	vim
