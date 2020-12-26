@@ -44,7 +44,7 @@ removes scroll bar and display line numbers."
            exec-path))))
 
 (setq user-full-name "Edison Aguiar de S. Neto"
-      user-mail-address "ednetoali@gmail.com")
+      user-mail-address "edison.aguiar.neto@gmail.com")
 
 (visual-config-modes)
 (set-default-indentation)
@@ -66,6 +66,6 @@ removes scroll bar and display line numbers."
 (global-set-key (kbd "C-a") 'beginning-of-line++)
 
 ;; Env variables
-(setenv "SCRIPTS" "/home/eldron/projects/snippets/shell/")
+(setenv "SCRIPTS" "/home/eaneto/projects/snippets/shell/")
 
 ;;; customizations.el ends here

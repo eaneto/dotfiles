@@ -20,12 +20,6 @@
     :ensure t
     :defer t)
 
-  (use-package php-mode
-    :ensure t
-    :defer t
-    :config
-    (add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode)))
-
   (use-package web-mode
     :ensure t
     :defer t
@@ -53,10 +47,6 @@
     (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode)))
 
   (use-package groovy-mode
-    :ensure t
-    :defer t)
-
-  (use-package kotlin-mode
     :ensure t
     :defer t)
 

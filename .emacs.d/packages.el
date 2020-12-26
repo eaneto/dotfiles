@@ -22,8 +22,6 @@
   ;; For important compatibility libraries like cl-lib
   (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
 
-(package-initialize)
-
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
@@ -48,8 +46,8 @@
    '(flycheck-python-pycompile-executable "python3.8")
    '(flycheck-python-pylint-executable "python3.8")))
 
-;(use-package go-mode
-;  :ensure t)
+(use-package go-mode
+  :ensure t)
 
 (use-package lsp-mode
   :ensure t
@@ -93,11 +91,6 @@
   :ensure t
   :config
   (which-key-mode))
-
-(use-package fancy-battery
-  :ensure t
-  :config
-  (fancy-battery-mode))
 
 (use-package latex-preview-pane
   :ensure t
@@ -148,12 +141,6 @@
   :ensure t
   :bind ("C-c d" . docker))
 
-(use-package pdf-tools
-  :ensure t
-  :defer t
-  :init
-  (pdf-tools-install))
-
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/awesome-tab"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/cql-mode"))
@@ -173,7 +160,6 @@
 (load "~/.emacs.d/lisp/clojure-config.el")
 (load "~/.emacs.d/lisp/elixir-config.el")
 (load "~/.emacs.d/lisp/evil-config.el")
-(load "~/.emacs.d/lisp/python-config.el")
 (load "~/.emacs.d/lisp/lsp-mode-c.el")
 (load "~/.emacs.d/lisp/git-config.el")
 (load "~/.emacs.d/lisp/project-config.el")
@@ -183,7 +169,6 @@
 (setup-custom-modes-packages)
 (setup-clojure-packages)
 (setup-elixir-packages)
-(setup-python-packages)
 (setup-lsp-mode-c)
 (setup-git-packages)
 (setup-awesome-tab)
