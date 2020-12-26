@@ -163,6 +163,7 @@
 (load "~/.emacs.d/lisp/lsp-mode-c.el")
 (load "~/.emacs.d/lisp/git-config.el")
 (load "~/.emacs.d/lisp/project-config.el")
+(load "~/.emacs.d/lisp/rust-config.el")
 
 (setup-evil-packages)
 (setup-project-packages)
@@ -173,5 +174,6 @@
 (setup-git-packages)
 (setup-awesome-tab)
 (setup-cql-mode)
+(setup-rust-packages)
 
 ;;; packages.el ends here
