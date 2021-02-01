@@ -7,6 +7,6 @@
   (use-package rustic
     :ensure t))
 
-(provide 'setup-rust-packages)
+(provide 'rust-config)
 
 ;;; rust-config.el ends here

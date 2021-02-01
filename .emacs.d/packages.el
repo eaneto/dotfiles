@@ -39,15 +39,7 @@
   :ensure t
   :init
   (global-flycheck-mode)
-  (add-hook 'after-init-hook #'global-flycheck-mode)
-  :config
-  (custom-set-variables
-   '(flycheck-python-flake8-executable "python3.8")
-   '(flycheck-python-pycompile-executable "python3.8")
-   '(flycheck-python-pylint-executable "python3.8")))
-
-(use-package go-mode
-  :ensure t)
+  (add-hook 'after-init-hook #'global-flycheck-mode))
 
 (use-package lsp-mode
   :ensure t

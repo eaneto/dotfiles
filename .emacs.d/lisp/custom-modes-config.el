@@ -16,10 +16,6 @@
     :ensure t
     :defer t)
 
-  (use-package apache-mode
-    :ensure t
-    :defer t)
-
   (use-package web-mode
     :ensure t
     :defer t
@@ -50,12 +46,6 @@
     :ensure t
     :defer t)
 
-  (use-package clojure-mode
-    :ensure t)
-
-  (use-package cider
-    :ensure t)
-
   (use-package feature-mode
     :ensure t)
 
@@ -65,12 +55,10 @@
   (use-package alda-mode
     :ensure t)
 
-  (use-package ess
-    :ensure t
-    :config
-    (add-to-list 'auto-mode-alist '("\\.r\\'" . R-mode)))
-
   (use-package haskell-mode
+    :ensure t)
+
+  (use-package go-mode
     :ensure t))
 
 (provide 'custom-modes-config)
