@@ -119,11 +119,6 @@
   :config
   (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
 
-(use-package sly
-  :ensure t
-  :config
-  (setq inferior-lisp-program "/usr/bin/sbcl"))
-
 (use-package ranger
   :ensure t
   :config
@@ -149,7 +144,6 @@
   (awesome-tab-mode t))
 
 (load "~/.emacs.d/lisp/custom-modes-config.el")
-(load "~/.emacs.d/lisp/clojure-config.el")
 (load "~/.emacs.d/lisp/elixir-config.el")
 (load "~/.emacs.d/lisp/evil-config.el")
 (load "~/.emacs.d/lisp/lsp-mode-c.el")
@@ -160,7 +154,6 @@
 (setup-evil-packages)
 (setup-project-packages)
 (setup-custom-modes-packages)
-(setup-clojure-packages)
 (setup-elixir-packages)
 (setup-lsp-mode-c)
 (setup-git-packages)
