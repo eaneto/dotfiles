@@ -147,7 +147,6 @@
 (load "~/.emacs.d/lisp/elixir-config.el")
 (load "~/.emacs.d/lisp/evil-config.el")
 (load "~/.emacs.d/lisp/lsp-mode-c.el")
-(load "~/.emacs.d/lisp/git-config.el")
 (load "~/.emacs.d/lisp/project-config.el")
 (load "~/.emacs.d/lisp/rust-config.el")
 
@@ -156,7 +155,6 @@
 (setup-custom-modes-packages)
 (setup-elixir-packages)
 (setup-lsp-mode-c)
-(setup-git-packages)
 (setup-awesome-tab)
 (setup-cql-mode)
 (setup-rust-packages)

@@ -14,12 +14,6 @@
       (define-key evil-normal-state-map (kbd "M-.") nil)
       (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)))
 
-  (use-package evil-magit
-    :ensure t
-    :config
-    (setq evil-magit-state 'normal)
-    (setq evil-magit-use-y-for-yank nil))
-
   (use-package evil-matchit
     :ensure t
     :config

@@ -39,7 +39,7 @@
  '(line-spacing 0.2)
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
-   '(rustic go-mode company-lsp haskell-mode git-gutter-fringe lsp-ui lsp-mode 2048-game ess monokai racket-mode evil-surround alda-mode docker ranger hydra terraform-mode feature-mode origami multi-term writeroom-mode rainbow-mode cider dashboard alchemist nov counsel groovy-mode org-bullets smex evil-matchit symon projectile fireplace python-docstring gitignore-mode ag apache-mode elixir-mode mmm-mode popwin color-identifiers-mode highlight-indent-guides telephone-line yaml-mode dockerfile-mode all-the-icons neotree gh-md arduino-mode evil-magit async flycheck latex-preview-pane ## python-doctring web-mode markdown-mode js2-mode evil goto-chg undo-tree which-key use-package))
+   '(rustic go-mode company-lsp haskell-mode git-gutter-fringe lsp-ui lsp-mode 2048-game ess monokai racket-mode evil-surround alda-mode docker ranger hydra terraform-mode feature-mode origami multi-term writeroom-mode rainbow-mode cider dashboard alchemist nov counsel groovy-mode org-bullets smex evil-matchit symon projectile fireplace python-docstring gitignore-mode ag elixir-mode mmm-mode popwin color-identifiers-mode highlight-indent-guides telephone-line yaml-mode dockerfile-mode all-the-icons neotree gh-md arduino-mode async flycheck latex-preview-pane ## python-doctring web-mode markdown-mode js2-mode evil goto-chg undo-tree which-key use-package))
  '(pos-tip-background-color "#FFFACE")
  '(pos-tip-foreground-color "#272822")
  '(send-mail-function 'mailclient-send-it)
