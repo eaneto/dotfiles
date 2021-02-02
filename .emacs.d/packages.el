@@ -143,20 +143,14 @@
   (setq awesome-tab-display-icon t)
   (awesome-tab-mode t))
 
-(load "~/.emacs.d/lisp/custom-modes-config.el")
-(load "~/.emacs.d/lisp/elixir-config.el")
-(load "~/.emacs.d/lisp/evil-config.el")
-(load "~/.emacs.d/lisp/lsp-mode-c.el")
-(load "~/.emacs.d/lisp/project-config.el")
-(load "~/.emacs.d/lisp/rust-config.el")
-
-(setup-evil-packages)
-(setup-project-packages)
-(setup-custom-modes-packages)
-(setup-elixir-packages)
-(setup-lsp-mode-c)
 (setup-awesome-tab)
 (setup-cql-mode)
-(setup-rust-packages)
+
+(require 'evil-config)
+(require 'project-config)
+(require 'custom-modes-config)
+(require 'elixir-config)
+(require 'lsp-mode-c)
+(require 'rust-config)
 
 ;;; packages.el ends here

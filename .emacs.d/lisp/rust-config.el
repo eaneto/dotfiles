@@ -3,9 +3,8 @@
 ;;; Emacs rust configuration --- Package configuration for Emacs rust
 ;;; Code:
 
-(defun setup-rust-packages()
-  (use-package rustic
-    :ensure t))
+(use-package rustic
+  :ensure t)
 
 (provide 'rust-config)
 
