@@ -4,7 +4,7 @@
 #  / /\__ \ | | | | | (__
 # /___|___/_| |_|_|  \___|
 
-export ZSH="/home/edison/.oh-my-zsh"
+export ZSH="/home/eaneto/.oh-my-zsh"
 
 ZSH_THEME="lambda-mod"
 ZSH_TMUX_AUTOSTART=true
@@ -16,6 +16,7 @@ plugins=(
     docker-compose
     virtualenv
     catimg
+    ssh-agent
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -49,4 +50,8 @@ case "$EMACS" in
 esac
 
 . ~/.profile
+
 eval "$(jenv init -)"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
