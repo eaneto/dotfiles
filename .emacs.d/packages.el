@@ -128,6 +128,16 @@
   :ensure t
   :bind ("C-c d" . docker))
 
+(use-package lsp-python-ms
+  :ensure t
+  :init (setq lsp-python-ms-auto-install-server t)
+  :config (setq lsp-python-ms-executable
+      "~/projects/python-language-server/output/bin/Release/linux-x64/publish/Microsoft.Python.LanguageServer")
+
+  :hook (python-mode . (lambda ()
+                          (require 'lsp-python-ms)
+                          (lsp))))
+
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/awesome-tab"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/cql-mode"))
