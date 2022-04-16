@@ -54,6 +54,9 @@ bindsym $mod+o									exec transmission-gtk
 # start ranger
 bindsym $mod+q									exec urxvt -e ranger
 
+# start spotify
+bindsym $mod+Shift+s							exec spotify
+
 # change focus
 bindsym $mod+h									focus left
 bindsym $mod+j 									focus down
@@ -105,9 +108,9 @@ bindsym $mod+r									mode "resize"
 
 set $workspace1 "1 "
 set $workspace2 "2 "
-set $workspace3 "3 "
+set $workspace3 "3 "
 set $workspace4 "4 "
-set $workspace5 "5 "
+set $workspace5 "5 "
 set $workspace6 "6 "
 set $workspace7 "7"
 set $workspace8 "8"
@@ -145,6 +148,7 @@ for_window [class="^jetbrains-.+"][window_type=dialog]  focus
 for_window [instance="sun-awt-X11-XWindowPeer"]         border pixel 0
 for_window [title="video0 - mpv"]				        floating enable
 for_window [title="Calculator"]		                    floating enable
+for_window [class="Spotify"]	    			        move to workspace $workspace5
 
 # reload the configuration file
 #bindsym $mod+Shift+c							 reload
