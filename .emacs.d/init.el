@@ -22,9 +22,6 @@
  '(custom-safe-themes
    '("f3ab34b145c3b2a0f3a570ddff8fabb92dafc7679ac19444c31058ac305275e1" "a2cde79e4cc8dc9a03e7d9a42fabf8928720d420034b66aecc5b665bbf05d4e9" "fee4e306d9070a55dce4d8e9d92d28bd9efe92625d2ba9d4d654fc9cd8113b7f" "274fa62b00d732d093fc3f120aca1b31a6bb484492f31081c1814a858e25c72e" "97965ccdac20cae22c5658c282544892959dc541af3e9ef8857dbf22eb70e82b" "34ed3e2fa4a1cb2ce7400c7f1a6c8f12931d8021435bad841fdc1192bd1cc7da" "5a39d2a29906ab273f7900a2ae843e9aa29ed5d205873e1199af4c9ec921aaab" "26d49386a2036df7ccbe802a06a759031e4455f07bda559dcf221f53e8850e69" "1263771faf6967879c3ab8b577c6c31020222ac6d3bac31f331a74275385a452" "3380a2766cf0590d50d6366c5a91e976bdc3c413df963a0ab9952314b4577299" "fede08d0f23fc0612a8354e0cf800c9ecae47ec8f32c5f29da841fe090dfc450" "cea3ec09c821b7eaf235882e6555c3ffa2fd23de92459751e18f26ad035d2142" default))
  '(fci-rule-color "#dedede")
- '(flycheck-python-flake8-executable "python3.8")
- '(flycheck-python-pycompile-executable "python3.8")
- '(flycheck-python-pylint-executable "python3.8")
  '(git-gutter:update-interval 1)
  '(highlight-changes-colors '("#FD5FF0" "#AE81FF"))
  '(highlight-tail-colors
@@ -73,7 +70,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#1d1f21" :foreground "#c5c8c6" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 134 :width normal :foundry "ADBO" :family "Source Code Variable")))))
+ '(default ((t (:inherit nil :stipple nil :background "#1d1f21" :foreground "#c5c8c6" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "ADBO" :family "Source Code Variable")))))
 
 (load "~/.emacs.d/main.el")
 
