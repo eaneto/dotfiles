@@ -133,7 +133,6 @@
 (setup-cql-mode)
 
 (require 'evil-config)
-(require 'project-config)
 (require 'custom-modes-config)
 (require 'lsp-mode-c)
 (require 'rust-config)
