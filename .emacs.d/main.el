@@ -4,8 +4,6 @@
 ;;;
 ;;; Code:
 
-
-(load "~/.emacs.d/scratch.el")
 (load "~/.emacs.d/packages.el")
 (load "~/.emacs.d/linux-style.el")
 (load "~/.emacs.d/customizations.el")
