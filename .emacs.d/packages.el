@@ -80,11 +80,6 @@
   :config
   (which-key-mode))
 
-(use-package latex-preview-pane
-  :ensure t
-  :init
-  (latex-preview-pane-enable))
-
 (use-package telephone-line
   :ensure t
   :init
@@ -110,19 +105,10 @@
   (add-hook 'org-mode-hook
             (lambda () (org-bullets-mode 1))))
 
-(use-package nov
-  :ensure t
-  :config
-  (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
-
 (use-package ranger
   :ensure t
   :config
   (ranger-override-dired-mode t))
-
-(use-package docker
-  :ensure t
-  :bind ("C-c d" . docker))
 
 (use-package lsp-python-ms
   :ensure t
@@ -155,7 +141,6 @@
 (require 'evil-config)
 (require 'project-config)
 (require 'custom-modes-config)
-(require 'elixir-config)
 (require 'lsp-mode-c)
 (require 'rust-config)
 
