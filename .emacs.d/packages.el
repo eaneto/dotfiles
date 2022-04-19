@@ -35,12 +35,6 @@
   (yas-global-mode 1)
   :hook (go-mode . yas-minor-mode))
 
-(use-package flycheck
-  :ensure t
-  :init
-  (global-flycheck-mode)
-  (add-hook 'after-init-hook #'global-flycheck-mode))
-
 (use-package lsp-mode
   :ensure t
   :commands (lsp lsp-deferred)
