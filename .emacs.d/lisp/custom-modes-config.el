@@ -7,10 +7,6 @@
   :ensure t
   :defer t)
 
-(use-package gitignore-mode
-  :ensure t
-  :defer t)
-
 (use-package js2-mode
   :ensure t
   :defer t)

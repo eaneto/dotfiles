@@ -75,10 +75,6 @@
   (define-key company-active-map (kbd "M-j") 'company-select-next-or-abort)
   (define-key company-active-map (kbd "M-k") 'company-select-previous-or-abort))
 
-(use-package company-lsp
-  :ensure t
-  :commands company-lsp)
-
 (use-package which-key
   :ensure t
   :config
