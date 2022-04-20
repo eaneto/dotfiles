@@ -104,15 +104,11 @@
   :config
   (ranger-override-dired-mode t))
 
-(use-package lsp-python-ms
+(use-package lsp-pyright
   :ensure t
-  :init (setq lsp-python-ms-auto-install-server t)
-  :config (setq lsp-python-ms-executable
-      "~/projects/python-language-server/output/bin/Release/linux-x64/publish/Microsoft.Python.LanguageServer")
-
   :hook (python-mode . (lambda ()
-                          (require 'lsp-python-ms)
-                          (lsp))))
+                          (require 'lsp-pyright)
+                          (lsp))))  ; or lsp-deferred
 
 (use-package monokai-theme
   :config
