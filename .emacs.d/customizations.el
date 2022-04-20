@@ -4,6 +4,12 @@
 ;;;
 ;;; Code:
 
+(set-face-attribute 'default nil
+                    :family "Monaco"
+                    :height 140
+                    :weight 'normal
+                    :width 'normal)
+
 (defun visual-config-modes()
   "Visual modes. Removes tool and menu bar,
 removes scroll bar and display line numbers."

@@ -114,6 +114,10 @@
                           (require 'lsp-python-ms)
                           (lsp))))
 
+(use-package monokai-theme
+  :config
+  (load-theme 'monokai t))
+
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/awesome-tab"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/cql-mode"))
