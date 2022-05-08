@@ -18,7 +18,8 @@ removes scroll bar and display line numbers."
   (tool-bar-mode -1)
   (menu-bar-mode -1)
   (scroll-bar-mode -1)
-  (global-linum-mode t)
+  (global-display-line-numbers-mode)
+  (setq display-line-numbers-type 'relative)
   (show-paren-mode 1))
 
 (defun set-default-indentation()
