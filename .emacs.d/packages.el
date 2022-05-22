@@ -40,6 +40,10 @@
   :commands (lsp lsp-deferred)
   :hook
   (go-mode . lsp-deferred)
+  (html-mode . lsp)
+  (javascript-mode . lsp)
+  (css-mode . lsp)
+  (scss-mode . lsp)
   :config
   (add-to-list 'lsp-language-id-configuration '(terraform-mode . "terraform"))
 
@@ -108,11 +112,22 @@
   :ensure t
   :hook (python-mode . (lambda ()
                           (require 'lsp-pyright)
-                          (lsp))))  ; or lsp-deferred
+                          (lsp))))
+
+(use-package python-black
+  :ensure t
+  :demand t
+  :after python
+  :hook (python-mode . python-black-on-save-mode))
 
 (use-package monokai-theme
   :config
   (load-theme 'monokai t))
+
+(use-package ansible
+  :ensure t
+  :config
+  (add-hook 'yaml-mode-hook '(lambda () (ansible 1))))
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/awesome-tab"))
