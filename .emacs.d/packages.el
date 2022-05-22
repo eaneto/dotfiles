@@ -108,25 +108,6 @@
   :config
   (ranger-override-dired-mode t))
 
-(use-package lsp-pyright
-  :ensure t
-  :hook (python-mode . (lambda ()
-                          (require 'lsp-pyright)
-                          (lsp))))
-
-(use-package python-black
-  :ensure t
-  :demand t
-  :after python
-  :hook (python-mode . python-black-on-save-mode))
-
-(use-package pyimport
-  :ensure t
-  :after python
-  :hook
-  (python-mode . (lambda()
-            (add-hook 'before-save-hook #'pyimport-remove-unused t t))))
-
 (use-package monokai-theme
   :config
   (load-theme 'monokai t))
@@ -135,6 +116,11 @@
   :ensure t
   :config
   (add-hook 'yaml-mode-hook '(lambda () (ansible 1))))
+
+(use-package diff-hl
+  :ensure t
+  :init
+  (global-diff-hl-mode))
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/awesome-tab"))
@@ -158,5 +144,6 @@
 (require 'custom-modes-config)
 (require 'lsp-mode-c)
 (require 'rust-config)
+(require 'python-config)
 
 ;;; packages.el ends here
