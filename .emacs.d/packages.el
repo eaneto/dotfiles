@@ -120,6 +120,13 @@
   :after python
   :hook (python-mode . python-black-on-save-mode))
 
+(use-package pyimport
+  :ensure t
+  :after python
+  :hook
+  (python-mode . (lambda()
+            (add-hook 'before-save-hook #'pyimport-remove-unused t t))))
+
 (use-package monokai-theme
   :config
   (load-theme 'monokai t))
