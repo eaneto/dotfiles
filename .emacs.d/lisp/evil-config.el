@@ -5,9 +5,8 @@
 
 (use-package evil
   :ensure t
-  :init
-  (evil-mode 1)
   :config
+  (evil-mode 1)
   (evil-set-initial-state 'term-mode 'emacs)
   (with-eval-after-load 'evil
     (define-key evil-normal-state-map (kbd "M-.") nil)
