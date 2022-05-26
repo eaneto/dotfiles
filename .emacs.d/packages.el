@@ -92,10 +92,27 @@
   (setq highlight-indent-guides-method 'character)
   (setq highlight-indent-guides-responsive 'top))
 
-(use-package smex
+;(use-package smex
+;  :ensure t
+;  :config
+;  (global-set-key (kbd "M-x") 'smex))
+
+(use-package counsel
   :ensure t
+  :init
+  (ivy-mode 1)
   :config
-  (global-set-key (kbd "M-x") 'smex))
+  (setq ivy-re-builders-alist
+      '((t . ivy--regex-fuzzy)))
+  (setq ivy-use-virtual-buffers t)
+  (setq enable-recursive-minibuffers t)
+  (global-set-key "\C-s" 'swiper)
+  (global-set-key (kbd "M-x") 'counsel-M-x)
+  (global-set-key (kbd "C-x C-f") 'counsel-find-file)
+  (global-set-key (kbd "C-x b") 'ivy-switch-buffer)
+  ;; TODO: Change TAB and RET on the minibuffer to work like smex
+  (define-key ivy-minibuffer-map (kbd "M-j") 'ivy-next-line)
+  (define-key ivy-minibuffer-map (kbd "M-k") 'ivy-previous-line))
 
 (use-package org-bullets
   :ensure t
