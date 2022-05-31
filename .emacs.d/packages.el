@@ -73,6 +73,11 @@
   (define-key company-active-map (kbd "M-j") 'company-select-next-or-abort)
   (define-key company-active-map (kbd "M-k") 'company-select-previous-or-abort))
 
+(use-package flycheck
+  :ensure t
+  :config
+  (global-flycheck-mode))
+
 (use-package which-key
   :ensure t
   :config
@@ -91,11 +96,6 @@
   (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
   (setq highlight-indent-guides-method 'character)
   (setq highlight-indent-guides-responsive 'top))
-
-;(use-package smex
-;  :ensure t
-;  :config
-;  (global-set-key (kbd "M-x") 'smex))
 
 (use-package counsel
   :ensure t
