@@ -75,7 +75,7 @@
 
 (use-package flycheck
   :ensure t
-  :config
+  :init
   (global-flycheck-mode))
 
 (use-package which-key
