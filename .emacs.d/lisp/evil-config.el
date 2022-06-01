@@ -22,6 +22,11 @@
   :config
   (global-evil-surround-mode 1))
 
+(use-package evil-collection
+  :ensure t
+  :config
+  (evil-collection-init 'xref))
+
 (provide 'evil-config)
 
 ;;; evil-config.el ends here
