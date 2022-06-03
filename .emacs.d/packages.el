@@ -44,6 +44,7 @@
   (javascript-mode . lsp)
   (css-mode . lsp)
   (scss-mode . lsp)
+  (rustic-mode . lsp)
   :config
   (add-to-list 'lsp-language-id-configuration '(terraform-mode . "terraform"))
 
@@ -113,6 +114,13 @@
   ;; TODO: Change TAB and RET on the minibuffer to work like smex
   (define-key ivy-minibuffer-map (kbd "M-j") 'ivy-next-line)
   (define-key ivy-minibuffer-map (kbd "M-k") 'ivy-previous-line))
+
+(use-package ivy-xref
+  :ensure t
+  :init
+  (when (>= emacs-major-version 27)
+    (setq xref-show-definitions-function #'ivy-xref-show-defs))
+  (setq xref-show-xrefs-function #'ivy-xref-show-xrefs))
 
 (use-package org-bullets
   :ensure t

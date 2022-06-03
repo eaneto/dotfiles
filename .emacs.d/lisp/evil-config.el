@@ -5,6 +5,8 @@
 
 (use-package evil
   :ensure t
+  :init
+  (setq evil-want-keybinding nil)
   :config
   (evil-mode 1)
   (evil-set-initial-state 'term-mode 'emacs)

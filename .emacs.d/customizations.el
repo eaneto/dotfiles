@@ -20,7 +20,8 @@ removes scroll bar and display line numbers."
   (scroll-bar-mode -1)
   (global-display-line-numbers-mode)
   (setq display-line-numbers-type 'relative)
-  (show-paren-mode 1))
+  (show-paren-mode 1)
+  (hl-line-mode))
 
 (defun set-default-indentation()
   "Configures the default indentation (4 spaces)."

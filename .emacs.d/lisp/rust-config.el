@@ -4,7 +4,9 @@
 ;;; Code:
 
 (use-package rustic
-  :ensure t)
+  :ensure t
+  :config
+  (setq lsp-rust-server 'rust-analyzer))
 
 (provide 'rust-config)
 
