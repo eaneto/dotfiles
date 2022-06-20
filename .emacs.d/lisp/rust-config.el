@@ -3,6 +3,9 @@
 ;;; Emacs rust configuration --- Package configuration for Emacs rust
 ;;; Code:
 
+(use-package rust-mode
+  :ensure t)
+
 (use-package rustic
   :ensure t
   :config
