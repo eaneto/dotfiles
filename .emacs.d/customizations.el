@@ -73,7 +73,4 @@ removes scroll bar and display line numbers."
 
 (global-set-key (kbd "C-a") 'beginning-of-line++)
 
-;; Env variables
-(setenv "SCRIPTS" "/home/eaneto/projects/snippets/shell/")
-
 ;;; customizations.el ends here

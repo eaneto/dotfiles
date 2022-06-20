@@ -27,7 +27,8 @@
 (use-package evil-collection
   :ensure t
   :config
-  (evil-collection-init 'xref))
+  (evil-collection-init 'xref)
+  (evil-collection-init 'org))
 
 (provide 'evil-config)
 
