@@ -10,7 +10,7 @@
   :ensure t
   :config
   (setq lsp-rust-server 'rust-analyzer)
-  (setq rustic-format-on-save t)
+  (setq rust-format-on-save t)
   (setq lsp-rust-analyzer-server-display-inlay-hints t))
 
 (provide 'rust-config)
