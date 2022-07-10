@@ -147,6 +147,11 @@
   :init
   (global-diff-hl-mode))
 
+(use-package hl-todo
+  :ensure t
+  :init
+  (global-hl-todo-mode))
+
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/awesome-tab"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/cql-mode"))
