@@ -3,8 +3,8 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod		                                Mod4
-set $term		                                urxvt -e tmux
-set $browser 									brave
+set $term		                                alacritty -e tmux
+set $browser 						firefox
 
 # Set color to be used in the bar
 set $background				                    "#1d1f21"
@@ -52,7 +52,7 @@ bindsym $mod+y                                  exec $browser
 bindsym $mod+o									exec transmission-gtk
 
 # start ranger
-bindsym $mod+q									exec urxvt -e ranger
+bindsym $mod+q									exec alacritty -e ranger
 
 # start spotify
 bindsym $mod+Shift+s							exec spotify
