@@ -1,6 +1,5 @@
 let base16colorspace=256
 
-execute pathogen#infect()
 " Enable the syntax
 syntax on
 filetype plugin indent on
