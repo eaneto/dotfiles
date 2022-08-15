@@ -157,6 +157,16 @@
   :config
   (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode)))
 
+(use-package dashboard
+  :ensure t
+  :config
+  (dashboard-setup-startup-hook)
+  (setq dashboard-banner-logo-title "United Federation of Planets")
+  (setq dashboard-startup-banner "~/Pictures/ufp_logo.png")
+  (setq dashboard-center-content t)
+  (setq dashboard-items '())
+  (setq dashboard-set-footer nil))
+
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/awesome-tab"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/cql-mode"))
