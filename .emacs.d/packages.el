@@ -161,8 +161,7 @@
   :ensure t
   :config
   (dashboard-setup-startup-hook)
-  (setq dashboard-banner-logo-title "United Federation of Planets")
-  (setq dashboard-startup-banner "~/Pictures/ufp_logo.png")
+  (setq dashboard-startup-banner "~/.emacs.d/ufp_logo.txt")
   (setq dashboard-center-content t)
   (setq dashboard-items '())
   (setq dashboard-set-footer nil))
