@@ -161,10 +161,11 @@
   :ensure t
   :config
   (dashboard-setup-startup-hook)
-  (setq dashboard-startup-banner "~/.emacs.d/ufp_logo.txt")
-  (setq dashboard-center-content t)
-  (setq dashboard-items '())
-  (setq dashboard-set-footer nil))
+  (setq dashboard-startup-banner "~/.emacs.d/ufp_logo.txt"
+        dashboard-center-content t
+        dashboard-projects-backend 'project-el
+        dashboard-items '((projects . 5))
+        dashboard-set-footer nil))
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/awesome-tab"))
