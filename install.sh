@@ -10,7 +10,6 @@ ln -s ~/projects/dotfiles/.emacs.d/init.el ~/.emacs.d
 ln -s ~/projects/dotfiles/.emacs.d/main.el ~/.emacs.d
 ln -s ~/projects/dotfiles/.emacs.d/packages.el ~/.emacs.d
 ln -s ~/projects/dotfiles/.emacs.d/linux-style.el ~/.emacs.d
-ln -s ~/projects/dotfiles/.emacs.d/code-style.el ~/.emacs.d
 ln -s ~/projects/dotfiles/.emacs.d/customizations.el ~/.emacs.d
 ln -s ~/projects/dotfiles/.emacs.d/lisp/rust-config.el ~/.emacs.d/lisp
 ln -s ~/projects/dotfiles/.emacs.d/lisp/lsp-mode-c.el ~/.emacs.d/lisp

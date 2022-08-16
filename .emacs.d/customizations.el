@@ -43,6 +43,11 @@ removes scroll bar and display line numbers."
 	  (back-to-indentation)
 	(beginning-of-line)))
 
+(setq-default c-default-style "linux"
+              c-basic-offset 4
+              tab-width 4
+              indent-tabs-mode nil)
+
 (defun read-path-variable-from-zshrc()
   (let ((path (shell-command-to-string ". ~/.zshrc; echo -n $PATH")))
     (setenv "PATH" path)

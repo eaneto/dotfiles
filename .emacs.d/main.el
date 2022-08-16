@@ -7,6 +7,5 @@
 (load "~/.emacs.d/packages.el")
 (load "~/.emacs.d/linux-style.el")
 (load "~/.emacs.d/customizations.el")
-(load "~/.emacs.d/code-style.el")
 
 ;;; main.el ends here
