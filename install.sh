@@ -37,5 +37,9 @@ ln -s ~/projects/dotfiles/.tmux.conf ~/
 # vim
 ln -s ~/projects/dotfiles/.vimrc ~/
 
+# Alacritty
+mkdir -p ~/.config/alacritty
+ln -s ~/projects/dotfiles/alacritty/alacritty.yml ~/.config/alacritty
+
 # git
 git config --global core.excludesFile '~/projects/dotfile/.gitignore_global'
