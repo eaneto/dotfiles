@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# Emacs
 mkdir -p ~/.emacs.d/lisp
 mkdir -p ~/.emacs.d/lisp/cql-mode
 mkdir -p ~/.emacs.d/lisp/awesome-tab
@@ -18,3 +19,23 @@ ln -s ~/projects/dotfiles/.emacs.d/lisp/evil-config.el ~/.emacs.d/lisp
 ln -s ~/projects/dotfiles/.emacs.d/lisp/custom-modes-config.el ~/.emacs.d/lisp
 ln -s ~/projects/dotfiles/.emacs.d/lisp/cql-mode/cql-mode.el ~/.emacs.d/lisp/cql-mode
 ln -s ~/projects/dotfiles/.emacs.d/lisp/awesome-tab/awesome-tab.el ~/.emacs.d/lisp/awesome-tab
+
+# Zsh
+ln -s ~/projects/dotfiles/.zshrc ~/
+
+# i3/i3status
+
+mkdir -p ~/.config/i3
+mkdir -p ~/.config/i3status
+
+ln -s ~/projects/dotfiles/i3/config ~/.config/i3
+ln -s ~/projects/dotfiles/i3status/config.desktop ~/.config/i3status/config
+
+# tmux
+ln -s ~/projects/dotfiles/.tmux.conf ~/
+
+# vim
+ln -s ~/projects/dotfiles/.vimrc ~/
+
+# git
+git config --global core.excludesFile '~/projects/dotfile/.gitignore_global'
