@@ -29,7 +29,7 @@ IGNORED"
             (let ((filename (buffer-file-name)))
               ;; Enable kernel mode for the appropriate files
               (when (and filename
-                         (string-match (expand-file-name "~/Projects/linux")
+                         (string-match (expand-file-name "~/projects/linux")
                                        filename))
                 (setq indent-tabs-mode t)
                 (setq show-trailing-whitespace t)
