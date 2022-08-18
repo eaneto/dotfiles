@@ -4,7 +4,7 @@
 
 set $mod		                                Mod4
 set $term		                                alacritty -e tmux
-set $browser 						            firefox
+set $browser 						            brave
 
 # Set color to be used in the bar
 set $background				                    "#1d1f21"
