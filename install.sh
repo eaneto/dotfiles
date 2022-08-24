@@ -42,4 +42,5 @@ mkdir -p ~/.config/alacritty
 ln -s ~/projects/dotfiles/alacritty/alacritty.yml ~/.config/alacritty
 
 # git
-git config --global core.excludesFile '~/projects/dotfile/.gitignore_global'
+ln -s ~/projects/dotfiles/.gitignore_global ~/
+git config --global core.excludesFile '~/.gitignore_global'
