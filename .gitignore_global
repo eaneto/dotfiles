@@ -88,3 +88,6 @@ flycheck_*.el
 
 */.ccls-cache*
 *.java-version
+**/.ccls-cache/*
+**/.cache/*
+compile_commands.json
