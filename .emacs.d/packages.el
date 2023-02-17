@@ -122,6 +122,10 @@
     (setq xref-show-definitions-function #'ivy-xref-show-defs))
   (setq xref-show-xrefs-function #'ivy-xref-show-xrefs))
 
+(use-package org
+  :config
+  (setq org-clock-sound "~/Music/ding.wav"))
+
 (use-package org-bullets
   :ensure t
   :config
