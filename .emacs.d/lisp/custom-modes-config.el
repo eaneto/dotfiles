@@ -16,6 +16,10 @@
 (use-package go-mode
   :ensure t)
 
+(use-package dockerfile-mode
+  :ensure t
+  :defer t)
+
 (provide 'custom-modes-config)
 
 ;;; custom-modes-config.el ends here
