@@ -56,6 +56,12 @@ removes scroll bar and display line numbers."
            (split-string-and-unquote path ":")
            exec-path))))
 
+(dolist (hook '(text-mode-hook))
+  (add-hook hook (lambda () (flyspell-mode 1))))
+
+(dolist (hook '(change-log-mode-hook log-edit-mode-hook))
+  (add-hook hook (lambda () (flyspell-mode -1))))
+
 (setq user-full-name "Edison Aguiar de S. Neto"
       user-mail-address "edison.aguiar.neto@gmail.com")
 
