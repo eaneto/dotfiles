@@ -20,6 +20,10 @@
   :ensure t
   :defer t)
 
+(use-package protobuf-mode
+  :ensure t
+  :defer t)
+
 (provide 'custom-modes-config)
 
 ;;; custom-modes-config.el ends here
