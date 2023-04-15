@@ -169,8 +169,21 @@
   (setq dashboard-startup-banner "~/.emacs.d/ufp_logo.txt"
         dashboard-center-content t
         dashboard-projects-backend 'project-el
-        dashboard-items '((projects . 5))
+        dashboard-items '((recents . 5)
+                          (projects . 5))
         dashboard-set-footer nil))
+
+(use-package exec-path-from-shell
+  :ensure t
+  :init
+  (when (memq window-system '(mac ns x))
+    (exec-path-from-shell-initialize))
+  :config
+  (exec-path-from-shell-copy-env "OPENAI_KEY"))
+
+(use-package gptel
+  :config
+  (setq gptel-api-key (getenv "OPENAI_KEY")))
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/awesome-tab"))

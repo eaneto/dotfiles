@@ -28,7 +28,8 @@
   :ensure t
   :config
   (evil-collection-init 'xref)
-  (evil-collection-init 'org))
+  (evil-collection-init 'org)
+  (evil-collection-init 'dashboard))
 
 (provide 'evil-config)
 
