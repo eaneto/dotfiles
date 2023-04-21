@@ -183,8 +183,8 @@
   (setq dashboard-startup-banner "~/.emacs.d/ufp_logo.txt"
         dashboard-center-content t
         dashboard-projects-backend 'project-el
-        dashboard-items '((recents . 5)
-                          (projects . 5))
+        dashboard-items '((projects . 5)
+                          (recents . 5))
         dashboard-set-footer nil))
 
 (use-package gptel
