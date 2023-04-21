@@ -24,6 +24,7 @@ source $ZSH/oh-my-zsh.sh
 # ENV variables
 export PROJECTS=$HOME/projects
 export EDITOR=emacs
+export LSP_USE_PLISTS=true
 export GIT_EDITOR=vim
 export SCRIPTS=$PROJECTS/snippets/shell
 

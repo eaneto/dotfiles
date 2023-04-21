@@ -29,6 +29,15 @@
 (use-package all-the-icons
   :ensure t)
 
+(use-package exec-path-from-shell
+  :ensure t
+  :init
+  (when (memq window-system '(mac ns x))
+    (exec-path-from-shell-initialize))
+  :config
+  (exec-path-from-shell-copy-env "OPENAI_KEY")
+  (exec-path-from-shell-copy-env "LSP_USE_PLISTS"))
+
 (use-package yasnippet
   :ensure t
   :config
@@ -53,7 +62,12 @@
                     :major-modes '(terraform-mode)
                     :server-id 'terraform-ls))
 
-  (add-hook 'terraform-mode-hook #'lsp))
+  (add-hook 'terraform-mode-hook #'lsp)
+  ;; 100mb
+  (setq gc-cons-threshold 100000000)
+  ;; 1mb
+  (setq read-process-output-max (* 1024 1024))
+  (setq lsp-lens-enable nil))
 
 (defun lsp-go-install-save-hooks ()
   (add-hook 'before-save-hook #'lsp-format-buffer t t)
@@ -172,14 +186,6 @@
         dashboard-items '((recents . 5)
                           (projects . 5))
         dashboard-set-footer nil))
-
-(use-package exec-path-from-shell
-  :ensure t
-  :init
-  (when (memq window-system '(mac ns x))
-    (exec-path-from-shell-initialize))
-  :config
-  (exec-path-from-shell-copy-env "OPENAI_KEY"))
 
 (use-package gptel
   :config
