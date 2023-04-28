@@ -63,4 +63,4 @@ complete -o nospace -C /usr/bin/terraform terraform
 alias j!=jbang
 export PATH="$HOME/.jbang/bin:$PATH"
 
-setxkbmap us
+setxkbmap us -variant intl
