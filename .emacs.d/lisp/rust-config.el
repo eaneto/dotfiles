@@ -4,14 +4,12 @@
 ;;; Code:
 
 (use-package rust-mode
-  :ensure t)
+  :ensure)
 
 (use-package rustic
-  :ensure t
+  :ensure
   :config
-  (setq lsp-rust-server 'rust-analyzer)
-  (setq rustic-format-on-save t)
-  (setq lsp-rust-analyzer-server-display-inlay-hints t))
+  (setq rustic-format-on-save t))
 
 (provide 'rust-config)
 

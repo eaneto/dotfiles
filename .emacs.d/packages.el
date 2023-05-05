@@ -54,6 +54,12 @@
   (css-mode . lsp)
   (scss-mode . lsp)
   (rustic-mode . lsp)
+  :custom
+  (lsp-rust-server 'rust-analyzer)
+  (lsp-inlay-hint-enable t)
+  (lsp-rust-analyzer-cargo-watch-command "clippy")
+  (lsp-rust-analyzer-display-chaining-hints t)
+  (lsp-rust-analyzer-display-closure-return-type-hints t)
   :config
   (add-to-list 'lsp-language-id-configuration '(terraform-mode . "terraform"))
 
