@@ -30,7 +30,8 @@
   :config
   (evil-collection-init 'xref)
   (evil-collection-init 'org)
-  (evil-collection-init 'dashboard))
+  (evil-collection-init 'dashboard)
+  (evil-collection-init 'deadgrep))
 
 (provide 'evil-config)
 
