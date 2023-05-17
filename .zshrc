@@ -64,3 +64,6 @@ alias j!=jbang
 export PATH="$HOME/.jbang/bin:$PATH"
 
 setxkbmap us -variant intl
+
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
