@@ -217,16 +217,7 @@
 (use-package deadgrep
   :ensure)
 
-(use-package separedit
-  :ensure
-  :config
-  (define-key prog-mode-map        (kbd "C-c C-e") #'separedit)
-  (define-key minibuffer-local-map (kbd "C-c C-e") #'separedit)
-  (define-key help-mode-map        (kbd "C-c C-e") #'separedit)
-  (define-key helpful-mode-map     (kbd "C-c C-e") #'separedit))
-
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/awesome-tab"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/cql-mode"))
 
 (defun setup-cql-mode()
@@ -234,13 +225,6 @@
   (require 'cql-mode)
   (add-to-list 'auto-mode-alist '("\\.cql\\'" . cql-mode)))
 
-(defun setup-awesome-tab()
-  "Setup for awesome tab."
-  (require 'awesome-tab)
-  (setq awesome-tab-display-icon t)
-  (awesome-tab-mode t))
-
-(setup-awesome-tab)
 (setup-cql-mode)
 
 (require 'evil-config)
