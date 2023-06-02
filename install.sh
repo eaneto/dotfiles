@@ -3,7 +3,6 @@
 # Emacs
 mkdir -p ~/.emacs.d/lisp
 mkdir -p ~/.emacs.d/lisp/cql-mode
-mkdir -p ~/.emacs.d/lisp/awesome-tab
 
 ln -s ~/projects/dotfiles/.emacs.d/ufp_logo.txt ~/.emacs.d
 ln -s ~/projects/dotfiles/.emacs.d/init.el ~/.emacs.d
@@ -18,7 +17,6 @@ ln -s ~/projects/dotfiles/.emacs.d/lisp/python-config.el ~/.emacs.d/lisp
 ln -s ~/projects/dotfiles/.emacs.d/lisp/evil-config.el ~/.emacs.d/lisp
 ln -s ~/projects/dotfiles/.emacs.d/lisp/custom-modes-config.el ~/.emacs.d/lisp
 ln -s ~/projects/dotfiles/.emacs.d/lisp/cql-mode/cql-mode.el ~/.emacs.d/lisp/cql-mode
-ln -s ~/projects/dotfiles/.emacs.d/lisp/awesome-tab/awesome-tab.el ~/.emacs.d/lisp/awesome-tab
 
 # Zsh
 ln -s ~/projects/dotfiles/.zshrc ~/
