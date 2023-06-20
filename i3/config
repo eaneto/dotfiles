@@ -32,6 +32,7 @@ bindsym XF86MonBrightnessUp exec light -A 5
  # decrease screen brightness
 bindsym XF86MonBrightnessDown exec light -U 5
 
+bindsym Print exec maim -s | xclip -selection clipboard -t image/png
 
 # kill focused window.
 bindsym $mod+Shift+q							kill
