@@ -143,16 +143,16 @@ bindsym $mod+Shift+9                            move container to workspace $wor
 bindsym $mod+Shift+0                            move container to workspace $workspace10
 
 # Loads transmission in workspace 10
+assign [class="Emacs"]				            $workspace1
+assign [class="Alacritty"]	    			    $workspace2
+assign [class="Brave"]	    			        $workspace3
+assign [class="Spotify"]	    			    $workspace4
 assign [class="Transmission"]				    $workspace10
 
 for_window [class="^jetbrains-.+"][window_type=dialog]  focus
 for_window [instance="sun-awt-X11-XWindowPeer"]         border pixel 0
-for_window [title="video0 - mpv"]				        floating enable
-for_window [title="Calculator"]		                    floating enable
-for_window [class="Spotify"]	    			        move to workspace $workspace4
 
 # reload the configuration file
-#bindsym $mod+Shift+c							 reload
 bindsym $mod+Shift+r+c							 reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
