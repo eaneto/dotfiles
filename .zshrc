@@ -41,8 +41,6 @@ alias ll="ls -laho"
 
 # Scripts
 alias volume="sh $SCRIPTS/volume.sh"
-alias download="sh $SCRIPTS/download.sh"
-alias pall="sh $SCRIPTS/pull_everything.sh"
 
 case "$EMACS" in
     t)

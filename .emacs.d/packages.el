@@ -44,6 +44,11 @@
   (yas-global-mode 1)
   :hook (go-mode . yas-minor-mode))
 
+(use-package terraform-mode
+  :ensure t
+  :config
+  (add-hook 'terraform-mode-hook #'outline-minor-mode))
+
 (use-package lsp-mode
   :ensure t
   :commands (lsp lsp-deferred)
