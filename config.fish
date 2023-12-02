@@ -22,6 +22,7 @@ abbr _ "sudo"
 # Git shortcuts
 abbr gst "git status"
 abbr gd "git diff"
+abbr gl "git pull"
 abbr gp "git push"
 abbr gpsup "git push --set-upstream origin $(git_branch)"
 abbr gpf "git push --force"
