@@ -18,7 +18,6 @@ abbr ll "ls -laho"
 abbr l "ls -l"
 abbr _ "sudo"
 
-
 # Git shortcuts
 abbr gst "git status"
 abbr gd "git diff"
@@ -43,7 +42,7 @@ function fish_prompt
     set_color purple
     echo -n "["(prompt_pwd)"] "
     set_color blue
-    echo (fish_git_prompt)
+    echo -n (fish_git_prompt)
     set_color cyan
     echo -n " → "
 end
