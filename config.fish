@@ -12,6 +12,7 @@ export SCRIPTS=$PROJECTS/snippets/shell
 abbr v "vim"
 abbr vi "vim"
 abbr r "ranger"
+abbr gw "./gradlew"
 
 abbr ls "ls -N --color"
 abbr ll "ls -laho"
@@ -33,6 +34,9 @@ alias gc! "git commit --verbose --amend"
 
 # Scripts
 abbr volume "sh $SCRIPTS/volume.sh"
+
+# asdf
+source /opt/asdf-vm/asdf.fish
 
 function fish_prompt
     set_color green
