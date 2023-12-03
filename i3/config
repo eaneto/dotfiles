@@ -17,7 +17,7 @@ set $inactive_text_color	                    "#676e7d"
 font pango:mono 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier                               $mod
+floating_modifier $mod
 
 # Window borders
 new_window pixel 0
@@ -25,13 +25,6 @@ new_window pixel 0
 #
 # Key bindings
 #
-
-# Screen brightness controls
-# increase screen brightness
-bindsym XF86MonBrightnessUp exec light -A 5
- # decrease screen brightness
-bindsym XF86MonBrightnessDown exec light -U 5
-
 bindsym Print exec maim -s | xclip -selection clipboard -t image/png
 
 # kill focused window.
@@ -149,9 +142,6 @@ assign [class="Brave"]	    			        $workspace3
 assign [class="Spotify"]	    			    $workspace4
 assign [class="Transmission"]				    $workspace10
 
-for_window [class="^jetbrains-.+"][window_type=dialog]  focus
-for_window [instance="sun-awt-X11-XWindowPeer"]         border pixel 0
-
 # reload the configuration file
 bindsym $mod+Shift+r+c							 reload
 
@@ -185,14 +175,12 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-# exec_always --no-startup-id polybar main
-
 bar {
         status_command i3status
         position top
 }
 
-hide_edge_borders both
+#hide_edge_borders both
 
 # i3lock config
 bindsym $mod+Shift+x exec i3lock --color="$background"
