@@ -30,6 +30,7 @@ abbr gco "git checkout"
 abbr gcb "git checkout -b"
 abbr gaa "git add --all"
 abbr gc "git commit --verbose"
+abbr gcl "git clone --recurse-submodules"
 alias gc! "git commit --verbose --amend"
 
 # Scripts
@@ -37,6 +38,9 @@ abbr volume "sh $SCRIPTS/volume.sh"
 
 # asdf
 source /opt/asdf-vm/asdf.fish
+
+# SSH
+eval (ssh-agent -c)
 
 function fish_prompt
     set_color green
