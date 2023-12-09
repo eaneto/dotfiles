@@ -35,8 +35,7 @@
   (when (memq window-system '(mac ns x))
     (exec-path-from-shell-initialize))
   :config
-  (exec-path-from-shell-copy-env "OPENAI_KEY")
-  (exec-path-from-shell-copy-env "LSP_USE_PLISTS"))
+  (exec-path-from-shell-copy-env "OPENAI_KEY"))
 
 (use-package yasnippet
   :ensure t
@@ -48,46 +47,6 @@
   :ensure t
   :config
   (add-hook 'terraform-mode-hook #'outline-minor-mode))
-
-(use-package lsp-mode
-  :ensure t
-  :commands (lsp lsp-deferred)
-  :hook
-  (go-mode . lsp-deferred)
-  (html-mode . lsp)
-  (javascript-mode . lsp)
-  (css-mode . lsp)
-  (scss-mode . lsp)
-  (rustic-mode . lsp)
-  :custom
-  (lsp-rust-server 'rust-analyzer)
-  (lsp-inlay-hint-enable t)
-  (lsp-rust-analyzer-cargo-watch-command "clippy")
-  (lsp-rust-analyzer-display-chaining-hints t)
-  (lsp-rust-analyzer-display-closure-return-type-hints t)
-  :config
-  (add-to-list 'lsp-language-id-configuration '(terraform-mode . "terraform"))
-
-  (lsp-register-client
-   (make-lsp-client :new-connection (lsp-stdio-connection '("~/.local/bin/terraform-lsp" "-enable-log-file"))
-                    :major-modes '(terraform-mode)
-                    :server-id 'terraform-ls))
-
-  (add-hook 'terraform-mode-hook #'lsp)
-  ;; 100mb
-  (setq gc-cons-threshold 100000000)
-  ;; 1mb
-  (setq read-process-output-max (* 1024 1024))
-  (setq lsp-lens-enable nil))
-
-(defun lsp-go-install-save-hooks ()
-  (add-hook 'before-save-hook #'lsp-format-buffer t t)
-  (add-hook 'before-save-hook #'lsp-organize-imports t t))
-(add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
-
-(use-package lsp-ui
-  :ensure t
-  :commands lsp-ui-mode)
 
 (use-package company
   :ensure t
@@ -136,7 +95,6 @@
   (global-set-key (kbd "M-x") 'counsel-M-x)
   (global-set-key (kbd "C-x C-f") 'counsel-find-file)
   (global-set-key (kbd "C-x b") 'ivy-switch-buffer)
-  ;; TODO: Change TAB and RET on the minibuffer to work like smex
   (define-key ivy-minibuffer-map (kbd "M-j") 'ivy-next-line)
   (define-key ivy-minibuffer-map (kbd "M-k") 'ivy-previous-line))
 
@@ -234,8 +192,15 @@
 
 (require 'evil-config)
 (require 'custom-modes-config)
-(require 'lsp-mode-c)
 (require 'rust-config)
 (require 'python-config)
+
+(add-hook 'c-mode-hook 'eglot-ensure)
+(add-hook 'c++-mode-hook 'eglot-ensure)
+(add-hook 'objc-mode-hook 'eglot-ensure)
+(add-hook 'c++-mode-hook 'eglot-ensure)
+(add-hook 'go-mode-hook 'eglot-ensure)
+(add-hook 'rustic-mode-hook 'eglot-ensure)
+(add-hook 'python-mode-hook 'eglot-ensure)
 
 ;;; packages.el ends here

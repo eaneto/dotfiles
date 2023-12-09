@@ -3,13 +3,6 @@
 ;;; Emacs Python configuration --- Package configuration for Emacs Python
 ;;; Code:
 
-(use-package lsp-pyright
-  :ensure t
-  :defer t
-  :hook (python-mode . (lambda ()
-                          (require 'lsp-pyright)
-                          (lsp))))
-
 ;; Applies black formatter on save.
 (use-package python-black
   :ensure t
