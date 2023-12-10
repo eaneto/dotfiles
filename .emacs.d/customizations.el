@@ -48,14 +48,6 @@ removes scroll bar and display line numbers."
               tab-width 4
               indent-tabs-mode nil)
 
-(defun read-path-variable-from-zshrc()
-  (let ((path (shell-command-to-string ". ~/.zshrc; echo -n $PATH")))
-    (setenv "PATH" path)
-    (setq exec-path
-          (append
-           (split-string-and-unquote path ":")
-           exec-path))))
-
 (dolist (hook '(text-mode-hook))
   (add-hook hook (lambda () (flyspell-mode 1))))
 
@@ -70,7 +62,6 @@ removes scroll bar and display line numbers."
 (visual-config-modes)
 (set-default-indentation)
 (enable-ido-mode)
-(read-path-variable-from-zshrc)
 
 (add-hook 'term-mode-hook (lambda ()
                             (setq show-trailing-whitespace nil)))
