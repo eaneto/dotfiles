@@ -195,12 +195,14 @@
 (require 'rust-config)
 (require 'python-config)
 
-(add-hook 'c-mode-hook 'eglot-ensure)
-(add-hook 'c++-mode-hook 'eglot-ensure)
-(add-hook 'objc-mode-hook 'eglot-ensure)
-(add-hook 'c++-mode-hook 'eglot-ensure)
-(add-hook 'go-mode-hook 'eglot-ensure)
-(add-hook 'rustic-mode-hook 'eglot-ensure)
-(add-hook 'python-mode-hook 'eglot-ensure)
+(use-package eglot
+  :hook
+  (c-mode . eglot-ensure)
+  (c++-mode . eglot-ensure)
+  (objc-mode . eglot-ensure)
+  (c++-mode . eglot-ensure)
+  (go-mode . eglot-ensure)
+  (rustic-mode . eglot-ensure)
+  (python-mode . eglot-ensure))
 
 ;;; packages.el ends here
