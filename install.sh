@@ -21,6 +21,9 @@ ln -s ~/projects/dotfiles/.emacs.d/lisp/cql-mode/cql-mode.el ~/.emacs.d/lisp/cql
 # Zsh
 ln -s ~/projects/dotfiles/.zshrc ~/
 
+# Fish
+ln -s ~/projects/dotfiles/config.fish ~/.config/fish/
+
 # i3/i3status
 
 mkdir -p ~/.config/i3
