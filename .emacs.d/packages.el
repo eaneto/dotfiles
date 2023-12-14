@@ -161,10 +161,6 @@
                           (recents . 5))
         dashboard-set-footer nil))
 
-(use-package gptel
-  :config
-  (setq gptel-api-key (getenv "OPENAI_KEY")))
-
 (use-package citar
   :custom
   (citar-bibliography '("~/projects/research/references.bib"))
