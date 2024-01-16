@@ -40,7 +40,7 @@ ln -s ~/projects/dotfiles/.vimrc ~/
 
 # Alacritty
 mkdir -p ~/.config/alacritty
-ln -s ~/projects/dotfiles/alacritty/alacritty.yml ~/.config/alacritty
+ln -s ~/projects/dotfiles/alacritty/alacritty.toml ~/.config/alacritty
 
 # git
 ln -s ~/projects/dotfiles/.gitignore_global ~/
