@@ -33,9 +33,7 @@
   :ensure t
   :init
   (when (memq window-system '(mac ns x))
-    (exec-path-from-shell-initialize))
-  :config
-  (exec-path-from-shell-copy-env "OPENAI_KEY"))
+    (exec-path-from-shell-initialize)))
 
 (use-package yasnippet
   :ensure t
