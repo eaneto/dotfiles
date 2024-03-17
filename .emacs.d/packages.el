@@ -218,4 +218,7 @@
   (rustic-mode . eglot-ensure)
   (python-mode . eglot-ensure))
 
+(use-package elfeed
+  :ensure)
+
 ;;; packages.el ends here
