@@ -47,4 +47,4 @@ ln -s ~/projects/dotfiles/.gitignore_global ~/
 git config --global core.excludesFile '~/.gitignore_global'
 
 # zathura
-ln -s ~/projects/zathura/zathurarc ~/.config/zathura
+ln -s ~/projects/dotfiles/zathura/zathurarc ~/.config/zathura/
