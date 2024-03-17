@@ -28,6 +28,10 @@
   (python-mode . (lambda()
                    (add-hook 'before-save-hook 'python-isort-on-save-mode))))
 
+(use-package pet
+  :config
+  (add-hook 'python-base-mode-hook 'pet-mode -10))
+
 (provide 'python-config)
 
 ;;; python-config.el ends here
