@@ -162,6 +162,11 @@
 (use-package citar
   :custom
   (citar-bibliography '("~/projects/research/references.bib"))
+  (org-cite-global-bibliography '("~/projects/research/references.bib"))
+  (org-cite-insert-processor 'citar)
+  (org-cite-follow-processor 'citar)
+  (org-cite-activate-processor 'citar)
+  (citar-bibliography org-cite-global-bibliography)
   :hook
   (LaTeX-mode . citar-capf-setup)
   (org-mode . citar-capf-setup))
