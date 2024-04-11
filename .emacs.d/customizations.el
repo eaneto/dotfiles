@@ -77,4 +77,7 @@ removes scroll bar and display line numbers."
 
 (global-set-key (kbd "C-a") 'beginning-of-line++)
 
+;; Configure js-mode for avro schema defition files
+(add-to-list 'auto-mode-alist '("\\.avsc\\'" . js-mode))
+
 ;;; customizations.el ends here
