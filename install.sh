@@ -24,9 +24,6 @@ ln -s ~/projects/dotfiles/.emacs.d/snippets ~/.emacs.d/snippets
 ln -s ~/projects/dotfiles/.emacs.d/snippets/org-mode/begcm ~/.emacs.d/snippets/org-mode
 ln -s ~/projects/dotfiles/.emacs.d/snippets/org-mode/begsrc ~/.emacs.d/snippets/org-mode
 
-# Zsh
-ln -s ~/projects/dotfiles/.zshrc ~/
-
 # Fish
 ln -s ~/projects/dotfiles/config.fish ~/.config/fish/
 ln -s ~/projects/dotfiles/fish-ssh-agent/functions/__ssh_agent_is_started.fish ~/.config/fish/functions
@@ -54,6 +51,3 @@ ln -s ~/projects/dotfiles/alacritty/alacritty.toml ~/.config/alacritty
 # git
 ln -s ~/projects/dotfiles/.gitignore_global ~/
 git config --global core.excludesFile '~/.gitignore_global'
-
-# zathura
-ln -s ~/projects/dotfiles/zathura/zathurarc ~/.config/zathura/
