@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Begin and end comment block
+# key: begcm
+# --
+
+#+BEGIN_COMMENT
+$0
+#+END_COMMENT
