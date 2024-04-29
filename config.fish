@@ -40,8 +40,8 @@ abbr volume "sh $SCRIPTS/volume.sh"
 # asdf
 source /opt/asdf-vm/asdf.fish
 
-# SSH
-eval (ssh-agent -c)
+# GPG
+export GPG_TTY=(tty)
 
 function fish_prompt
     set_color green

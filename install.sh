@@ -29,6 +29,9 @@ ln -s ~/projects/dotfiles/.zshrc ~/
 
 # Fish
 ln -s ~/projects/dotfiles/config.fish ~/.config/fish/
+ln -s ~/projects/dotfiles/fish-ssh-agent/functions/__ssh_agent_is_started.fish ~/.config/fish/functions
+ln -s ~/projects/dotfiles/fish-ssh-agent/functions/__ssh_agent_start.fish ~/.config/fish/functions
+ln -s ~/projects/dotfiles/fish-ssh-agent/conf.d/fish-ssh-agent.fish ~/.config/fish/conf.d
 
 # i3/i3status
 

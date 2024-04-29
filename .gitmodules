@@ -1,3 +1,6 @@
 [submodule ".emacs.d/lisp/cql-mode"]
 	path = .emacs.d/lisp/cql-mode
 	url = https://github.com/3ldr0n/cql-mode.git
+[submodule "fish-ssh-agent"]
+	path = fish-ssh-agent
+	url = git@github.com:danhper/fish-ssh-agent.git
