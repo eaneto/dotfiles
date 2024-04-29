@@ -50,8 +50,10 @@ function fish_prompt
     echo -n (whoami) " "
     set_color purple
     echo -n "["(prompt_pwd)"] "
-    set_color blue
-    echo -n (fish_git_prompt)
+    if test -d .git
+        set_color blue
+        echo -n (fish_git_prompt)
+    end
     set_color cyan
     echo -n " → "
 end
