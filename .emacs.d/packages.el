@@ -220,4 +220,7 @@
 (use-package elfeed
   :ensure)
 
+(use-package fish-mode
+  :ensure)
+
 ;;; packages.el ends here
