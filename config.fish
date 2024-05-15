@@ -44,7 +44,11 @@ source /opt/asdf-vm/asdf.fish
 export GPG_TTY=(tty)
 
 function fish_prompt
-    set_color green
+    if test $status -eq 0
+        set_color green
+    else
+        set_color red
+    end
     echo -n "λ "
     set_color yellow
     echo -n (whoami) " "
