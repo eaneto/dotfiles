@@ -160,8 +160,8 @@
 
 (use-package citar
   :custom
-  (citar-bibliography '("~/projects/research/references.bib"))
-  (org-cite-global-bibliography '("~/projects/research/references.bib"))
+  (citar-bibliography '("~/projects/bewlrm/research/references.bib"))
+  (org-cite-global-bibliography '("~/projects/bewlrm/research/references.bib"))
   (org-cite-insert-processor 'citar)
   (org-cite-follow-processor 'citar)
   (org-cite-activate-processor 'citar)
