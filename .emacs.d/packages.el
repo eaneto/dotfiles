@@ -223,4 +223,10 @@
 (use-package fish-mode
   :ensure)
 
+(use-package psession
+  :ensure
+  :config
+  (setq psession-save-buffers-unwanted-buffers-regexp "\\(diary\\|\\.jpg\\|\\.png\\|\\*image-native-display\\*\\)$")
+  (psession-mode 1))
+
 ;;; packages.el ends here
