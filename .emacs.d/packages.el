@@ -111,11 +111,11 @@
   :config
   (setq org-clock-sound "~/Music/ding.wav"))
 
-(use-package org-bullets
+(use-package org-superstar
   :ensure t
   :config
   (add-hook 'org-mode-hook
-            (lambda () (org-bullets-mode 1))))
+            (lambda () (org-superstar-mode 1))))
 
 (use-package ranger
   :ensure t
@@ -216,6 +216,10 @@
   (go-mode . eglot-ensure)
   (rustic-mode . eglot-ensure)
   (python-mode . eglot-ensure))
+
+(use-package eglot-booster
+	:after eglot
+	:config	(eglot-booster-mode))
 
 (use-package elfeed
   :ensure)
