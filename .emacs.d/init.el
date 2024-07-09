@@ -25,7 +25,7 @@
  '(elfeed-feeds
    '("http://peter.eisentraut.org/feed.xml" "https://feeds.feedburner.com/martinkl" "https://nullprogram.com/feed/" "https://rachelbythebay.com/w/atom.xml" "https://jvns.ca/atom.xml"))
  '(package-selected-packages
-   '(org-superstar eglot-booster psession fish-mode elfeed-org elfeed pet dashboard ellama deadgrep flx citar-embark citar exec-path-from-shell writeroom-mode protobuf-mode dockerfile-mode latex-preview-pane jinja2-mode olivetti web-mode hl-todo ivy-xref evil-collection flycheck counsel evil-surround diff-hl python-isort pyimport python-black ansible monokai-theme yasnippet yaml-mode which-key use-package telephone-line rustic ranger highlight-indent-guides go-mode evil-matchit company all-the-icons))
+   '(org-superstar eglot-booster psession fish-mode elfeed-org elfeed pet dashboard ellama deadgrep flx citar-embark citar exec-path-from-shell writeroom-mode protobuf-mode dockerfile-mode latex-preview-pane jinja2-mode olivetti web-mode hl-todo ivy-xref evil-collection flycheck counsel evil-surround diff-hl python-isort pyimport python-black ansible monokai-theme yasnippet yaml-mode which-key use-package telephone-line rustic highlight-indent-guides go-mode evil-matchit company all-the-icons))
  '(package-vc-selected-packages
    '((eglot-booster :vc-backend Git :url "https://github.com/jdtsmith/eglot-booster")))
  '(pdf-latex-command "xelatex")

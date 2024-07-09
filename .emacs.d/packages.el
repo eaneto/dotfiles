@@ -117,11 +117,6 @@
   (add-hook 'org-mode-hook
             (lambda () (org-superstar-mode 1))))
 
-(use-package ranger
-  :ensure t
-  :config
-  (ranger-override-dired-mode t))
-
 (use-package monokai-theme
   :ensure t
   :config
@@ -145,7 +140,9 @@
 (use-package web-mode
   :ensure t
   :config
-  (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode)))
+  (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+  (setq web-mode-engines-alist
+	    '(("django"    . "\\.html\\'"))))
 
 (use-package dashboard
   :ensure t
@@ -215,7 +212,10 @@
   (c++-mode . eglot-ensure)
   (go-mode . eglot-ensure)
   (rustic-mode . eglot-ensure)
-  (python-mode . eglot-ensure))
+  (python-mode . eglot-ensure)
+  :config
+  (fset #'jsonrpc--log-event #'ignore)
+  (eglot-events-buffer-size 0))
 
 (use-package eglot-booster
 	:after eglot
