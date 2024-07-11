@@ -9,8 +9,9 @@ export PROJECTS=$HOME/projects
 export SCRIPTS=$PROJECTS/snippets/shell
 
 # Shortcuts
-abbr v "vim"
-abbr vi "vim"
+abbr v "nvim"
+abbr vi "nvim"
+abbr vim "nvim"
 abbr r "ranger"
 abbr gw "./gradlew"
 
