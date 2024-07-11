@@ -143,7 +143,8 @@
   (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
   (setq web-mode-engines-alist
 	    '(("django"    . "\\.html\\'")))
-  (setq web-mode-markup-indent-offset 2))
+  (setq web-mode-markup-indent-offset 2)
+  (add-hook 'web-mode-hook (lambda () (electric-pair-local-mode -1))))
 
 (use-package dashboard
   :ensure t
