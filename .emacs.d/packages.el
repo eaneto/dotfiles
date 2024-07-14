@@ -177,20 +177,6 @@
 (use-package deadgrep
   :ensure)
 
-(use-package ellama
-  :init
-  (setopt ellama-language "English")
-  (require 'llm-ollama)
-  (setopt ellama-provider
-		  (make-llm-ollama
-		   :chat-model "zephyr:latest"
-           :embedding-model "zephyr:latest"))
-  (setopt ellama-providers
-		  '(("zephyr" . (make-llm-ollama
-						 :chat-model "zephyr:latest"
-						 :embedding-model "zephyr:latest")))))
-
-
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/cql-mode"))
 
