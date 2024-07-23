@@ -80,4 +80,12 @@ removes scroll bar and display line numbers."
 ;; Configure js-mode for avro schema defition files
 (add-to-list 'auto-mode-alist '("\\.avsc\\'" . js-mode))
 
+(defun set-fifteen-minute-timer()
+  (interactive)
+  (org-timer-set-timer "00:15:00"))
+
+(defun set-five-minute-timer()
+  (interactive)
+  (org-timer-set-timer "00:05:00"))
+
 ;;; customizations.el ends here

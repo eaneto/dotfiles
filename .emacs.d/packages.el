@@ -203,7 +203,7 @@
   (python-mode . eglot-ensure)
   :config
   (fset #'jsonrpc--log-event #'ignore)
-  (eglot-events-buffer-size 0))
+  (setq eglot-events-buffer-size 0))
 
 (use-package eglot-booster
 	:after eglot
