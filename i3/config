@@ -187,4 +187,4 @@ bindsym $mod+Shift+x exec i3lock --color="$background"
 
 exec sh ~/projects/snippets/shell/primary_monitor.sh
 
-exec_always feh --bg-fill ~/.config/wallpaper.jpg ~/.config/vertical-wallpaper.png
+exec_always feh --bg-fill ~/.config/wallpaper.jpg ~/.config/vertical-wallpaper.jpg
