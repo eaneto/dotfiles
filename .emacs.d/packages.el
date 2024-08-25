@@ -205,10 +205,6 @@
   (fset #'jsonrpc--log-event #'ignore)
   (setq eglot-events-buffer-size 0))
 
-(use-package eglot-booster
-	:after eglot
-	:config	(eglot-booster-mode))
-
 (use-package elfeed
   :ensure)
 
