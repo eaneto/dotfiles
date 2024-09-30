@@ -49,6 +49,7 @@ set cursorline
 
 " Shows numbe line
 set number
+set relativenumber
 
 " Always show current position
 set ruler
