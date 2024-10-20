@@ -9,8 +9,6 @@ export PROJECTS=$HOME/projects
 export SCRIPTS=$PROJECTS/snippets/shell
 
 # Shortcuts
-abbr v "nvim"
-abbr vi "nvim"
 abbr vim "nvim"
 abbr r "ranger"
 abbr gw "./gradlew"
@@ -26,7 +24,6 @@ abbr gd "git diff"
 abbr gl "git pull"
 abbr gf "git fetch"
 abbr gp "git push"
-abbr gpsup "git push --set-upstream origin $(git_branch)"
 abbr gpf "git push --force-with-lease"
 abbr gco "git checkout"
 abbr gcb "git checkout -b"
@@ -35,6 +32,7 @@ abbr gaa "git add --all"
 abbr gc "git commit --verbose"
 abbr gcl "git clone --recurse-submodules"
 alias gc! "git commit --verbose --amend"
+alias gpsup "git push --set-upstream origin $(git_branch)"
 
 # Scripts
 abbr volume "sh $SCRIPTS/volume.sh"
