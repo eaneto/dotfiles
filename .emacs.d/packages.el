@@ -217,4 +217,20 @@
   (setq psession-save-buffers-unwanted-buffers-regexp "\\(diary\\|\\.jpg\\|\\.png\\|\\*image-native-display\\*\\)$")
   (psession-mode 1))
 
+(use-package eldoc-box
+  :ensure t
+  :hook
+  (prog-mode . eldoc-box-hover-mode))
+
+(use-package pomm
+  :ensure
+  :config
+  (setq alert-default-style 'libnotify
+        pomm-audio-enabled t
+        pomm-audio-player-executable "mpv"
+        pomm-audio-files '((stop . "~/Music/ding.wav")
+                           (work . "~/Music/ding.wav")
+                           (short-break . "~/Music/ding.wav")
+                           (break . "~/Music/ding.wav"))))
+
 ;;; packages.el ends here
