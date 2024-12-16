@@ -11,9 +11,6 @@ ln -s ~/projects/dotfiles/.emacs.d/customizations.el ~/.emacs.d
 ln -s ~/projects/dotfiles/.emacs.d/lisp ~/.emacs.d/
 ln -s ~/projects/dotfiles/.emacs.d/snippets/ ~/.emacs.d/
 
-# Zsh
-ln -s ~/projects/dotfiles/.zshrc ~/
-
 # Fish
 mkdir -p ~/.config/fish
 
