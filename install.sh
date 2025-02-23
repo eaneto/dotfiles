@@ -54,3 +54,6 @@ git config --global core.excludesFile '~/.gitignore_global'
 
 # zathura
 ln -s ~/projects/dotfiles/zathura/zathurarc ~/.config/zathura/
+
+# GDB
+ln -s ~/projects/dotfiles/.gdbinit ~/
