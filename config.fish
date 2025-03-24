@@ -14,7 +14,7 @@ abbr r "ranger"
 abbr gw "./gradlew"
 
 abbr ls "ls -N --color"
-abbr ll "ls -laho"
+abbr ll "ls -aho"
 abbr l "ls -l"
 abbr _ "sudo"
 
