@@ -25,7 +25,6 @@ removes scroll bar and display line numbers."
 
 (defun set-default-indentation()
   "Configures the default indentation (4 spaces)."
-  (setq-default indent-tabs-mode nil)
   (setq-default tab-width 4)
   (setq indent-line-function 'insert-tab)
   (global-set-key (kbd "RET") 'newline-and-indent))
