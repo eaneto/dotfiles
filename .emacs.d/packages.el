@@ -233,4 +233,9 @@
                            (short-break . "~/Music/ding.wav")
                            (break . "~/Music/ding.wav"))))
 
+(use-package nov
+  :ensure
+  :config
+  (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
+
 ;;; packages.el ends here

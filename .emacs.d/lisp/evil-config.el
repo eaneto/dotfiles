@@ -31,7 +31,8 @@
   (evil-collection-init 'org)
   (evil-collection-init 'dashboard)
   (evil-collection-init 'deadgrep)
-  (evil-collection-init 'dired))
+  (evil-collection-init 'dired)
+  (evil-collection-init 'nov))
 
 (provide 'evil-config)
 
