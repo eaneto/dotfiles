@@ -21,7 +21,7 @@ default_border pixel 0
 #
 # Key bindings
 #
-#bindsym Print exec maim -s | xclip -selection clipboard -t image/png
+bindsym Print exec slurp | grim -g - - | wl-copy
 
 # kill focused window.
 bindsym $mod+Shift+q							kill
