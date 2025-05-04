@@ -14,7 +14,11 @@
   (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode)))
 
 (use-package go-mode
-  :ensure t)
+  :ensure t
+  :config
+  (add-hook 'go-mode-hook
+            (lambda ()
+              (add-hook 'before-save-hook 'gofmt-before-save))))
 
 (use-package dockerfile-mode
   :ensure t
