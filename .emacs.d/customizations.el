@@ -6,7 +6,7 @@
 
 (set-face-attribute 'default nil
                     :family "Monaco"
-                    :height 150
+                    :height 140
                     :weight 'normal
                     :width 'normal)
 
