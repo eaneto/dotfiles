@@ -111,3 +111,5 @@ highlight nonText ctermbg=NONE
 set rtp+=~/.fzf
 
 let g:fzf =  '<c-p>'
+
+autocmd FileType yaml setlocal ts=2 sw=2 sts=2 expandtab
