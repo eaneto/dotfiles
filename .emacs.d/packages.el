@@ -146,17 +146,6 @@
   (setq web-mode-markup-indent-offset 2)
   (add-hook 'web-mode-hook (lambda () (electric-pair-local-mode -1))))
 
-(use-package dashboard
-  :ensure t
-  :config
-  (dashboard-setup-startup-hook)
-  (setq dashboard-startup-banner "~/.emacs.d/ufp_logo.txt"
-        dashboard-center-content t
-        dashboard-projects-backend 'project-el
-        dashboard-items '((projects . 5)
-                          (recents . 5))
-        dashboard-set-footer nil))
-
 (use-package citar
   :custom
   (citar-bibliography '("~/projects/bewlrm/research/references.bib"))

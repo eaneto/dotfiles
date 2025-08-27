@@ -37,14 +37,14 @@
      "https://rachelbythebay.com/w/atom.xml"
      "https://jvns.ca/atom.xml"))
  '(package-selected-packages
-   '(all-the-icons ansible citar-embark company counsel dashboard
-                   deadgrep diff-hl dockerfile-mode eglot-booster
-                   eldoc-box elfeed-org evil-collection evil-matchit
-                   evil-surround exec-path-from-shell fish-mode flx
-                   flycheck go-mode highlight-indent-guides hl-todo
-                   ivy-xref latex-preview-pane monokai-theme nov
-                   olivetti org-superstar pet pomm protobuf-mode
-                   psession pyimport python-black python-isort rustic
+   '(all-the-icons ansible citar-embark company counsel deadgrep diff-hl
+                   dockerfile-mode eglot-booster eldoc-box elfeed-org
+                   evil-collection evil-matchit evil-surround
+                   exec-path-from-shell fish-mode flx flycheck go-mode
+                   highlight-indent-guides hl-todo ivy-xref
+                   latex-preview-pane monokai-theme nov olivetti
+                   org-superstar pet pomm protobuf-mode psession
+                   pyimport python-black python-isort rustic
                    telephone-line terraform-mode use-package web-mode
                    which-key writeroom-mode yaml-mode yasnippet))
  '(pdf-latex-command "xelatex")
