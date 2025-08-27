@@ -9,7 +9,6 @@ export PROJECTS=$HOME/projects
 export SCRIPTS=$PROJECTS/snippets/shell
 
 # Shortcuts
-abbr vim "nvim"
 abbr r "ranger"
 abbr gw "./gradlew"
 
@@ -35,7 +34,7 @@ alias gc! "git commit --verbose --amend"
 alias gpsup "git push --set-upstream origin $(git_branch)"
 
 # Scripts
-abbr volume "sh $SCRIPTS/volume.sh"
+alias volume "sh $SCRIPTS/volume.sh"
 
 # asdf
 source /opt/asdf-vm/asdf.fish
