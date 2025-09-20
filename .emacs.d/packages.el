@@ -206,11 +206,6 @@
   (setq psession-save-buffers-unwanted-buffers-regexp "\\(diary\\|\\.jpg\\|\\.png\\|\\*image-native-display\\*\\)$")
   (psession-mode 1))
 
-(use-package eldoc-box
-  :ensure t
-  :hook
-  (prog-mode . eldoc-box-hover-mode))
-
 (use-package pomm
   :ensure
   :config

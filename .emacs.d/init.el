@@ -38,9 +38,9 @@
      "https://jvns.ca/atom.xml"))
  '(package-selected-packages
    '(all-the-icons ansible citar-embark company counsel deadgrep diff-hl
-                   dockerfile-mode eglot-booster eldoc-box elfeed-org
-                   evil-collection evil-matchit evil-surround
-                   exec-path-from-shell fish-mode flx flycheck go-mode
+                   dockerfile-mode eglot elfeed-org evil-collection
+                   evil-matchit evil-surround exec-path-from-shell
+                   fish-mode flx flycheck go-mode
                    highlight-indent-guides hl-todo ivy-xref
                    latex-preview-pane monokai-theme nov olivetti
                    org-superstar pet pomm protobuf-mode psession
