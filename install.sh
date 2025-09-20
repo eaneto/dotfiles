@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # Emacs
+mkdir ~/.emacs.d
 ln -s ~/projects/dotfiles/.emacs.d/ufp_logo.txt ~/.emacs.d
 ln -s ~/projects/dotfiles/.emacs.d/init.el ~/.emacs.d
 ln -s ~/projects/dotfiles/.emacs.d/main.el ~/.emacs.d
