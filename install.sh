@@ -2,7 +2,6 @@
 
 # Emacs
 mkdir ~/.emacs.d
-ln -s ~/projects/dotfiles/.emacs.d/ufp_logo.txt ~/.emacs.d
 ln -s ~/projects/dotfiles/.emacs.d/init.el ~/.emacs.d
 ln -s ~/projects/dotfiles/.emacs.d/main.el ~/.emacs.d
 ln -s ~/projects/dotfiles/.emacs.d/packages.el ~/.emacs.d
@@ -16,6 +15,7 @@ ln -s ~/projects/dotfiles/.emacs.d/snippets/ ~/.emacs.d/
 ln -s ~/projects/dotfiles/.zshrc ~/
 
 # Fish
+mkdir ~/.config/fish
 ln -s ~/projects/dotfiles/config.fish ~/.config/fish/
 
 # i3/i3status
