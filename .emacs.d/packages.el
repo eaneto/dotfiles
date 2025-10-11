@@ -167,14 +167,6 @@
   :ensure)
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/cql-mode"))
-
-(defun setup-cql-mode()
-  "Setup for cql mode."
-  (require 'cql-mode)
-  (add-to-list 'auto-mode-alist '("\\.cql\\'" . cql-mode)))
-
-(setup-cql-mode)
 
 (require 'evil-config)
 (require 'custom-modes-config)
