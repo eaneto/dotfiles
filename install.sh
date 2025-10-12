@@ -1,5 +1,13 @@
 #!/bin/sh
 
+if [ $# -eq 0 ]
+then
+    echo "Pass the desired profile desktop or laptop"
+    exit
+fi
+
+profile=$1
+
 # Emacs
 mkdir ~/.emacs.d
 ln -s ~/projects/dotfiles/.emacs.d/init.el ~/.emacs.d
@@ -22,7 +30,13 @@ mkdir -p ~/.config/i3
 mkdir -p ~/.config/i3status
 
 ln -s ~/projects/dotfiles/i3/config ~/.config/i3
-ln -s ~/projects/dotfiles/i3status/config.desktop ~/.config/i3status/config
+
+if [ $profile = "laptop" ]
+then
+    ln -s ~/projects/dotfiles/i3status/config.laptop ~/.config/i3status/config
+else
+    ln -s ~/projects/dotfiles/i3status/config.desktop ~/.config/i3status/config
+fi
 
 # tmux
 ln -s ~/projects/dotfiles/.tmux.conf ~/
