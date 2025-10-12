@@ -11,12 +11,10 @@ ln -s ~/projects/dotfiles/.emacs.d/customizations.el ~/.emacs.d
 ln -s ~/projects/dotfiles/.emacs.d/lisp ~/.emacs.d/
 ln -s ~/projects/dotfiles/.emacs.d/snippets/ ~/.emacs.d/
 
-# Zsh
-ln -s ~/projects/dotfiles/.zshrc ~/
-
 # Fish
-mkdir ~/.config/fish
-ln -s ~/projects/dotfiles/config.fish ~/.config/fish/
+mkdir -p ~/.config/fish/
+ln -s ~/projects/dotfiles/fish/config.fish ~/.config/fish/
+ln -s ~/projects/dotfiles/fish/functions ~/.config/fish/
 
 # i3/i3status
 

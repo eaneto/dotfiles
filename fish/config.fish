@@ -32,15 +32,6 @@ abbr gc "git commit --verbose"
 abbr gcl "git clone --recurse-submodules"
 alias gc! "git commit --verbose --amend"
 
-function gpsup
-    git push --set-upstream origin $(git_branch)
-end
-
-# Save the functions if it hasn't been saved yet
-if not contains gpsupasd (functions)
-    funcsave gpsup
-end
-
 # Scripts
 alias volume "sh $SCRIPTS/volume.sh"
 
