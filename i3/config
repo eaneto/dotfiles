@@ -27,6 +27,15 @@ new_window pixel 0
 #
 bindsym Print exec maim -s | xclip -selection clipboard -t image/png
 
+## Volume
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -10%
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+## Backlight
+bindsym XF86MonBrightnessUp exec brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+
 # kill focused window.
 bindsym $mod+Shift+q							kill
 
@@ -179,8 +188,6 @@ bar {
         status_command i3status
         position top
 }
-
-#hide_edge_borders both
 
 # i3lock config
 bindsym $mod+Shift+x exec i3lock --color="$background"
