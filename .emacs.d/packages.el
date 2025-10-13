@@ -222,4 +222,7 @@
   :config
   (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
 
+(use-package eldoc
+  :bind (("M-RET" . eldoc-print-current-symbol-info)))
+
 ;;; packages.el ends here
