@@ -1,6 +1,6 @@
 general {
-        colors = true
-        interval = 5
+    colors = true
+    interval = 5
 }
 
 order += "volume speakers"
@@ -16,14 +16,16 @@ volume speakers {
 }
 
 wireless _first_ {
-        format_up = "W: (%quality at %essid) %ip"
-        format_down = "W: down"
+    format_up = "W: (%quality at %essid) %ip"
+    format_down = "W: down"
 }
 
 battery all {
-        format = "%status %percentage %remaining"
+    format = "%status %percentage %remaining (%consumption)"
+    low_threshold = 40
+    threshold_type = "percentage"
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
+    format = "%Y-%m-%d %H:%M:%S"
 }
