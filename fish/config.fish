@@ -34,6 +34,7 @@ alias gc! "git commit --verbose --amend"
 
 # Scripts
 alias volume "sh $SCRIPTS/volume.sh"
+alias swaudio "sh $SCRIPTS/swaudio.sh"
 
 # GPG
 export GPG_TTY=(tty)
