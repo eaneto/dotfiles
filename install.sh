@@ -53,7 +53,11 @@ ln -s ~/projects/dotfiles/.gitignore_global ~/
 git config --global core.excludesFile '~/.gitignore_global'
 
 # zathura
+mkdir -p ~/.config/zathura
 ln -s ~/projects/dotfiles/zathura/zathurarc ~/.config/zathura/
 
 # GDB
 ln -s ~/projects/dotfiles/.gdbinit ~/
+
+# Configure keyboard
+localectl set-x11-keymap us "intl" "caps:escape"
