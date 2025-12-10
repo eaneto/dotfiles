@@ -12,19 +12,13 @@
 ;;; Code:
 
 (require 'package)
-(setq package-enable-at-startup nil)
 
 (setq package-check-signature nil)
 
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
-(when (< emacs-major-version 24)
-  ;; For important compatibility libraries like cl-lib
-  (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
 
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
+(package-refresh-contents)
 
 (use-package all-the-icons
   :ensure t)
@@ -147,6 +141,7 @@
   (add-hook 'web-mode-hook (lambda () (electric-pair-local-mode -1))))
 
 (use-package citar
+  :ensure t
   :custom
   (citar-bibliography '("~/projects/bewlrm/research/references.bib"))
   (org-cite-global-bibliography '("~/projects/bewlrm/research/references.bib"))
@@ -159,6 +154,7 @@
   (org-mode . citar-capf-setup))
 
 (use-package citar-embark
+  :ensure t
   :after citar embark
   :no-require
   :config (citar-embark-mode))

@@ -29,6 +29,7 @@
                    (add-hook 'before-save-hook 'python-isort-on-save-mode))))
 
 (use-package pet
+  :ensure t
   :config
   (add-hook 'python-base-mode-hook 'pet-mode -10))
 
