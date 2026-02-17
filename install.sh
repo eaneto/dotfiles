@@ -60,4 +60,4 @@ ln -s ~/projects/dotfiles/zathura/zathurarc ~/.config/zathura/
 ln -s ~/projects/dotfiles/.gdbinit ~/
 
 # Configure keyboard
-localectl set-x11-keymap us "intl" "caps:escape"
+localectl set-x11-keymap us default "intl" "caps:escape"
