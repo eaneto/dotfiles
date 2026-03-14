@@ -52,7 +52,9 @@
 (use-package flycheck
   :ensure t
   :init
-  (global-flycheck-mode))
+  (global-flycheck-mode)
+  :custom
+  (flycheck-disabled-checkers '(org-lint)))
 
 (use-package which-key
   :ensure t
