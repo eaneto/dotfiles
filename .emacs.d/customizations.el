@@ -87,4 +87,51 @@ removes scroll bar and display line numbers."
   (interactive)
   (org-timer-set-timer "00:05:00"))
 
+(defvar custom/xref-window-stack nil
+  "Stack of windows from which xref definitions were jumped.")
+
+(defun custom/xref-find-definitions-smart ()
+  "Window-aware find definition.
+Jump to definition in the other window if the target buffer is already
+displayed there, otherwise jump in the current window."
+  (interactive)
+  (let* ((identifier (xref--read-identifier "Find definitions of: "))
+         (xrefs (xref-backend-definitions (xref-find-backend) identifier))
+         (xref (car xrefs))
+         (location (xref-item-location xref))
+         (file (expand-file-name (xref-location-group location)))
+         (target-window (get-buffer-window (get-file-buffer file) t)))
+    (if (and target-window (not (eq target-window (selected-window))))
+        (progn
+          (push (selected-window) custom/xref-window-stack)
+          (xref-find-definitions-other-window identifier))
+      (xref-find-definitions identifier))))
+
+(defun custom/xref-pop-marker-stack ()
+  "Pop the xref marker stack, returning to the origin window if recorded.
+This custom function exists so that it works well with multiple windows."
+  (interactive)
+  (let ((origin-window (pop custom/xref-window-stack)))
+    (if (and origin-window (window-live-p origin-window))
+        (let ((current-window (selected-window))
+              (current-buffer (current-buffer)))
+          (xref-go-back)
+          (let ((target-buffer (current-buffer))
+                (target-point (point)))
+            (if (eq target-buffer current-buffer)
+                ;; Same buffer, just go back normally, no window juggling needed
+                (goto-char target-point)
+              (set-window-buffer current-window current-buffer)
+              (select-window origin-window)
+              (switch-to-buffer target-buffer)
+              (goto-char target-point))))
+      (xref-go-back))))
+
+(global-set-key (kbd "M-.") #'custom/xref-find-definitions-smart)
+(global-set-key (kbd "M-,") #'custom/xref-pop-marker-stack)
+
+(advice-add 'xref-go-back :after
+            (lambda (&rest _) (pop custom/xref-window-stack)))
+
+
 ;;; customizations.el ends here
