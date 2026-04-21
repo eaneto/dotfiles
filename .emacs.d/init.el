@@ -37,15 +37,15 @@
      "https://rachelbythebay.com/w/atom.xml"
      "https://jvns.ca/atom.xml"))
  '(package-selected-packages
-   '(all-the-icons ansible citar-embark company counsel deadgrep diff-hl
-                   dockerfile-mode elfeed evil-collection evil-matchit
-                   evil-surround exec-path-from-shell fish-mode flx
-                   flycheck go-mode highlight-indent-guides hl-todo
-                   ivy-xref lox-mode monokai-theme nov org-superstar
-                   pet pomm protobuf-mode psession pyimport
-                   python-black python-isort rustic telephone-line
-                   terraform-mode web-mode writeroom-mode yaml-mode
-                   yasnippet))
+   '(all-the-icons ansible citar-embark clang-format clang-format+
+                   company counsel deadgrep diff-hl dockerfile-mode
+                   elfeed evil-collection evil-matchit evil-surround
+                   exec-path-from-shell fish-mode flx flycheck go-mode
+                   highlight-indent-guides hl-todo ivy-xref lox-mode
+                   monokai-theme nov org-superstar pet pomm
+                   protobuf-mode psession pyimport python-black
+                   python-isort rustic telephone-line terraform-mode
+                   web-mode writeroom-mode yaml-mode yasnippet))
  '(pdf-latex-command "xelatex")
  '(safe-local-variable-values '((flycheck-checker . flake8) (flycheck-checker . mypy))))
 (custom-set-faces

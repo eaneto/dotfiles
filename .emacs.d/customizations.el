@@ -44,14 +44,11 @@ removes scroll bar and display line numbers."
 (dolist (hook '(change-log-mode-hook log-edit-mode-hook))
   (add-hook hook (lambda () (flyspell-mode -1))))
 
-(setq user-full-name "Edison Aguiar de S. Neto"
-      user-mail-address "edison.aguiar.neto@gmail.com")
-
 (visual-config-modes)
-(setq-default c-default-style "linux"
-              c-basic-offset 4
-              tab-width 4
-              indent-tabs-mode nil)
+(setq-default c-basic-offset 4
+              tab-width 4)
+; Always indent with spaces
+(setq indent-tabs-mode nil)
 (global-set-key (kbd "RET") 'newline-and-indent)
 (enable-ido-mode)
 
