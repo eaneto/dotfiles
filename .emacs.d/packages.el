@@ -215,4 +215,9 @@
 (use-package eldoc
   :bind (("M-RET" . eldoc-print-current-symbol-info)))
 
+;(use-package clang-format
+;  :hook (c-mode c++-mode)
+;  :config
+;  (clang-format-on-save-mode))
+
 ;;; packages.el ends here

@@ -23,12 +23,6 @@ removes scroll bar and display line numbers."
   (show-paren-mode 1)
   (global-hl-line-mode))
 
-(defun set-default-indentation()
-  "Configures the default indentation (4 spaces)."
-  (setq-default tab-width 4)
-  (setq indent-line-function 'insert-tab)
-  (global-set-key (kbd "RET") 'newline-and-indent))
-
 (defun enable-ido-mode()
   "Enables ido-mode."
   (setq-default ido-enable-flex-matching t)
@@ -42,11 +36,6 @@ removes scroll bar and display line numbers."
 	  (back-to-indentation)
 	(beginning-of-line)))
 
-(setq-default c-default-style "linux"
-              c-basic-offset 4
-              tab-width 4
-              indent-tabs-mode nil)
-
 (dolist (hook '(text-mode-hook))
   (add-hook hook (lambda () (flyspell-mode 1))))
 
@@ -59,7 +48,11 @@ removes scroll bar and display line numbers."
       user-mail-address "edison.aguiar.neto@gmail.com")
 
 (visual-config-modes)
-(set-default-indentation)
+(setq-default c-default-style "linux"
+              c-basic-offset 4
+              tab-width 4
+              indent-tabs-mode nil)
+(global-set-key (kbd "RET") 'newline-and-indent)
 (enable-ido-mode)
 
 (add-hook 'term-mode-hook (lambda ()
