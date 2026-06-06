@@ -47,6 +47,13 @@ removes scroll bar and display line numbers."
 (visual-config-modes)
 (setq-default c-basic-offset 4
               tab-width 4)
+
+; Disables flycheck on c/c++ mode.
+(add-hook 'eglot-managed-mode-hook
+          (lambda ()
+            (when (derived-mode-p 'c-mode 'c++-mode)
+              (flycheck-mode -1))))
+
 ; Always indent with spaces
 (setq indent-tabs-mode nil)
 (global-set-key (kbd "RET") 'newline-and-indent)
