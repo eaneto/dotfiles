@@ -180,9 +180,12 @@
   (go-mode . eglot-ensure)
   (rustic-mode . eglot-ensure)
   (python-mode . eglot-ensure)
+  (arduino-mode . eglot-ensure)
   :config
   (fset #'jsonrpc--log-event #'ignore)
-  (setq eglot-events-buffer-size 0))
+  (setq eglot-events-buffer-size 0)
+  (add-to-list 'eglot-server-programs
+			   '(arduino-mode . ("arduino-language-server" "-cli-config" "~/.arduino15/arduino-cli.yaml"))))
 
 (use-package elfeed
   :ensure)
@@ -220,5 +223,12 @@
   :config
   (setq clang-format+-always-enable t)
   :hook (c-mode-common . clang-format+-mode))
+
+(use-package arduino-mode
+  :ensure)
+
+(use-package typst-ts-mode
+  :custom
+  (typst-ts-mode-watch-options "--open"))
 
 ;;; packages.el ends here
