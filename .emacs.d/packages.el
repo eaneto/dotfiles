@@ -228,6 +228,7 @@
   :ensure)
 
 (use-package typst-ts-mode
+  :ensure
   :custom
   (typst-ts-mode-watch-options "--open"))
 
