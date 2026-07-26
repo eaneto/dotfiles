@@ -185,7 +185,8 @@
   (fset #'jsonrpc--log-event #'ignore)
   (setq eglot-events-buffer-size 0)
   (add-to-list 'eglot-server-programs
-			   '(arduino-mode . ("arduino-language-server" "-cli-config" "~/.arduino15/arduino-cli.yaml"))))
+			   '(arduino-mode . ("arduino-language-server" "-cli-config" "~/.arduino15/arduino-cli.yaml")))
+  (setq eglot-extend-to-xref t))
 
 (use-package elfeed
   :ensure)
