@@ -130,5 +130,18 @@ This custom function exists so that it works well with multiple windows."
 (advice-add 'xref-go-back :after
             (lambda (&rest _) (pop custom/xref-window-stack)))
 
+; Custom safe directories control, this way I don't have to add a
+; bunch of specific directories for sub-projects.
+(defvar custom/trusted-dir-locals-roots '("~/projects/embedded-systems/"))
+
+(defun custom/dir-locals-always-safe-p (_all-vars _unsafe-vars _risky-vars dir-name)
+  "Auto-trust dir-locals under any root in `custom/trusted-dir-locals-roots'."
+  (seq-some (lambda (root)
+              (string-prefix-p (expand-file-name root)
+                                (expand-file-name dir-name)))
+            custom/trusted-dir-locals-roots))
+
+(advice-add 'hack-local-variables-confirm :before-until #'custom/dir-locals-always-safe-p)
+
 
 ;;; customizations.el ends here
