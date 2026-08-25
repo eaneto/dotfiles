@@ -1,4 +1,4 @@
-;;; packages.el --- Package configuration file
+;;; packages.el --- Package configuration file -*- lexical-binding: nil; -*-
 ;;; Commentary:
 ;;; Emacs Packages configuration --- Package configuration for Emacs
 ;;;

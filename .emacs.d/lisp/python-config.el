@@ -1,4 +1,4 @@
-;;; python-config.el --- Package configuration for Python
+;;; python-config.el --- Package configuration for Python -*- lexical-binding: nil; -*-
 ;;; Commentary:
 ;;; Emacs Python configuration --- Package configuration for Emacs Python
 ;;; Code:

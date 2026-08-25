@@ -1,4 +1,4 @@
-;;; customizations.el --- Configs and key maps for Emacs.
+;;; customizations.el --- Configs and key maps for Emacs. -*- lexical-binding: nil; -*-
 ;;; Commentary:
 ;;; Configure Emacs --- Configs and key maps for Emacs.
 ;;;

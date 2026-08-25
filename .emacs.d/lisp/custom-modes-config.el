@@ -1,4 +1,4 @@
-;;; custom-modes-config.el --- Package configuration for custom modes packages
+;;; custom-modes-config.el --- Package configuration for custom modes packages -*- lexical-binding: nil; -*-
 ;;; Commentary:
 ;;; Emacs custom modes configuration --- Package configuration for Emacs custom modes
 ;;; Code:

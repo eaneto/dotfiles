@@ -1,4 +1,4 @@
-;;; rust-config.el --- Package configuration for rust
+;;; rust-config.el --- Package configuration for rust -*- lexical-binding: nil; -*-
 ;;; Commentary:
 ;;; Emacs rust configuration --- Package configuration for Emacs rust
 ;;; Code:

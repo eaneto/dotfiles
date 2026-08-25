@@ -1,4 +1,4 @@
-;;; main.el --- Loads other config files
+;;; main.el --- Loads other config files -*- lexical-binding: nil; -*-
 ;;; Commentary:
 ;;; Emacs Packages configuration --- load all other configuration.
 ;;;

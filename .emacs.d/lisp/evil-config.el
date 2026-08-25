@@ -1,4 +1,4 @@
-;;; evil-config.el --- Package configuration for evil packages
+;;; evil-config.el --- Package configuration for evil packages -*- lexical-binding: nil; -*-
 ;;; Commentary:
 ;;; Emacs Evil configuration --- Package configuration for Emacs evil
 ;;; Code:
