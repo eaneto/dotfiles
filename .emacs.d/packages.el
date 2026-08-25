@@ -233,4 +233,7 @@
   :custom
   (typst-ts-mode-watch-options "--open"))
 
+(use-package writeroom-mode
+  :ensure)
+
 ;;; packages.el ends here
