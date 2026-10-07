@@ -113,11 +113,6 @@
   (add-hook 'org-mode-hook
             (lambda () (org-superstar-mode 1))))
 
-(use-package monokai-theme
-  :ensure t
-  :config
-  (load-theme 'monokai t))
-
 (use-package ansible
   :ensure t
   :config

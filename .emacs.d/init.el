@@ -42,11 +42,11 @@
 				   dockerfile-mode elfeed evil-collection evil-matchit
 				   evil-surround exec-path-from-shell fish-mode flx
 				   flycheck go-mode highlight-indent-guides hl-todo
-				   ivy-xref lox-mode monokai-theme nov org-superstar
-				   pet pomm protobuf-mode psession pyimport
-				   python-black python-isort rustic telephone-line
-				   terraform-mode typst-ts-mode web-mode
-				   writeroom-mode yaml-mode yasnippet))
+				   ivy-xref just-mode lox-mode monokai-theme nov
+				   org-superstar pet pomm protobuf-mode psession
+				   pyimport python-black python-isort rustic
+				   telephone-line terraform-mode typst-ts-mode
+				   web-mode writeroom-mode yaml-mode yasnippet))
  '(pdf-latex-command "xelatex")
  '(safe-local-variable-values '((flycheck-checker . flake8) (flycheck-checker . mypy))))
 (custom-set-faces
