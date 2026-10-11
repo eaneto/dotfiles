@@ -189,11 +189,14 @@
 (use-package fish-mode
   :ensure)
 
-(use-package psession
-  :ensure
+(use-package desktop
   :config
-  (setq psession-save-buffers-unwanted-buffers-regexp "\\(diary\\|\\.jpg\\|\\.png\\|\\*image-native-display\\*\\)$")
-  (psession-mode 1))
+  (setq desktop-save t
+        desktop-load-locked-desktop t
+        desktop-files-not-to-save
+        "\\(\\`/[^/:]*:\\|(ftp)\\'\\|diary\\|\\.jpg\\|\\.png\\)$"
+        desktop-buffers-not-to-save "\\*image-native-display\\*")
+  (desktop-save-mode 1))
 
 (use-package pomm
   :ensure
