@@ -145,5 +145,7 @@ This custom function exists so that it works well with multiple windows."
 
 (advice-add 'hack-local-variables-confirm :before-until #'custom/dir-locals-always-safe-p)
 
+; Disables sound when an error occurs.
+(setq ring-bell-function 'ignore)
 
 ;;; customizations.el ends here
